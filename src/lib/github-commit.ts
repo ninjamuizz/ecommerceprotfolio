@@ -53,10 +53,18 @@ async function gh<T>(token: string, path: string, init?: RequestInit): Promise<T
 }
 
 export interface FileChange {
-  /** Repo-relative path, e.g. "src/data/flavors.json". */
+  /** Repo-relative path, e.g. "src/data/flavors.json" or "public/images/flavors/cane-sugar-syrups/american-strawberry.webp". */
   path: string;
-  /** Full new file content (not a diff/patch). */
-  content: string;
+  /** Full new file content (not a diff/patch). Required unless `delete` is true. */
+  content?: string;
+  /** How `content` is encoded — 'utf-8' (default) for text files, 'base64' for
+   * binary uploads (images, PDFs) where the caller already has base64 data
+   * (e.g. straight from a browser FileReader/FormData) and re-encoding it as
+   * UTF-8 first would corrupt it. */
+  encoding?: 'utf-8' | 'base64';
+  /** Remove this path in the commit instead of writing to it — for replacing
+   * an uploaded image with a different-extension file, or clearing one. */
+  delete?: boolean;
 }
 
 export interface CommitResult {
@@ -104,11 +112,21 @@ export async function commitFiles(
   const parentCommit = await gh<CommitResponse>(token, `/repos/${owner}/${repo}/git/commits/${parentSha}`);
   const baseTreeSha = parentCommit.tree.sha;
 
-  const treeEntries = [];
+  const treeEntries: { path: string; mode: string; type: string; sha: string | null }[] = [];
   for (const file of files) {
+    if (file.delete) {
+      // A null sha on an existing path deletes it in the resulting tree/commit.
+      treeEntries.push({ path: file.path, mode: '100644', type: 'blob', sha: null });
+      continue;
+    }
+    if (file.content === undefined) {
+      throw new Error(`commitFiles: "${file.path}" has no content and delete is not set.`);
+    }
+    const base64Content =
+      file.encoding === 'base64' ? file.content : Buffer.from(file.content, 'utf-8').toString('base64');
     const blob = await gh<BlobResponse>(token, `/repos/${owner}/${repo}/git/blobs`, {
       method: 'POST',
-      body: JSON.stringify({ content: Buffer.from(file.content, 'utf-8').toString('base64'), encoding: 'base64' }),
+      body: JSON.stringify({ content: base64Content, encoding: 'base64' }),
     });
     treeEntries.push({ path: file.path, mode: '100644', type: 'blob', sha: blob.sha });
   }

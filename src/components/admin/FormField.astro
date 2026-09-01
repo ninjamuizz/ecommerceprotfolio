@@ -92,6 +92,26 @@ const { field, value } = Astro.props;
         <input id={`f-${field.key}`} type="text" value={value === null || value === undefined ? '' : String(value)} placeholder="(none)" />
       )}
 
+      {field.kind === 'image' && (
+        <div class="image-field" data-field-image={field.key}>
+          {value ? (
+            <img class="image-preview" data-image-preview src={String(value)} alt="" />
+          ) : (
+            <p class="no-image" data-image-preview>No image</p>
+          )}
+          <div class="image-controls">
+            <label class="btn-file">
+              Choose file…
+              <input type="file" accept="image/*" data-image-input hidden />
+            </label>
+            <button type="button" class="btn-image-remove" data-image-remove disabled={!value}>
+              Remove image
+            </button>
+          </div>
+          <p class="image-status" data-image-status role="status" />
+        </div>
+      )}
+
       {(field.kind === 'stringArray' || field.kind === 'nullableStringArray') && (
         <div class="array-field">
           <div class="array-rows" data-array-rows>
@@ -173,7 +193,7 @@ const { field, value } = Astro.props;
     }
   });
 
-  document.addEventListener('click', (event) => {
+  document.addEventListener('click', async (event) => {
     const target = event.target as HTMLElement;
 
     const addBtn = target.closest<HTMLElement>('[data-add-row]');
@@ -190,8 +210,79 @@ const { field, value } = Astro.props;
     const removeBtn = target.closest<HTMLElement>('[data-remove-row]');
     if (removeBtn) {
       removeBtn.closest('[data-array-row]')?.remove();
+      return;
+    }
+
+    const removeImageBtn = target.closest<HTMLButtonElement>('[data-image-remove]');
+    if (removeImageBtn && !removeImageBtn.disabled) {
+      const wrapper = removeImageBtn.closest<HTMLElement>('[data-field-image]');
+      const form = removeImageBtn.closest<HTMLFormElement>('form[data-api-url]');
+      const statusEl = wrapper?.querySelector<HTMLElement>('[data-image-status]');
+      if (!wrapper || !form || !statusEl) return;
+      removeImageBtn.disabled = true;
+      statusEl.textContent = 'Removing…';
+      try {
+        const res = await fetch(`${form.dataset.apiUrl}image/`, { method: 'DELETE' });
+        const body = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(body?.error ?? `Remove failed (${res.status})`);
+        setImagePreview(wrapper, body.image ?? null);
+        statusEl.textContent = 'Removed — committed to GitHub.';
+      } catch (err) {
+        statusEl.textContent = err instanceof Error ? err.message : 'Remove failed.';
+        removeImageBtn.disabled = false;
+      }
     }
   });
+
+  document.addEventListener('change', async (event) => {
+    const input = event.target as HTMLElement;
+    if (!(input instanceof HTMLInputElement) || !input.matches('[data-image-input]')) return;
+    const file = input.files?.[0];
+    if (!file) return;
+
+    const wrapper = input.closest<HTMLElement>('[data-field-image]');
+    const form = input.closest<HTMLFormElement>('form[data-api-url]');
+    const statusEl = wrapper?.querySelector<HTMLElement>('[data-image-status]');
+    if (!wrapper || !form || !statusEl) return;
+
+    statusEl.textContent = 'Uploading…';
+    try {
+      const fd = new FormData();
+      fd.append('file', file);
+      const res = await fetch(`${form.dataset.apiUrl}image/`, { method: 'POST', body: fd });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(body?.error ?? `Upload failed (${res.status})`);
+      setImagePreview(wrapper, body.image ?? null);
+      statusEl.textContent = 'Uploaded — committed to GitHub.';
+    } catch (err) {
+      statusEl.textContent = err instanceof Error ? err.message : 'Upload failed.';
+    } finally {
+      input.value = '';
+    }
+  });
+
+  /** Swaps the image-field's preview (an <img> or the "No image" placeholder)
+   * for the freshly uploaded/removed state, and enables/disables the Remove
+   * button accordingly — without a full page reload. */
+  function setImagePreview(wrapper: HTMLElement, newImagePath: string | null): void {
+    wrapper.querySelector('[data-image-preview]')?.remove();
+    const controls = wrapper.querySelector('.image-controls');
+    const el = newImagePath ? document.createElement('img') : document.createElement('p');
+    el.setAttribute('data-image-preview', '');
+    if (el instanceof HTMLImageElement && newImagePath) {
+      el.className = 'image-preview';
+      el.src = newImagePath;
+      el.alt = '';
+    } else {
+      el.className = 'no-image';
+      el.textContent = 'No image';
+    }
+    if (controls) controls.before(el);
+    else wrapper.prepend(el);
+
+    const removeBtn = wrapper.querySelector<HTMLButtonElement>('[data-image-remove]');
+    if (removeBtn) removeBtn.disabled = !newImagePath;
+  }
 </script>
 
 <style>
@@ -306,5 +397,72 @@ const { field, value } = Astro.props;
   }
   template {
     display: none;
+  }
+  .image-field {
+    display: grid;
+    gap: 10px;
+  }
+  .image-preview {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: var(--cream-card);
+    border: 1px solid #1b0f2229;
+    padding: 8px;
+  }
+  .no-image {
+    width: 140px;
+    height: 140px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--cream-card);
+    border: 1px dashed #1b0f2229;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+  }
+  .image-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .btn-file {
+    border: 1px solid #1b0f2229;
+    border-radius: var(--pill);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    background: #fff;
+  }
+  .btn-file:hover {
+    border-color: var(--gold);
+  }
+  .btn-image-remove {
+    border: 1px solid #1b0f2229;
+    background: none;
+    border-radius: var(--pill);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary);
+    cursor: pointer;
+  }
+  .btn-image-remove:hover:not(:disabled) {
+    border-color: var(--red);
+    color: var(--red);
+  }
+  .btn-image-remove:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .image-status {
+    font-size: 12px;
+    color: var(--secondary);
+    margin: 0;
+    min-height: 1em;
   }
 </style>

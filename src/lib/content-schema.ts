@@ -23,7 +23,8 @@ export type FieldKind =
   | 'stringArray'
   | 'nullableText'
   | 'nullableStringArray'
-  | 'objectArray';
+  | 'objectArray'
+  | 'image';
 
 interface BaseField {
   /** Object key this field reads/writes. */
@@ -88,6 +89,15 @@ export interface ObjectArrayField extends BaseField {
   columns: ObjectArrayColumn[];
 }
 
+/** A nullable image-path field with its own upload/replace/remove UI
+ * (FormField.astro), backed by a dedicated endpoint
+ * (api/admin/flavors/[category]/[slug]/image.ts) that commits the actual
+ * binary file to GitHub alongside the data-field update — NOT part of the
+ * plain JSON save payload, since that has no way to carry binary content. */
+export interface ImageField extends BaseField {
+  kind: 'image';
+}
+
 export type FieldDescriptor =
   | TextField
   | TextareaField
@@ -96,7 +106,8 @@ export type FieldDescriptor =
   | StringArrayField
   | NullableTextField
   | NullableStringArrayField
-  | ObjectArrayField;
+  | ObjectArrayField
+  | ImageField;
 
 export interface ContentTypeSchema {
   id: 'flavor' | 'recipe';
@@ -179,9 +190,9 @@ export const flavorSchema: ContentTypeSchema = {
     },
     {
       key: 'image',
-      label: 'Image path',
-      kind: 'nullableText',
-      helpText: 'e.g. /images/flavors/cane-sugar-syrups/american-strawberry.webp, or leave blank for none.',
+      label: 'Image',
+      kind: 'image',
+      helpText: 'Uploads commit the file to the repo immediately (separate from the Save changes button below).',
     },
     { key: 'suggestedUses', label: 'Suggested uses', kind: 'stringArray', itemLabel: 'Use' },
     {
