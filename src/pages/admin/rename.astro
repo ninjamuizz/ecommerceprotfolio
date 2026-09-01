@@ -14,7 +14,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const session = requireSession(Astro.cookies);
 if (!session) {
-  return Astro.redirect('/admin/login');
+  return Astro.redirect('/admin/login/');
 }
 
 // Optional prefill from a flavor edit page's "Rename this flavor" link
@@ -173,7 +173,7 @@ const prefillOldName = Astro.url.searchParams.get('oldName') ?? '';
 
     let data: { conclusion: string | null; status: string; detailsUrl: string | null } | { error: string };
     try {
-      const res = await fetch(`/api/admin/build-status?sha=${encodeURIComponent(commitSha)}`);
+      const res = await fetch(`/api/admin/build-status/?sha=${encodeURIComponent(commitSha)}`);
       data = await res.json();
     } catch {
       data = { error: 'Network error while checking build status.' };
@@ -197,7 +197,7 @@ const prefillOldName = Astro.url.searchParams.get('oldName') ?? '';
       const revertBtn = statusEl.querySelector<HTMLButtonElement>('[data-revert-btn]');
       revertBtn?.addEventListener('click', async () => {
         revertBtn.disabled = true;
-        const r = await fetch('/api/admin/rename/revert', {
+        const r = await fetch('/api/admin/rename/revert/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ commitSha }),
@@ -236,7 +236,7 @@ const prefillOldName = Astro.url.searchParams.get('oldName') ?? '';
     setStatus('Scanning repo…');
     resultsEl.hidden = true;
 
-    const res = await fetch('/api/admin/rename/preview', {
+    const res = await fetch('/api/admin/rename/preview/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ oldName, categorySlug, slug }),
@@ -283,7 +283,7 @@ const prefillOldName = Astro.url.searchParams.get('oldName') ?? '';
     setStatus('Committing the rename to GitHub…');
 
     try {
-      const res = await fetch('/api/admin/rename/apply', {
+      const res = await fetch('/api/admin/rename/apply/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...lastRequest, newName, approvedHits }),

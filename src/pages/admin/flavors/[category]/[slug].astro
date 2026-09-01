@@ -15,7 +15,7 @@ import { flavorSchema } from '../../../../lib/content-schema';
 
 const session = requireSession(Astro.cookies);
 if (!session) {
-  return Astro.redirect('/admin/login');
+  return Astro.redirect('/admin/login/');
 }
 
 const { category, slug } = Astro.params;
@@ -136,7 +136,7 @@ const renameUrl = `/admin/rename/?categorySlug=${encodeURIComponent(category)}&s
     const MAX_ATTEMPTS = 45;
     let data: { conclusion: string | null; status: string; detailsUrl: string | null } | { error: string };
     try {
-      const res = await fetch(`/api/admin/build-status?sha=${encodeURIComponent(commitSha)}`);
+      const res = await fetch(`/api/admin/build-status/?sha=${encodeURIComponent(commitSha)}`);
       data = await res.json();
     } catch {
       data = { error: 'Network error while checking build status.' };

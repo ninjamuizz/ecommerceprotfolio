@@ -12,7 +12,7 @@ import { FLAVOR_CATEGORIES } from '../../../lib/content-schema';
 
 const session = requireSession(Astro.cookies);
 if (!session) {
-  return Astro.redirect('/admin/login');
+  return Astro.redirect('/admin/login/');
 }
 
 const flavors = readFlavors();
