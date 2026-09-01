@@ -1,0 +1,214 @@
+---
+// Admin: edit form for ONE recipe, built dynamically from
+// content-schema.ts's `recipeSchema.fields` (same pattern as
+// admin/flavors/[category]/[slug].astro — see that file's comment). Saves
+// via POST to /api/admin/recipes/{slug} (src/pages/api/admin/recipes/[slug].ts).
+export const prerender = false;
+
+import { requireSession } from '../../../lib/auth-server';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FormField from '../../../components/admin/FormField.astro';
+import { getRecipeBySlug } from '../../../lib/content-store';
+import { recipeSchema } from '../../../lib/content-schema';
+
+const session = requireSession(Astro.cookies);
+if (!session) {
+  return Astro.redirect('/admin/login');
+}
+
+const { slug } = Astro.params;
+if (!slug) {
+  return new Response('Not found', { status: 404 });
+}
+
+const recipe = getRecipeBySlug(slug);
+if (!recipe) {
+  return new Response(`Recipe not found: ${slug}`, { status: 404 });
+}
+
+// Trailing slash required — astro.config.mjs sets trailingSlash: 'always'
+// for the whole site, API routes included.
+const apiUrl = `/api/admin/recipes/${slug}/`;
+---
+
+<BaseLayout title={`Edit ${recipe.name} — Admin`} showHeader={false} showFooter={false} background="cream">
+  <section class="shell">
+    <a class="back" href="/admin/recipes/">← All recipes</a>
+    <p class="eyebrow">Recipe</p>
+    <h1>{recipe.name}</h1>
+
+    <form data-recipe-form data-api-url={apiUrl}>
+      {recipeSchema.fields.map((field) => <FormField field={field} value={(recipe as Record<string, unknown>)[field.key]} />)}
+
+      <div class="actions">
+        <button type="submit" class="btn-save">Save changes</button>
+        <p class="status" data-status role="status"></p>
+      </div>
+    </form>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-recipe-form]');
+  const status = document.querySelector<HTMLElement>('[data-status]');
+
+  function gatherPayload(formEl: HTMLFormElement): Record<string, unknown> {
+    const payload: Record<string, unknown> = {};
+    formEl.querySelectorAll<HTMLElement>('[data-field]').forEach((wrapper) => {
+      const key = wrapper.dataset.field!;
+      const kind = wrapper.dataset.kind!;
+
+      if (kind === 'text' || kind === 'enum') {
+        const input = wrapper.querySelector<HTMLInputElement | HTMLSelectElement>('input, select');
+        payload[key] = input?.value ?? '';
+      } else if (kind === 'textarea') {
+        const textarea = wrapper.querySelector<HTMLTextAreaElement>('textarea');
+        payload[key] = textarea?.value ?? '';
+      } else if (kind === 'boolean') {
+        const checkbox = wrapper.querySelector<HTMLInputElement>('input[type="checkbox"]');
+        payload[key] = Boolean(checkbox?.checked);
+      } else if (kind === 'nullableText') {
+        const input = wrapper.querySelector<HTMLInputElement>('input');
+        const value = (input?.value ?? '').trim();
+        payload[key] = value === '' ? null : input!.value;
+      } else if (kind === 'stringArray' || kind === 'nullableStringArray') {
+        const items = Array.from(wrapper.querySelectorAll<HTMLInputElement>('[data-array-item]'))
+          .map((i) => i.value)
+          .filter((v) => v.trim() !== '');
+        payload[key] = kind === 'nullableStringArray' && items.length === 0 ? null : items;
+      } else if (kind === 'objectArray') {
+        const rows = Array.from(wrapper.querySelectorAll<HTMLElement>('[data-array-row]'));
+        payload[key] = rows.map((row) => {
+          const obj: Record<string, string> = {};
+          row.querySelectorAll<HTMLInputElement>('[data-object-col]').forEach((input) => {
+            obj[input.dataset.objectCol!] = input.value;
+          });
+          return obj;
+        });
+      }
+    });
+    return payload;
+  }
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!status) return;
+    status.textContent = 'Saving…';
+    status.classList.remove('error', 'success');
+    try {
+      const apiUrl = form.dataset.apiUrl!;
+      const res = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(gatherPayload(form)),
+      });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(body?.error ?? `Save failed (${res.status})`);
+      }
+      status.textContent = 'Saved — committed to GitHub. Checking the build…';
+      status.classList.add('success');
+      if (body?._commit?.sha) pollBuildStatus(body._commit.sha, status);
+    } catch (err) {
+      status.textContent = err instanceof Error ? err.message : 'Save failed.';
+      status.classList.add('error');
+    }
+  });
+
+  /**
+   * Same async build-check pattern as the rename tool (src/pages/admin/rename.astro)
+   * and the flavor edit page — a serverless save can't block for however
+   * long CI takes, so this polls GET /api/admin/build-status every few
+   * seconds instead. Gives up (not fails) after ~3 minutes.
+   */
+  async function pollBuildStatus(commitSha: string, statusEl: HTMLElement, attempt = 0): Promise<void> {
+    const MAX_ATTEMPTS = 45;
+    let data: { conclusion: string | null; status: string; detailsUrl: string | null } | { error: string };
+    try {
+      const res = await fetch(`/api/admin/build-status?sha=${encodeURIComponent(commitSha)}`);
+      data = await res.json();
+    } catch {
+      data = { error: 'Network error while checking build status.' };
+    }
+    if ('error' in data) {
+      statusEl.textContent = `Saved, but couldn't check the build: ${data.error}`;
+      return;
+    }
+    if (data.conclusion === 'success') {
+      statusEl.textContent = 'Saved — build check passed.';
+      return;
+    }
+    if (data.conclusion && data.conclusion !== 'success') {
+      statusEl.textContent = `Saved, but the build check FAILED (${data.conclusion}). See GitHub Actions.`;
+      statusEl.classList.add('error');
+      return;
+    }
+    if (attempt >= MAX_ATTEMPTS) {
+      statusEl.textContent = 'Saved — build check still running after 3 minutes; check GitHub Actions directly.';
+      return;
+    }
+    statusEl.textContent = `Saved — build check ${data.status === 'queued' ? 'queued' : 'running'}…`;
+    setTimeout(() => pollBuildStatus(commitSha, statusEl, attempt + 1), 4000);
+  }
+</script>
+
+<style>
+  .shell {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px var(--gutter) 96px;
+  }
+  .back {
+    display: inline-block;
+    color: var(--secondary);
+    font-size: 13px;
+    text-decoration: none;
+    margin-bottom: 16px;
+  }
+  .back:hover {
+    color: var(--ink);
+  }
+  .eyebrow {
+    color: var(--gold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  h1 {
+    margin: 0 0 28px;
+    font-size: 30px;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+  }
+  .btn-save {
+    background: var(--plum);
+    color: #fff;
+    border: none;
+    border-radius: var(--pill);
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn-save:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+  .status {
+    font-size: 13px;
+    margin: 0;
+    color: var(--secondary);
+  }
+  .status.success {
+    color: var(--green);
+  }
+  .status.error {
+    color: var(--red);
+  }
+</style>

@@ -1,0 +1,186 @@
+---
+// IMPORTANT FINDING (see NOTES.md): this is a REAL 6-quote carousel, not the
+// single static testimonial the brief described/quoted. Ported verbatim from
+// reference/home.html's <section class="testimonials" data-astro-cid-gakqr736>
+// — no id/heading/eyebrow at all in the source (not even a semantic <h2>),
+// kept exactly as bare as the original.
+const quotes = [
+  {
+    text: 'One taste says it all! Not only is Stirling a great American made product, but head-to-head it beats all other syrups out there. Pure, rich flavor pours out of each bottle — zero after taste and we’ve found that less syrup is needed to produce great drinks.',
+    who: 'Alex Ruppe',
+    org: 'Espresso West · Grand Junction, CO',
+  },
+  {
+    text: 'I just wanted to reach out and say I absolutely love your syrups! No other syrup I’ve tried has the same depth and complexity of flavor as yours do. I first found your syrups at the Coffee Expo in NYC last year, and have been using them ever since.',
+    who: 'Chris Collier',
+    org: null,
+  },
+  {
+    text: 'Joe Beans has been using Stirling for many years in our drive thru coffee shops. We have grown to 3 locations in 14 years and are consistently voted “Best Coffee” in our town. I wholeheartedly believe that the quality of Stirling Syrups is what elevates us above the other competitors. I would recommend Stirling to anyone who wants a wildly successful coffee shop! Thanks for all you do!',
+    who: 'Linda Brown',
+    org: 'CEO Joe Beans Coffee · Lynchburg, VA',
+  },
+  {
+    text: 'Our new Espresso Sodas, rely on consistent flavor from Stirling’s Vanilla, Almond and Orange flavors.',
+    who: 'David Schomer',
+    org: 'Espresso Vivace · Seattle, WA',
+  },
+  {
+    text: 'We founded our coffee shop on three principles Quality, Consistency and Speed. We have used Stirling flavored syrups for the last 4 years because we can depend on them to have the same great taste and quality every time.',
+    who: 'Brandon Jurasek & Casey Doran',
+    org: 'True Brew Espresso · Great Falls, MT',
+  },
+  {
+    text: 'Stirling Flavors are the perfect syrup to complement my award winning coffee. The flavors are by far the highest quality flavors I’ve tried on the market.',
+    who: 'Shannon Noland',
+    org: 'Cosmic Coffee · Warsaw, MO',
+  },
+];
+---
+
+<section class="testimonials">
+  <div class="shell">
+    <div class="card">
+      <div class="stack" data-stack>
+        {
+          quotes.map((q, i) => (
+            <figure class="quote" data-quote={i} aria-hidden={i === 0 ? 'false' : 'true'}>
+              <blockquote>{q.text}</blockquote>
+              <figcaption>
+                <span class="who">{q.who}</span>
+                {q.org && <span class="org">{q.org}</span>}
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <div class="dots" role="group" aria-label="Choose a testimonial">
+        {
+          quotes.map((q, i) => (
+            <button
+              type="button"
+              data-dot={i}
+              aria-pressed={i === 0 ? 'true' : 'false'}
+              aria-label={`Testimonial from ${q.who}`}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const el = document.querySelector<HTMLElement>('.testimonials');
+  if (el) {
+    const quotes = Array.from(el.querySelectorAll<HTMLElement>('[data-quote]'));
+    const dots = Array.from(el.querySelectorAll<HTMLButtonElement>('[data-dot]'));
+    let active = 0;
+    let timer: number | undefined;
+
+    const show = (i: number) => {
+      active = i;
+      quotes.forEach((q, n) => {
+        q.classList.toggle('is-active', n === i);
+        q.setAttribute('aria-hidden', String(n !== i));
+      });
+      dots.forEach((d, n) => d.setAttribute('aria-pressed', String(n === i)));
+    };
+    const advance = () => {
+      quotes[active]?.classList.remove('is-active');
+      window.setTimeout(() => show((active + 1) % quotes.length), 480);
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = window.setInterval(advance, 8000);
+    };
+
+    dots.forEach((dot, i) =>
+      dot.addEventListener('click', () => {
+        show(i);
+        restart();
+      })
+    );
+    show(0);
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) restart();
+  }
+</script>
+
+<style>
+  .testimonials {
+    background: var(--cream);
+    padding-block: clamp(48px, 7vw, 96px);
+  }
+  .card {
+    border-radius: var(--r-xl);
+    background: var(--cream-card);
+    text-align: center;
+    border: 1px solid #1b0f2214;
+    padding: 64px 56px;
+  }
+  .stack {
+    display: grid;
+  }
+  .quote {
+    visibility: hidden;
+    opacity: 0;
+    grid-area: 1 / 1;
+    margin: 0;
+    transition: opacity 0.5s;
+  }
+  .quote.is-active {
+    visibility: visible;
+    opacity: 1;
+  }
+  blockquote {
+    letter-spacing: -0.02em;
+    max-width: 62ch;
+    color: var(--ink);
+    margin: 0 auto;
+    font-size: clamp(20px, 2.2vw, 27px);
+    font-weight: 500;
+    line-height: 1.42;
+  }
+  figcaption {
+    gap: 4px;
+    margin-top: 28px;
+    display: grid;
+  }
+  .who {
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .org {
+    color: var(--secondary);
+    font-size: 13px;
+  }
+  .dots {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    display: flex;
+  }
+  .dots button {
+    cursor: pointer;
+    width: 9px;
+    height: 9px;
+    transition: background var(--t-hover);
+    background: #1b0f222e;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+  }
+  .dots button:hover {
+    background: #1b0f2266;
+  }
+  .dots button[aria-pressed='true'] {
+    background: var(--gold);
+  }
+  @media (width <= 640px) {
+    .card {
+      padding: 40px 24px;
+    }
+  }
+</style>

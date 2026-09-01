@@ -1,0 +1,588 @@
+---
+// "Six lines that work together" — ported verbatim from reference/home.html's
+// <section class="lines" id="categories" data-astro-cid-q4otqnx5>. This is
+// the real #categories section (NOTES.md: the brief's separate "#categories
+// ticker" doesn't exist on the live site — that ticker is inside the hero,
+// see Hero.astro).
+//
+// Step text/rail colors come from src/data/lines.json (Phase 3, already
+// verified against this exact markup). The pour/fill presentation data below
+// (per-bottle tip-x/tip-y pivot, halo product image, stream color vs. grain
+// particles, cup layer heights) isn't part of lines.json's schema, so it's
+// extracted here directly from reference/home.html's <div class="stage"> —
+// every dx/d/width/height/background value is copied verbatim, not invented.
+import linesData from '../data/lines.json';
+
+interface Grain {
+  dx: string;
+  d: string;
+  width: string;
+  height: string;
+  background: string;
+}
+interface PourerVisual {
+  tipX: string;
+  tipY: string;
+  image: { src: string; srcset: string; width: string; height: string };
+  streamColor: string | null;
+  grains: Grain[];
+}
+
+const pourerVisuals: PourerVisual[] = [
+  {
+    tipX: '0.5',
+    tipY: '0.028',
+    image: {
+      src: '/images/site/lines-pourer-1.webp',
+      srcset:
+        '/images/site/lines-pourer-1-180w.webp 180w, /images/site/lines-pourer-1-360w.webp 360w',
+      width: '500',
+      height: '500',
+    },
+    streamColor: '#C1A12E',
+    grains: [],
+  },
+  {
+    tipX: '0.49',
+    tipY: '0.034',
+    image: {
+      src: '/images/site/lines-pourer-2.webp',
+      srcset: '/images/site/lines-pourer-2-180w.webp 180w, /images/site/lines-pourer-2-360w.webp 360w',
+      width: '500',
+      height: '500',
+    },
+    streamColor: '#002554',
+    grains: [],
+  },
+  {
+    tipX: '0.497',
+    tipY: '0.042',
+    image: {
+      src: '/images/site/lines-pourer-3.webp',
+      srcset: '/images/site/lines-pourer-3-180w.webp 180w, /images/site/lines-pourer-3-360w.webp 360w',
+      width: '500',
+      height: '500',
+    },
+    streamColor: '#009D4E',
+    grains: [],
+  },
+  {
+    tipX: '0.541',
+    tipY: '0.124',
+    image: {
+      src: '/images/site/lines-pourer-4.webp',
+      srcset: '/images/site/lines-pourer-4-180w.webp 180w, /images/site/lines-pourer-4-360w.webp 360w',
+      width: '500',
+      height: '500',
+    },
+    streamColor: null,
+    grains: [
+      { dx: '-42', d: '0', width: '3', height: '3', background: '#F5841F' },
+      { dx: '0', d: '55', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '42', d: '110', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-6', d: '165', width: '3', height: '3', background: '#F5841F' },
+      { dx: '36', d: '220', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '-12', d: '275', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '30', d: '330', width: '3', height: '3', background: '#F5841F' },
+      { dx: '-18', d: '385', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '24', d: '440', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-24', d: '495', width: '3', height: '3', background: '#F5841F' },
+      { dx: '18', d: '550', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '-30', d: '605', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '12', d: '0', width: '3', height: '3', background: '#F5841F' },
+      { dx: '-36', d: '55', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '6', d: '110', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-42', d: '165', width: '3', height: '3', background: '#F5841F' },
+      { dx: '0', d: '220', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '42', d: '275', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-6', d: '330', width: '3', height: '3', background: '#F5841F' },
+      { dx: '36', d: '385', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '-12', d: '440', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '30', d: '495', width: '3', height: '3', background: '#F5841F' },
+      { dx: '-18', d: '550', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '24', d: '605', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-24', d: '0', width: '3', height: '3', background: '#F5841F' },
+      { dx: '18', d: '55', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '-30', d: '110', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '12', d: '165', width: '3', height: '3', background: '#F5841F' },
+      { dx: '-36', d: '220', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '6', d: '275', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-42', d: '330', width: '3', height: '3', background: '#F5841F' },
+      { dx: '0', d: '385', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '42', d: '440', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-6', d: '495', width: '3', height: '3', background: '#F5841F' },
+      { dx: '36', d: '550', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '-12', d: '605', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '30', d: '0', width: '3', height: '3', background: '#F5841F' },
+      { dx: '-18', d: '55', width: '4', height: '4', background: '#E8D3BE' },
+      { dx: '24', d: '110', width: '5', height: '5', background: '#F6EFE6' },
+      { dx: '-24', d: '165', width: '3', height: '3', background: '#F5841F' },
+    ],
+  },
+  {
+    tipX: '0.499',
+    tipY: '0.056',
+    image: {
+      src: '/images/site/lines-pourer-5.webp',
+      srcset: '/images/site/lines-pourer-5-180w.webp 180w, /images/site/lines-pourer-5-360w.webp 360w',
+      width: '500',
+      height: '500',
+    },
+    streamColor: '#673165',
+    grains: [],
+  },
+  {
+    tipX: '0.424',
+    tipY: '0.123',
+    image: {
+      src: '/images/site/lines-pourer-6.webp',
+      srcset: '/images/site/lines-pourer-6-180w.webp 180w, /images/site/lines-pourer-6-360w.webp 360w',
+      width: '504',
+      height: '504',
+    },
+    streamColor: null,
+    grains: [
+      { dx: '-37.5', d: '0', width: '4.5', height: '4.5', background: '#E64784' },
+      { dx: '-7.5', d: '55', width: '6.5', height: '6.5', background: '#F6EFE6' },
+      { dx: '22.5', d: '110', width: '5.5', height: '5.5', background: '#C1A12E' },
+      { dx: '-30', d: '165', width: '4.5', height: '4.5', background: '#E64784' },
+      { dx: '0', d: '220', width: '6.5', height: '6.5', background: '#F6EFE6' },
+      { dx: '30', d: '275', width: '5.5', height: '5.5', background: '#C1A12E' },
+      { dx: '-22.5', d: '330', width: '4.5', height: '4.5', background: '#E64784' },
+      { dx: '7.5', d: '385', width: '6.5', height: '6.5', background: '#F6EFE6' },
+      { dx: '37.5', d: '440', width: '5.5', height: '5.5', background: '#C1A12E' },
+      { dx: '-15', d: '495', width: '4.5', height: '4.5', background: '#E64784' },
+      { dx: '15', d: '550', width: '6.5', height: '6.5', background: '#F6EFE6' },
+      { dx: '-37.5', d: '605', width: '5.5', height: '5.5', background: '#C1A12E' },
+      { dx: '-7.5', d: '0', width: '4.5', height: '4.5', background: '#E64784' },
+      { dx: '22.5', d: '55', width: '6.5', height: '6.5', background: '#F6EFE6' },
+      { dx: '-30', d: '110', width: '5.5', height: '5.5', background: '#C1A12E' },
+    ],
+  },
+];
+
+const cupLayers = [
+  { h: '52', color: '#C1A12E' },
+  { h: '34', color: '#002554' },
+  { h: '34', color: '#009D4E' },
+  { h: '52', color: '#F5841F' },
+  { h: '28', color: '#673165' },
+  { h: '20', color: '#E64784' },
+];
+
+const steps = linesData.map((line, i) => ({ ...line, visual: pourerVisuals[i] }));
+---
+
+<section class="lines" id="categories">
+  <div class="shell">
+    <div class="head">
+      <h2 class="h2">Six lines that work together.</h2>
+      <p class="intro">
+        Built for coffee houses: coffee goes in first, then the flavor. The same lines work in a
+        dirty soda, a tea or a frappe.
+      </p>
+    </div>
+    <div class="grid">
+      <div class="steps" data-steps>
+        {
+          steps.map((step, i) => (
+            <button
+              type="button"
+              class="step"
+              data-step={i}
+              aria-pressed={i === 0 ? 'true' : 'false'}
+              style={`--rail:${step.railColor}`}
+            >
+              <span class="num">{String(step.order).padStart(2, '0')}</span>
+              <span class="text">
+                <span class="eyebrow action">{step.kicker}</span>
+                <span class="name">{step.title}</span>
+                <span class="blurb">{step.description}</span>
+              </span>
+            </button>
+          ))
+        }
+        <button type="button" class="playpause" data-playpause aria-pressed="true">
+          <span class="glyph" aria-hidden="true" />
+          <span data-playpause-label>Pause</span>
+        </button>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="scene">
+          {
+            steps.map((step, i) => (
+              <div class="pourer" data-pour={i} style={`--tip-x:${step.visual.tipX}; --tip-y:${step.visual.tipY}`}>
+                <div class="halo">
+                  <img
+                    src={step.visual.image.src}
+                    srcset={step.visual.image.srcset}
+                    alt=""
+                    sizes="180px"
+                    loading="lazy"
+                    decoding="async"
+                    width={step.visual.image.width}
+                    height={step.visual.image.height}
+                  />
+                </div>
+                {step.visual.streamColor && (
+                  <div class="stream" style={`--c:${step.visual.streamColor}`}>
+                    <span class="stream-body" />
+                    <span class="stream-bead" />
+                  </div>
+                )}
+                {step.visual.grains.length > 0 && (
+                  <div class="grains">
+                    {step.visual.grains.map((g) => (
+                      <span
+                        style={`--dx:${g.dx}px; --d:${g.d}ms; width:${g.width}px; height:${g.height}px; background:${g.background}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))
+          }
+          <div class="cup">
+            <div class="fill">
+              <span class="base">Coffee</span>
+              {
+                cupLayers.map((layer, i) => (
+                  <span class="layer" data-layer={i} style={`--h:${layer.h}px; background:${layer.color}`} />
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const el = document.querySelector<HTMLElement>('.lines');
+  if (el) {
+    const steps = Array.from(el.querySelectorAll<HTMLButtonElement>('[data-step]'));
+    const pourers = Array.from(el.querySelectorAll<HTMLElement>('[data-pour]'));
+    const layers = Array.from(el.querySelectorAll<HTMLElement>('[data-layer]'));
+    const playpause = el.querySelector<HTMLButtonElement>('[data-playpause]');
+    const label = el.querySelector<HTMLElement>('[data-playpause-label]');
+    let active = 0;
+    let timer: number | undefined;
+
+    const show = (i: number) => {
+      active = i;
+      steps.forEach((s, n) => s.setAttribute('aria-pressed', String(n === i)));
+      pourers.forEach((p, n) => p.classList.toggle('is-active', n === i));
+      layers.forEach((l, n) => l.classList.toggle('is-filled', n <= i));
+    };
+    const pause = () => {
+      window.clearInterval(timer);
+      timer = undefined;
+      playpause?.setAttribute('aria-pressed', 'false');
+      if (label) label.textContent = 'Play';
+    };
+    const play = () => {
+      pause();
+      timer = window.setInterval(() => show((active + 1) % steps.length), 2600);
+      playpause?.setAttribute('aria-pressed', 'true');
+      if (label) label.textContent = 'Pause';
+    };
+
+    steps.forEach((s, i) =>
+      s.addEventListener('click', () => {
+        show(i);
+        pause();
+      })
+    );
+    playpause?.addEventListener('click', () => (timer ? pause() : play()));
+    show(0);
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      pause();
+    } else {
+      new IntersectionObserver(([entry]) => (entry.isIntersecting ? play() : pause()), {
+        threshold: 0.25,
+      }).observe(el);
+    }
+  }
+</script>
+
+<style>
+  .lines {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(64px, 9vw, 132px);
+  }
+  .head {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: end;
+    gap: clamp(28px, 5vw, 72px);
+    margin-bottom: clamp(40px, 6vw, 76px);
+    display: grid;
+  }
+  .intro {
+    color: var(--body-on-cream);
+    max-width: 42ch;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    align-items: start;
+    gap: clamp(32px, 5vw, 64px);
+    display: grid;
+  }
+  .steps {
+    gap: 2px;
+    display: grid;
+  }
+  .step {
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    transition:
+      background var(--t-hover),
+      border-color var(--t-hover);
+    background: none;
+    border: 0;
+    border-left: 2px solid transparent;
+    gap: 20px;
+    padding: 20px 22px;
+    display: flex;
+  }
+  .step[aria-pressed='true'] {
+    background: var(--cream-card);
+    border-left-color: var(--rail);
+  }
+  .step:hover {
+    background: var(--cream-card);
+  }
+  .num {
+    letter-spacing: 0.04em;
+    width: 38px;
+    height: 38px;
+    color: var(--secondary);
+    transition:
+      background var(--t-hover),
+      color var(--t-hover),
+      border-color var(--t-hover);
+    border: 1px solid #1b0f2229;
+    border-radius: 50%;
+    flex: none;
+    place-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    display: grid;
+  }
+  .step[aria-pressed='true'] .num {
+    background: var(--rail);
+    border-color: var(--rail);
+    color: #fff;
+  }
+  .text {
+    gap: 6px;
+    display: grid;
+  }
+  .action {
+    color: var(--rail);
+  }
+  .name {
+    letter-spacing: -0.02em;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  .blurb {
+    color: var(--secondary);
+    max-width: 40ch;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .playpause {
+    border-radius: var(--pill);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    height: 38px;
+    color: var(--secondary);
+    cursor: pointer;
+    transition:
+      border-color var(--t-hover),
+      color var(--t-hover);
+    background: none;
+    border: 1px solid #1b0f2229;
+    justify-self: start;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0 0 22px;
+    padding-inline: 18px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+  }
+  .playpause:hover {
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  .glyph {
+    clip-path: polygon(0 0, 3px 0, 3px 100%, 0 100%, 0 0, 6px 0, 9px 0, 9px 100%, 6px 100%);
+    background: currentColor;
+    width: 9px;
+    height: 11px;
+  }
+  .playpause[aria-pressed='false'] .glyph {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+  .stage {
+    border-radius: var(--r-xl);
+    background: var(--plum);
+    place-items: center;
+    min-height: 520px;
+    padding: clamp(24px, 4vw, 48px);
+    display: grid;
+  }
+  .scene {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 260px;
+    height: 470px;
+    display: flex;
+    position: relative;
+  }
+  .pourer {
+    --halo: 150px;
+    --bottle: 116px;
+    --pour-x: 72px;
+    --pour-y: 104px;
+    width: var(--halo);
+    height: var(--halo);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.32s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+  }
+  .pourer.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .halo {
+    width: var(--halo);
+    height: var(--halo);
+    background: var(--cream-card);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .halo img {
+    width: var(--bottle);
+    height: auto;
+    left: calc(var(--pour-x) - var(--tip-x) * var(--bottle));
+    top: calc(var(--pour-y) - var(--tip-y) * var(--bottle));
+    transform-origin: calc(var(--tip-x) * 100%) calc(var(--tip-y) * 100%);
+    transition: rotate 0.9s var(--ease-out);
+    position: absolute;
+    rotate: 150deg;
+  }
+  .pourer:not(.is-active) img {
+    rotate: 128deg;
+  }
+  .stream {
+    left: var(--pour-x);
+    top: var(--pour-y);
+    width: 12px;
+    height: 124px;
+    position: absolute;
+    overflow: hidden;
+    translate: -50%;
+  }
+  .stream-body,
+  .stream-bead {
+    background: var(--c);
+    border-radius: 9999px;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+  }
+  .stream-body {
+    width: 7px;
+    height: 100%;
+    animation: syrup-stream 1.5s var(--ease-out) infinite;
+    top: 0;
+  }
+  .stream-bead {
+    width: 11px;
+    height: 13px;
+    animation: syrup-bead 1.5s var(--ease-out) infinite;
+    top: 0;
+  }
+  .grains {
+    left: var(--pour-x);
+    top: var(--pour-y);
+    width: 120px;
+    height: 140px;
+    position: absolute;
+    translate: -50%;
+  }
+  .grains span {
+    animation: 1.6s linear infinite grain-fall;
+    animation-delay: var(--d);
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+  .cup {
+    --layer-scale: 0.92;
+    width: 176px;
+    height: 300px;
+    position: relative;
+  }
+  .cup::before {
+    content: '';
+    background: #efe6d8;
+    border-radius: 6px;
+    height: 16px;
+    position: absolute;
+    inset: 0 -10px auto;
+  }
+  .fill {
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
+    background: #2f1c3a;
+    flex-direction: column-reverse;
+    display: flex;
+    position: absolute;
+    inset: 16px 0 0;
+    overflow: hidden;
+  }
+  .layer {
+    width: 100%;
+    height: 0;
+    transition: height 0.9s var(--ease-out);
+    flex: none;
+  }
+  .base {
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #ffffff6b;
+    background: #3b2617;
+    flex: none;
+    place-items: center;
+    width: 100%;
+    height: 68px;
+    font-size: 10px;
+    font-weight: 700;
+    display: grid;
+  }
+  .layer.is-filled {
+    height: calc(var(--h) * var(--layer-scale));
+  }
+  @media (width <= 900px) {
+    .stage {
+      min-height: 460px;
+    }
+    .scene {
+      transform: scale(0.86);
+    }
+  }
+</style>

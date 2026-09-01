@@ -1,0 +1,32 @@
+name: Build check
+
+# Runs on every push, including the commits the admin panel makes via the
+# GitHub API when editing/renaming flavors and recipes. This is the "does it
+# actually build" verification the addendum requires — done as a real CI
+# check rather than inside the admin panel's own serverless function, which
+# can't reliably run a full `npm run build` (execution-time limits, and no
+# guarantee devDependencies are bundled into a deployed function). The admin
+# panel polls this workflow's check-run status via the GitHub API
+# (src/lib/github-commit.ts's getCommitCheckStatus, exposed at
+# /api/admin/build-status) instead of blocking on a local build.
+#
+# Deployment itself is handled separately by Vercel's own Git integration,
+# which deploys on push independent of this workflow — this workflow exists
+# purely to give the admin panel something to poll for pass/fail.
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build

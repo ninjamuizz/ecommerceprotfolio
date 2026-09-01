@@ -1,0 +1,149 @@
+---
+// Real copy/links ported verbatim from reference/home.html's
+// <footer class="footer" data-astro-cid-jo6i4kqk>. Confirmed the source
+// footer has only 4 grid columns (brand + Flavors/For operators/Company) —
+// NO separate "Contact" nav column; contact info (email/phone) only appears
+// in the #rep section, not repeated in the footer. An earlier draft of this
+// component had a 5th "Contact" column that doesn't exist on the live site;
+// removed to match ground truth (see NOTES.md).
+// Wordmark image localized to public/images/site/ (both 1x/2x variants).
+const flavorLinks = [
+  'Cane Sugar Syrups',
+  'Sugar Free Syrups',
+  'Tea Concentrates',
+  'Frappe Mixes',
+  'Gourmet Sauces',
+  'Shakable Toppings',
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="shell">
+    <div class="grid">
+      <div class="brand">
+        <img
+          src="/images/site/wordmark-white.webp"
+          srcset="/images/site/wordmark-white.webp 1x, /images/site/wordmark-white-2x.webp 2x"
+          alt="Stirling Flavors"
+          width="169"
+          height="34"
+          loading="lazy"
+          decoding="async"
+        />
+        <p class="brand-sub">Flavors</p>
+        <address>
+          19220 64th Ave S<br />
+          Kent, Washington 98032
+        </address>
+      </div>
+
+      <nav class="column" aria-label="Flavors">
+        <p class="title">Flavors</p>
+        <ul>
+          {flavorLinks.map((label) => (
+            <li><a href="/#flavors">{label}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <nav class="column" aria-label="For operators">
+        <p class="title">For operators</p>
+        <ul>
+          <li><a href="/recipes/">Recipes</a></li>
+          <li><a href="/spec-sheets/">Spec sheets</a></li>
+          <li><a href="mailto:info@stirlingflavors.com?subject=Sample%20request">Sample requests</a></li>
+          <li><a href="/#distributors">Find a distributor</a></li>
+        </ul>
+      </nav>
+
+      <nav class="column" aria-label="Company">
+        <p class="title">Company</p>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#about">Quality guaranteed</a></li>
+          <li><a href="/#rep">Contact us</a></li>
+          <li><a href="mailto:info@stirlingflavors.com?subject=Export%20inquiry">Export inquiries</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="base">
+      <p>&copy; {year} Stirling Flavors, LLC</p>
+      <p>Family owned, Kent, WA</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--plum);
+    color: #fff;
+    padding-block: clamp(56px, 7vw, 96px) 40px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
+    gap: clamp(32px, 5vw, 64px);
+  }
+  .brand-sub {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 10px;
+  }
+  address {
+    font-style: normal;
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--on-dark);
+  }
+  .title {
+    margin: 0 0 18px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--on-dark-muted);
+  }
+  .column ul {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+  }
+  .column a {
+    color: var(--on-dark);
+    transition: color var(--t-hover);
+  }
+  .base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: clamp(48px, 6vw, 80px);
+    padding-top: 28px;
+    border-top: 1px solid #ffffff1a;
+    font-size: 13px;
+    color: var(--on-dark-muted);
+  }
+  .base p {
+    margin: 0;
+  }
+  @media (width <= 900px) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (width <= 520px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

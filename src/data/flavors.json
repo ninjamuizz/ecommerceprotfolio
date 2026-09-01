@@ -1,0 +1,2960 @@
+[
+  {
+    "name": "Stirling American Strawberry Cane Sugar Syrup",
+    "slug": "american-strawberry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR800",
+    "description": "As special as picking fresh strawberries, Stirling Strawberry Syrup has real strawberry fruit concentrate and true, pure strawberry flavor, with a sweet fragrance. Strawberries are very high in Vitamin A and C.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR800-american-strawberry-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/american-strawberry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling Asian Rose Cane Sugar Syrup",
+    "slug": "asian-rose",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR888",
+    "description": "As delicate as the flower itself, Stirling Rose Syrup will flavor your favorite beverage without overwhelming you.  Perfect for flavoring teas, you can also use Stirling Rose Syrup to make rose water for baking or to flavor a martini.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/asian-rose.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling B-52 Cane Sugar Syrup",
+    "slug": "b-52",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR874",
+    "description": "Bombastic blend of orange liqueur, coffee liqueur and Irish cream.  Stirling B-52 Syrup flies through all three flavors in succession, for a truly unique syrup patterned after the popular cocktail.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR874-b-52-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/b-52.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "big-apple",
+      "green-apple",
+      "blue-curacao",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling Big Apple Cane Sugar Syrup",
+    "slug": "big-apple",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR872",
+    "description": "Our Stirling Big Apple syrup brings the bright and amazing taste of Washington Red apples. We the doctor recommends an apple a day, we recommend adding this to your morning tea or to an afternoon Italian Soda.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR872-big-apple-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/big-apple.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "green-apple",
+      "blue-curacao",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling Blue Curacao Cane Sugar Syrup",
+    "slug": "blue-curacao",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR895",
+    "description": "While Curacao is not naturally blue, our non-alcoholic version will leave you anything but. We recommend using this in mock-tails, or alcohol-free cocktails, or just mixing with your favorite citrus soda.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/blue-curacao.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling Blue Raspberry Cane Sugar Syrup",
+    "slug": "blue-raspberry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR908",
+    "description": "Transform your drinks into pleasant surprises with Stirling Blue Raspberry syrup. Our Bright Juicy Raspberry flavor will delight the taste buds, while the the electric blue color dazzles kids and adults alike.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/blue-raspberry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Bubble Gum Cane Sugar Syrup",
+    "slug": "bubble-gum",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR901",
+    "description": "The classic taste you remember from your childhood, our Bubble Gum syrup is perfect for your summer Italian sodas, or blend with vanilla ice cream for an amazing bubble gum milkshake!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/bubble-gum.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling California Almond Cane Sugar Syrup",
+    "slug": "california-almond",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR859",
+    "description": "Almonds have been cultivated in the Mediterranean for over 2000 years. Stirling Almond Syrup brings the rich and bold flavor of almonds to life. Try the sugar free version of this staple nut flavor!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR859-california-almond-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/california-almond.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Ceylon Cinnamon Cane Sugar Syrup",
+    "slug": "ceylon-cinnamon",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR873",
+    "description": "An amazingly versatile spice, our cinnamon syrup has many different uses. Use with many of our other amazing syrups, in your morning tea, or in many other hot or cold drinks. The big cinnamon taste will be sure to please the biggest of cinnamon fans.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR873-ceylon-cinnamon-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/ceylon-cinnamon.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Cherry Blossom Cane Sugar Syrup",
+    "slug": "cherry-blossom",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR910",
+    "description": "Enjoy the rich flavors of Stirling’s Cherry Blossom Syrup. The delicate notes of wild cherry with floral and almond undertones makes this syrup perfect for spring, use in cocktails, lemonades, sodas, lattes and more.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/cherry-blossom.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Cherry Lime Cane Sugar Syrup",
+    "slug": "cherry-lime",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR916",
+    "description": "The flavors of Stirling’s Cherry Lime Syrup Harkens back to memories of childhood and classic cherry limeades. Combining the bright tastes of sweet maraschino cherries and zesty summer limes This Syrups is perfect for sodas, cocktails, lemonades, and more.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/cherry-lime.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Cinnamon & Brown Sugar Cane Sugar Syrup",
+    "slug": "cinnamon-and-brown-sugar",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR915",
+    "description": "Stirling’s Cinnamon & Brown Sugar Syrup add uses the classic combination to add a little spice to your favorite beverage. Bring warmth to your morning Latte and add a sweet, smooth spice to ciders, Teas, and cocktails.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/cinnamon-and-brown-sugar.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Classic Creme Brulee Cane Sugar Syrup",
+    "slug": "classic-creme-brulee",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR705",
+    "description": "A caramel and vanilla custard flavor, enhanced by the notes of caramelized sugar, you can almost see the crackling crust of this favorite dessert flavoring.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/classic-creme-brulee.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Classic Vanilla Cane Sugar Syrup",
+    "slug": "classic-vanilla",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR701",
+    "description": "Stirling Classic Vanilla Syrup is lighter and sweeter than the Stirling French Vanilla Syrup.  Each sip yields a sweet, smooth and creamy flavor that lingers long after the drink is finished.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR701-classic-vanilla-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/classic-vanilla.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Coffee Royale Cane Sugar Syrup",
+    "slug": "coffee-royale",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR867",
+    "description": "Our Coffee Royale syrup has all the flavor of your favorite drink without the alcohol, so it can be enjoyed in the morning worry free.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR867-coffee-royale-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/coffee-royale.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Creme Caramel Cane Sugar Syrup",
+    "slug": "creme-caramel",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR862",
+    "description": "Rich and buttery, caramel is popular the world over. Formulated specifically for specialty coffee drinks, Stirling Caramel Syrup delivers consistent and creamy caramel taste in every sip.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR862-creme-caramel-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/creme-caramel.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Creme de Cacao Cane Sugar Syrup",
+    "slug": "creme-de-cacao",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR883",
+    "description": "The original Crème de Cacao is a chocolate flavored liqueur with a hint of vanilla.  Stirling Crème de Cacao Syrup builds on that recipe, using dark chocolate and Bourbon vanilla.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/creme-de-cacao.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Curacao Orange Cane Sugar Syrup",
+    "slug": "curacao-orange",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR805",
+    "description": "With a 4,000-year-old history, oranges are best known for their medicinal properties.  Stirling Curacao Orange Syrup captures that element, delivering a clean, aromatic and citrus flavor.  Use to flavor any drink needing a citrus note, or create the perfect orange creamscicle.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/curacao-orange.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Egg-cellent Eggnog Cane Sugar Syrup",
+    "slug": "egg-cellent-eggnog",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR911",
+    "description": "Eggnog is a staple around the holidays, and Stirling Egg-cellent Eggnog delivers on the eggy, creamy goodness you grew up with. Mix with whole milk and coffee for a festive morning latte.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/egg-cellent-eggnog.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling English Red Raspberry Cane Sugar Syrup",
+    "slug": "english-red-raspberry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR850",
+    "description": "Especially popular in the Northwest, Raspberries, like their cousin blackberries, are most distinguished by their deep, red color. Stirling Raspberry Syrup contains fresh raspberry concentrate for a pure raspberry taste.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR850-english-red-raspberry-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/english-red-raspberry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling French Vanilla Cane Sugar Syrup",
+    "slug": "french-vanilla",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR808",
+    "description": "Hands-down, the Best French Vanilla in the market. Enjoyed by everyone, Stirling French Vanilla has a rich, bold, less sweet flavor distinguishing it from its counterpart, Classic Vanilla.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR808-french-vanilla-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/french-vanilla.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Georgia Peach Cane Sugar Syrup",
+    "slug": "georgia-peach",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR863",
+    "description": "Originally discovered in China, and then brought to the Mediterranean over 2500 years ago, peaches are a delectable fruit with a rich, ripe flavor.  Stirling Peach Syrup is made with real peach concentrate, which allows you taste the delicate flavor and robust aroma.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR863-georgia-peach-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/georgia-peach.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling German Chocolate Cane Sugar Syrup",
+    "slug": "german-chocolate",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR857",
+    "description": "Rich and creamy, chocolate is ambrosia. Made with real, premium cocoa powder, Stirling German Chocolate Syrup is unlike any flavored syrup you’ll taste.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR857-german-chocolate-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/german-chocolate.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Gingerbread Cane Sugar Syrup",
+    "slug": "gingerbread",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR891",
+    "description": "You can totally catch this syrup all year round. Our gingerbread syrup goes great in your morning coffee. Top off with our amazing Cinnamon shakable topping for a perfect holiday latte.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR891-gingerbread-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/gingerbread.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Going Bananas Cane Sugar Syrup",
+    "slug": "going-bananas",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR880",
+    "description": "Originally from the Malaysian jungles of South Asia, bananas are quite possibly the world’s oldest fruit.  With hundreds of varieties worldwide, Stirling Banana Syrup tastes like a perfectly ripe banana.  Make sure to try the Banana Flambé recipe.  It's outstanding!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR880-going-bananas-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/going-bananas.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Granny's Snickerdoodle Cane Sugar Syrup",
+    "slug": "granny-s-snickerdoodle",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR879",
+    "description": "A decadent sugar cookie, with cinnamon and the slightest hint of lemon, Stirling Snickerdoodle Syrup will remind you of the treats from your grandmother’s kitchen.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/granny-s-snickerdoodle.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Great Pumpkin Spice Cane Sugar Syrup",
+    "slug": "great-pumpkin-spice",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR890",
+    "description": "The sweetness of the fall season is combined in Stirling’s Great Pumpkin Spice Syrup. Combining the best of cinnamon, nutmeg and other delectable spices, you’ll enjoy a drink that will make you want the season to last all year long!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/great-pumpkin-spice.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Green Apple Cane Sugar Syrup",
+    "slug": "green-apple",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR900",
+    "description": "Sour Apple flavored syrup is a staple for anyone making Italian sodas over the summer. The perfect mix of tart and sweet, just like eating a Granny Smith apple!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/green-apple.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "blue-curacao",
+      "bubble-gum"
+    ]
+  },
+  {
+    "name": "Stirling Green Mint Cane Sugar Syrup",
+    "slug": "green-mint",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR871-G",
+    "description": "The ultimate menthe flavor.  Stirling Green Mint Syrup combines the strong flavor and aroma of peppermint in a potent, dark green syrup.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/green-mint.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Harvey's Butter Rum Batter Cane Sugar Syrup",
+    "slug": "harvey-s-butter-rum-batter",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR913",
+    "description": "Since 1952, Harvey’s® Butter Rum Batter has been providing a specialty mix for making delicious drinks. Their batter is made batch-by-batch, using real butter and other premium ingredients that give it the quality and unforgettable flavor their fans know and love. Stirling Flavors continues the same tradition of small batch processing and exceptional taste. Stirling’s love for all tastes delicious led us to create a flavored syrup that will be the star attraction during the upcoming holidays and cold winter months.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/harvey-s-butter-rum-batter.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Hawaiian Coconut Cane Sugar Syrup",
+    "slug": "hawaiian-coconut",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR865",
+    "description": "Grown in Europe, Asia, the Americas and Australasia, coconuts are warm weather fruits. Stirling’s Coconut Syrup harvests the rich, meaty coconut essence creating a flavor that is strong, bold and dominant.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR865-hawaiian-coconut-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/hawaiian-coconut.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Highland Butterscotch Cane Sugar Syrup",
+    "slug": "highland-butterscotch",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR804",
+    "description": "The heady flavors of cream, brown sugar, rich butter, pure sugar and vanilla combine to make Stirling Butterscotch Syrup popular among the young at heart.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR804-highland-butterscotch-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/highland-butterscotch.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Himalayan Pommegranate Cane Sugar Syrup",
+    "slug": "himalayan-pommegranate",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR906",
+    "description": "Pomegranate, a fruit valued in history for its health benefits, is another of our amazing flavors. Use in Italian sodas or mix with your favorite white wine and sparkling water for a summer time spritzer.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/himalayan-pommegranate.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Homestyle Peanut Butter Cane Sugar Syrup",
+    "slug": "homestyle-peanut-butter",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR893",
+    "description": "Like the childhood classic, our Homestyle Peanut Butter brings back memories of summers afternoons and school lunches. We recommend using this syrup with strawberry ice cream for a classic PB&J milkshake.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/homestyle-peanut-butter.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Irish Cream Cane Sugar Syrup",
+    "slug": "irish-cream",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR860",
+    "description": "Created in 1952 in San Francisco, Irish Coffee because an overnight sensation. Stirling Irish Crème Syrup combines the heady balance of Irish Whiskey, coffee and whipped cream in our popular, non-alcoholic tribute to the original drink.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR860-irish-cream-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/irish-cream.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Italian Amaretto Cane Sugar Syrup",
+    "slug": "italian-amaretto",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR851",
+    "description": "Originally a liqueur from Saronno, Italia, Amaretto is typically enjoyed straight, on the rocks or as a mixer.  Stirling Amaretto Syrup has a close flavor profile to Stirling Almond Syrup, with a liqueur taste.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR851-italian-amaretto-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/italian-amaretto.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Jamaican Rum Cane Sugar Syrup",
+    "slug": "jamaican-rum",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR864",
+    "description": "A house favorite… Enjoyed all over the Caribbean, and the World, Stirling Jamaican Rum Syrup gives the flavor of non-alcoholic rum, with a hint of caramel for a smooth, rich taste. Use in Lattes, Non-Alcoholic Beverages and in Baking.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR864-jamaican-rum-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/jamaican-rum.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Lavender de Provence Cane Sugar Syrup",
+    "slug": "lavender-de-provence",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR912",
+    "description": "Lavender is embraced for its calming, soothing properties. Stirling Lavender de Provence Syrup give you the Natural aroma of lavender flower, and adds a semi-sweet herbal and floral flavor perfect for cocktails, lemonades, sodas, and more",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/lavender-de-provence.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Lemon Meringue Cane Sugar Syrup",
+    "slug": "lemon-meringue",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR875",
+    "description": "The sharp, tangy, slightly sweet bite of lemon meringue pie is brought to life in Stirling Lemon Meringue Syrup.  Perfect for Italian Sodas.  For less citrus, add some cream.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/lemon-meringue.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Macadamia Nut Cane Sugar Syrup",
+    "slug": "macadamia-nut",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR868",
+    "description": "From the Land Down Under, this native Australian white nut was brought to Hawaii in 1882. Today, Stirling’s Macadamia Nut Syrup brings you the delicate and robust flavor and unique aroma of these fascinating nuts.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR868-macadamia-nut-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/macadamia-nut.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Maraschino Cherry Cane Sugar Syrup",
+    "slug": "maraschino-cherry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR884",
+    "description": "Maraschino cherries are renowned for their ruby red color and tangy taste.  Stirling Maraschino Cherry Syrup delicately blends true cherry flavors for a fruit flavor profile, not candy tasting.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR884-maraschino-cherry-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/maraschino-cherry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Mexican Kahlua Cane Sugar Syrup",
+    "slug": "mexican-kahlua",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR903",
+    "description": "Stirling Mexican Kahlua Syrup contains all the elements of the classic liquor without the alcohol! Enjoy with your morning cup of coffee, or with some steamed whole milk.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/mexican-kahlua.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Mojito Mojo Cane Sugar Syrup",
+    "slug": "mojito-mojo",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR902",
+    "description": "Our Mojito Mint syrup has the all the flavor of your favorite cocktail, without any of the alcohol. We recommend using this syrup with sparkling water for an afternoon treat.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/mojito-mojo.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Napoleon Brandy Cane Sugar Syrup",
+    "slug": "napoleon-brandy",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR876",
+    "description": "Stirling Mexican Kahlua Syrup contains all the elements of the classic liquor without the alcohol! Enjoy with your morning cup of coffee, or with some steamed whole milk.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR876-napoleon-brandy-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/napoleon-brandy.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling New England Black Cherry Cane Sugar Syrup",
+    "slug": "new-england-black-cherry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR801",
+    "description": "Dark and sweet, reminiscent of Bing Cherries, this is a perfect alternative to Maraschino cherry for Italian sodas, milkshakes, or baking.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR801-new-england-black-cherry-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/new-england-black-cherry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling New Zealand Kiwi Cane Sugar Syrup",
+    "slug": "new-zealand-kiwi",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR869",
+    "description": "Native to Northern China, Korea and Siberia, Kiwi is uniquely identified by its rich green color and black seeds.  Stirling Kiwi Syrup delivers the gentle flavor and sharp aroma of a kiwifruit.  Contains Kiwi juice for true flavor.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR869-new-zealand-kiwi-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/new-zealand-kiwi.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Old Fashioned Sarsaparilla Cane Sugar Syrup",
+    "slug": "old-fashioned-sarsaparilla",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR878",
+    "description": "Remember the old soda fountain?  Well, now you can take a trip down memory lane.  Stirling Sarsaparilla Syrup is so authentic, it makes a perfect Root Beer Float.  Add a splash of Stirling Cherry Syrup for a reminder of the Wild, Wild West.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/old-fashioned-sarsaparilla.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Oregon Mountain Blackberry Cane Sugar Syrup",
+    "slug": "oregon-mountain-blackberry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR810",
+    "description": "A native berry of the Pacific Northwest, Stirling Blackberry Syrup combines the flavor of true blackberry concentrate and natural blackberry flavor to create the most satisfying blackberry syrup in the market.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/oregon-mountain-blackberry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Peppermint Schnapps Cane Sugar Syrup",
+    "slug": "peppermint-schnapps",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR871",
+    "description": "A deliciously sweet, minty flavor that differs from its other mint counterparts. Stirling Peppermint Schnapps will make you think you are imbibing a digestif served in the Alps.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR871-peppermint-schnapps-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/peppermint-schnapps.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Persian Lime Cane Sugar Syrup",
+    "slug": "persian-lime",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR870",
+    "description": "A member of the citrus family of fruits, Stirling Lime Syrup delivers the perfect Italian Soda. With a mix a tart and sweet, we're sure it will fly right off your shelves!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/persian-lime.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Polynesian Pineapple Cane Sugar Syrup",
+    "slug": "polynesian-pineapple",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR905",
+    "description": "Our Pineapple syrup delivers the richness of the real thing, without the mess usually associated with cutting a Pineapple. Use in Italian sodas or with your favorite sparkling white wine for a tropical treat.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR905-polynesian-pineapple-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/polynesian-pineapple.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Rhythm & Blueberry Cane Sugar Syrup",
+    "slug": "rhythm-and-blueberry",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR803",
+    "description": "Listen to the rhythm of the falling blueberries all year round!  Blueberries are considered beneficial antioxidants, and Stirling Blueberry Syrup uses real blueberries in every bottle.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR803-rhythm-and-blueberry-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/rhythm-and-blueberry.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Rocky Mountain Hazelnut Cane Sugar Syrup",
+    "slug": "rocky-mountain-hazelnut",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR866",
+    "description": "Hazelnuts were revered as potent fertility food. Our Stirling Hazelnut Syrup is a strong, potent tribute to the great nut. We recommend using this in your morning latte.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR866-rocky-mountain-hazelnut-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/rocky-mountain-hazelnut.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Royal English Toffee Cane Sugar Syrup",
+    "slug": "royal-english-toffee",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR877",
+    "description": "“God Save the Queen.” This immensely popular flavor originated in England in the mid-19th century. Stirling English Toffee Syrup tastes like it’s made with treacle, butter and a hint of Vanilla.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/royal-english-toffee.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Salted Caramel Cane Sugar Syrup",
+    "slug": "salted-caramel",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR909",
+    "description": "Stirling Salted Caramel Syrup combines the creamy indulgence of caramel with a contrasting salty bite, making it complex, versatile and addictive.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/salted-caramel.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Sweet African Watermelon Cane Sugar Syrup",
+    "slug": "sweet-african-watermelon",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR907",
+    "description": "Everyone's favorite summer melon in syrup form! Our Watermelon syrup is just the right amount of sweet. Use for Italian sodas, or mix with vanilla ice cream for an amazing milk shake!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/sweet-african-watermelon.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Sweetness Cane Sugar Syrup",
+    "slug": "sweetness",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR892",
+    "description": "Providing over 60 exceptionally high-quality gourmet flavors, Stirling syrups have won every award for quality and taste. rich and vibrant flavor is the result of using pure fruit juice concentrates and the finest flavor ingredients available.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR892-sweetness-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/sweetness.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Swiss Chocolate Almond Cane Sugar Syrup",
+    "slug": "swiss-chocolate-almond",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR853",
+    "description": "A savory mix of two popular flavors.  The rich chocolate flavor is evenly rounded out by the almond notes, resulting in a blend perfect for your favorite hot or cold beverage.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR853-swiss-chocolate-almond-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/swiss-chocolate-almond.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Toasted Marshmallow Cane Sugar Syrup",
+    "slug": "toasted-marshmallow",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR886",
+    "description": "A campfire favorite, Stirling Toasted Marshmallow Syrup continues the tradition of puffed sugar on a stick.  Perfect for your next Some Mores Latte!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR886-toasted-marshmallow-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/toasted-marshmallow.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Tropical Mango Cane Sugar Syrup",
+    "slug": "tropical-mango",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR894",
+    "description": "Mangoes are the epitome of tropical fruit. Sweet and delicious, our mango syrup is perfect for an evening cocktail or your favorite tropical punch.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR894-tropical-mango-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/tropical-mango.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Tuscan Tiramisu Cane Sugar Syrup",
+    "slug": "tuscan-tiramisu",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR896",
+    "description": "Just like your favorite Italian dessert, Stirling Tuscan Tiramisu Syrup will give your coffee that classic taste you know and love! This makes a great addition to your morning coffee or just steamed with whole milk for an evening treat.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR896-tuscan-tiramisu-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/tuscan-tiramisu.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Vienna Chocolate Mint Cane Sugar Syrup",
+    "slug": "vienna-chocolate-mint",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR802",
+    "description": "Reminiscent of your favorite after dinner treat, Stirling Vienna Chocolate Mint is the perfect balance of sweet milk chocolate and cooling mint flavors.  Imagine yourself in Vienna eating chocolate mint cake and listening to Mozart!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR802-vienna-chocolate-mint-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/vienna-chocolate-mint.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling White Chocolate Cane Sugar Syrup",
+    "slug": "white-chocolate",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR887",
+    "description": "Made from cocoa butter, milk, sugar and vanilla, White Chocolate is not really chocolate. However, Stirling White Chocolate Syrup incorporates the rich, creamy, vanilla note of a true white chocolate made from cocoa plants. It’s creamy and delicious!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR887-white-chocolate-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/white-chocolate.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling White Peach Cane Sugar Syrup",
+    "slug": "white-peach",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR914",
+    "description": "White peaches have a softer peach flavor then their yellow counterparts, but are much more floral tasting The Delicate, Sweet, non-acidic, flavor of Stirling’s White Peach Syrup is great for Cocktails, teas, smoothies, lemonades, and more.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/cane-sugar-syrups/white-peach.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Yellow Passionfruit Cane Sugar Syrup",
+    "slug": "yellow-passionfruit",
+    "category": "Cane Sugar Syrups",
+    "categorySlug": "cane-sugar-syrups",
+    "sku": "STIR904",
+    "description": "Did you know that Passion fruit is actually a berry? We didn't either until we started making our Passion Fruit syrup. This goes great in your coffee, but will also make an amazing Italian soda or milk shake.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "28 lb",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR904-yellow-passionfruit-spec-sheet.pdf",
+    "image": "/images/flavors/cane-sugar-syrups/yellow-passionfruit.webp",
+    "suggestedUses": [
+      "Latte",
+      "Italian Soda",
+      "Blended Frappe"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "asian-rose",
+      "b-52",
+      "big-apple",
+      "green-apple",
+      "blue-curacao"
+    ]
+  },
+  {
+    "name": "Stirling Cherry Blossom Frappe Mixe",
+    "slug": "cherry-blossom",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1510",
+    "description": "Like snow giving way to blooms Enjoy the color Transformation from white to Pink with Stirling’s Cherry Blossom Frappe Mix delivering Delicate floral notes of Cherry blossom with hints of vanilla.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/cherry-blossom.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "english-toffee",
+      "mocha",
+      "red-velvet",
+      "vanilla-neutral-base"
+    ]
+  },
+  {
+    "name": "Stirling Chocolate Cherry Blossom Frappe Mixe",
+    "slug": "chocolate-cherry-blossom",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1511",
+    "description": "Stirling’s Chocolate Cherry Blossom Frappe mix is espresso free & combines the delicate floral flavor of Cherry Blossom, with delicious rich cocoa in perfect harmony for the perfect spring dessert.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/chocolate-cherry-blossom.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "english-toffee",
+      "mocha",
+      "red-velvet",
+      "vanilla-neutral-base"
+    ]
+  },
+  {
+    "name": "Stirling Chocolate (without Espresso) Frappe Mixe",
+    "slug": "chocolate-without-espresso",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1583",
+    "description": "NON-ESPRESSO – Stirling’s Chocolate Frappe mix is espresso free and made from delicious rich cocoa. This frappe is amazing on its own or can be used with Stirling Syrups and sauces to create your unique twist on classic frappes.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/chocolate-without-espresso.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "cookies-and-cream",
+      "english-toffee",
+      "mocha",
+      "red-velvet",
+      "vanilla-neutral-base",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling Cookies and Cream Frappe Mixe",
+    "slug": "cookies-and-cream",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1509",
+    "description": "Stirling Cookies and Cream Frappe mix is rich and velvety, with a classic taste that will put a smile on your face. While Great alone, Stirling Cookies and Cream Frappe mix can also be mixed with fruit, candy, cereal pieces, or one of our Gourmet Syrups and sauces. Let your creativity run wild.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/cookies-and-cream.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "english-toffee",
+      "mocha",
+      "red-velvet",
+      "vanilla-neutral-base",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling English Toffee Frappe Mixe",
+    "slug": "english-toffee",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1577",
+    "description": "Stirling’s English Toffee Frappé Mix is a decadent, rich mix with notes of chocolate, espresso, caramel, vanilla and brown sugar.  With little toffee bits, it blends up thick and sweet.  Add your favorite liqueur flavor for an added twist.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/english-toffee.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "mocha",
+      "red-velvet",
+      "vanilla-neutral-base",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling Mocha Frappe Mixe",
+    "slug": "mocha",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1557",
+    "description": "Stirling’s Mocha Frappe mix is and artfully blended mix of rich cocoa and espresso and one of our best-selling products. This frappe is amazing on its own or can be used with Stirling Syrups and sauces to create your unique twist on mochas frappes.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/mocha.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "english-toffee",
+      "red-velvet",
+      "vanilla-neutral-base",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling Red Velvet Frappe Mixe",
+    "slug": "red-velvet",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1582",
+    "description": "Stirling Red Velvet Frappe mix evokes the taste of the traditional dessert. Make a smooth creamy Frappe with flavors of rich chocolate, creamy vanilla and just a hint of cream cheese. You can also pair the frappé with a Stirling Syrup and/or Sauces and create a uniquely delicious frappés.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/red-velvet.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "english-toffee",
+      "mocha",
+      "vanilla-neutral-base",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling Vanilla Neutral Base Frappe Mixe",
+    "slug": "vanilla-neutral-base",
+    "category": "Frappe Mixes",
+    "categorySlug": "frappe-mixes",
+    "sku": "STIR1501",
+    "description": "Stirling Vanilla Frappé Mix is a creamy vanilla base that can be made with or without any flavorings.  Pair the frappé with any Stirling Gourmet Syrup or Sauce and create perfect frappés every time.",
+    "pack": "6 / 3.5 lb",
+    "container": "8 x 10 x 14.5 in",
+    "caseWeight": "21 lb",
+    "pallet": "50 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/frappe-mixes/vanilla-neutral-base.webp",
+    "suggestedUses": [
+      "Classic Frappe",
+      "Syrup-Layered Frappe",
+      "Sauce Swirl"
+    ],
+    "relatedFlavors": [
+      "chocolate-without-espresso",
+      "cookies-and-cream",
+      "english-toffee",
+      "mocha",
+      "red-velvet",
+      "cherry-blossom"
+    ]
+  },
+  {
+    "name": "Stirling Caramel Sauce Gourmet Sauce",
+    "slug": "caramel-sauce",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3562",
+    "description": "Stirling’s Caramel Sauce adds a rich and intense flavor when used as an ingredient or topping. Perfect for coffee drinks, milkshakes, dessert toppings, or rimming cocktail glasses.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/caramel-sauce.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "chocolate-sauce",
+      "dark-chocolate-sauce",
+      "white-chocolate-sauce",
+      "salted-caramel",
+      "pumpkin-spice-sauce"
+    ]
+  },
+  {
+    "name": "Stirling Chocolate Sauce Gourmet Sauce",
+    "slug": "chocolate-sauce",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3583",
+    "description": "Stirling's Gourmet Chocolate Sauce is creamy and rich.  It has a pourable consistency and pumps easily.  It blends perfectly with light and medium roast coffees and makes exceptional mochas, iced coffees and frappés.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/chocolate-sauce.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "dark-chocolate-sauce",
+      "white-chocolate-sauce",
+      "caramel-sauce",
+      "salted-caramel",
+      "pumpkin-spice-sauce"
+    ]
+  },
+  {
+    "name": "Stirling Dark Chocolate Sauce Gourmet Sauce",
+    "slug": "dark-chocolate-sauce",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3500",
+    "description": "Stirling's Dark Chocolate Sauce is decadent and bold.  It is thick and rich, yet pump-able.  It has a high percentage of cocoa and chocolate making it as pure to melted chocolate as you can get.  Make sure to stir well when using in hot drinks.  Pour a small amount of hot, steamed milk and melt the chocolate sauce before adding the rest of ingredients to your drink.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/dark-chocolate-sauce.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "chocolate-sauce",
+      "white-chocolate-sauce",
+      "caramel-sauce",
+      "salted-caramel",
+      "pumpkin-spice-sauce"
+    ]
+  },
+  {
+    "name": "Stirling Pumpkin Spice Sauce Gourmet Sauce",
+    "slug": "pumpkin-spice-sauce",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3590",
+    "description": "You asked, we listened!  Stirling's Great Pumpkin Spice Sauce is out of this world delicious.  Use it in lattes, cappuccinos and frappés.  You won't be disappointed with the creamy texture, bold flavors and smooth finish.  It really is the best pumpkin spice sauce available.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/pumpkin-spice-sauce.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "chocolate-sauce",
+      "dark-chocolate-sauce",
+      "white-chocolate-sauce",
+      "caramel-sauce",
+      "salted-caramel"
+    ]
+  },
+  {
+    "name": "Stirling Salted Caramel Gourmet Sauce",
+    "slug": "salted-caramel",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3509",
+    "description": "Made from the highest quality ingredients, Stirling Salted Caramel Sauce has a delectably sweet, richly intense flavor with a pop of salty. Perfect for coffee drinks, milkshakes, dessert toppings, or rimming cocktail glasses.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/salted-caramel.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "chocolate-sauce",
+      "dark-chocolate-sauce",
+      "white-chocolate-sauce",
+      "caramel-sauce",
+      "pumpkin-spice-sauce"
+    ]
+  },
+  {
+    "name": "Stirling White Chocolate Sauce Gourmet Sauce",
+    "slug": "white-chocolate-sauce",
+    "category": "Gourmet Sauces",
+    "categorySlug": "gourmet-sauces",
+    "sku": "STIR3587",
+    "description": "Stirling White Chocolate Sauce is a creamy, chocolatey sauce that's great for a white mocha, frappés and ice cream!  It is based on Stirling's White Chocolate Syrup so it imparts a great flavor with added body, cream and texture.",
+    "pack": "6 / 64 oz",
+    "container": "15.25 x 10.5 x 9 in",
+    "caseWeight": "35 lb",
+    "pallet": "52 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/gourmet-sauces/white-chocolate-sauce.webp",
+    "suggestedUses": [
+      "Mocha",
+      "Drizzle Finish",
+      "Blended Shake"
+    ],
+    "relatedFlavors": [
+      "chocolate-sauce",
+      "dark-chocolate-sauce",
+      "caramel-sauce",
+      "salted-caramel",
+      "pumpkin-spice-sauce"
+    ]
+  },
+  {
+    "name": "Stirling Chocolate Shakable Topping",
+    "slug": "chocolate",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2583",
+    "description": "Made with a rich, full-bodied cocoa, Stirling Chocolate Shakable Topping is the perfect way to add a deep chocolate flavor to fresh fruits, baked goods, and hot beverages.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/shakable-toppings/chocolate.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling Cinnamon Shakable Topping",
+    "slug": "cinnamon",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2573",
+    "description": "Perfect rimming a glass, garnishing a drink, or topping a dessert; Stirling Cinnamon Shakable topping turns ordinary beverages into gourmet treats.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": "STIR2573-cinnamon-spec-sheet.pdf",
+    "image": "/images/flavors/shakable-toppings/cinnamon.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling Mini Marshmallow Shakable Topping",
+    "slug": "mini-marshmallow",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2586",
+    "description": "Stirling Mini-Marshmallow bits turn ordinary beverages into gourmet treats whether topping off a steaming mug of hot chocolate, or adding them to one of your favorite cereals.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/shakable-toppings/mini-marshmallow.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling Peppermint Bits Shakable Topping",
+    "slug": "peppermint-bits",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2588",
+    "description": "Stirling’s Peppermint Bits Shakable Topping is the perfect seasonal topping, adding the classic candy cane flavor & colors when sprinkled on your Lattes, Mochas, Cocoas, Brownies & Cookies. Tis the Season for peppermint!",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/shakable-toppings/peppermint-bits.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling Raspberry Shakable Topping",
+    "slug": "raspberry",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2550",
+    "description": "Whether rimming a glass, garnishing a drink, or topping a dessert Stirling Raspberry Shakable topping adds a subtly fruity aromas and flavors to your favorite beverages or gourmet treat.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": null,
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling Strawberry Shakable Topping",
+    "slug": "strawberry",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2500",
+    "description": "Stirling Shakable Toppings are flavor enhancements designed for retail and back bar use - great for rimming cocktail glasses or coffee mugs. Providing a sensory delight, our toppings are a delicate blend of spices and sugar designed to enhance the beverage experience. These cost effective, aromatic toppings will brighten up each drink.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": null,
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling Toasted Coconut Shakable Topping",
+    "slug": "toasted-coconut",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2565",
+    "description": "Whether rimming a glass, garnishing a drink, or topping a dessert Stirling Toasted Coconut Topping turns ordinary beverages into gourmet treats. Our Toasted Coconut Topping adds a light crunch and sweetness to baked treats and is perfect for ice cream, sliced fruit, drinks and even salads.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": "STIR2565-toasted-coconut-spec-sheet.pdf",
+    "image": "/images/flavors/shakable-toppings/toasted-coconut.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "vanilla",
+      "white-chocolate",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling Toffee Bit Inclusions Shakable Topping",
+    "slug": "toffee-bit-inclusions",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2577",
+    "description": "Stirling Shakable Toppings are flavor enhancements designed for retail and back bar use - great for rimming cocktail glasses or coffee mugs. Providing a sensory delight, our toppings are a delicate blend of spices and sugar designed to enhance the beverage experience. These cost effective, aromatic toppings will brighten up each drink.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": null,
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "white-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling Vanilla Shakable Topping",
+    "slug": "vanilla",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2501",
+    "description": "Stirling’s Vanilla Shakable Topping is the perfect coffee condiment adding a subtle richness when sprinkled on baked goods, fresh fruit, cappuccinos, and more.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/shakable-toppings/vanilla.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "white-chocolate",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling White Chocolate Shakable Topping",
+    "slug": "white-chocolate",
+    "category": "Shakable Toppings",
+    "categorySlug": "shakable-toppings",
+    "sku": "STIR2587",
+    "description": "Whether rimming a glass, garnishing a drink, or topping a dessert, Stirling White Chocolate Shakable topping turns ordinary beverage into gourmet treats.",
+    "pack": "12 / 6.5 oz",
+    "container": "7 x 9 x 6 in",
+    "caseWeight": "3–8 lb",
+    "pallet": "100 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/shakable-toppings/white-chocolate.webp",
+    "suggestedUses": [
+      "Cup Finish",
+      "Rimmed Glass",
+      "Frappe Topper"
+    ],
+    "relatedFlavors": [
+      "chocolate",
+      "cinnamon",
+      "mini-marshmallow",
+      "toasted-coconut",
+      "vanilla",
+      "peppermint-bits"
+    ]
+  },
+  {
+    "name": "Stirling American Strawberry Sugar Free Syrup",
+    "slug": "american-strawberry",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR013",
+    "description": "As special as picking fresh strawberries, Sugar-Free Stirling Strawberry Syrup has real strawberry fruit concentrate and true, pure strawberry flavor, with a sweet fragrance. Strawberries are very high in Vitamin A and C.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/american-strawberry.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling California Almond Sugar Free Syrup",
+    "slug": "california-almond",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR006",
+    "description": "Almonds have been cultivated in the Mediterranean for over 2000 years. Stirling Almond Syrup brings the rich and bold flavor of almonds to life. Try the sugar free version of this staple nut flavor!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/california-almond.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling Creme Caramel Sugar Free Syrup",
+    "slug": "creme-caramel",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR005",
+    "description": "Rich and buttery, caramel is popular the world over. Formulated specifically for specialty coffee drinks, Stirling Caramel Syrup delivers consistent and creamy caramel taste in every sip.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR005-creme-caramel-spec-sheet.pdf",
+    "image": "/images/flavors/sugar-free-syrups/creme-caramel.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling English Red Raspberry Sugar Free Syrup",
+    "slug": "english-red-raspberry",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR012",
+    "description": "Especially popular in the Northwest, Raspberries, like their cousin blackberries, are most distinguished by their deep, red color. Stirling Sugar-Free Raspberry Syrup contains fresh raspberry concentrate for a pure raspberry taste.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/english-red-raspberry.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-toffee",
+      "french-vanilla",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling English Toffee Sugar Free Syrup",
+    "slug": "english-toffee",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR011",
+    "description": "“God Save the Queen.” This immensely popular flavor originated in England in the mid-19th century. Stirling Sugar-Free English Toffee Syrup tastes like it’s made with treacle, butter and a hint of Vanilla.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/english-toffee.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "french-vanilla",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling French Vanilla Sugar Free Syrup",
+    "slug": "french-vanilla",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR001",
+    "description": "Enjoyed by everyone, Stirling Sugar-Free French Vanilla has a rich, bold flavor. Hands-down, the Best French Vanilla in the market NOW SUGAR-FREE!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR001-french-vanilla-spec-sheet.pdf",
+    "image": "/images/flavors/sugar-free-syrups/french-vanilla.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "german-chocolate"
+    ]
+  },
+  {
+    "name": "Stirling German Chocolate Sugar Free Syrup",
+    "slug": "german-chocolate",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR003",
+    "description": "Rich and creamy, chocolate is ambrosia. Made with real, premium cocoa powder, Stirling German Chocolate Syrup is unlike any flavored syrup you’ll taste.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR003-german-chocolate-spec-sheet.pdf",
+    "image": "/images/flavors/sugar-free-syrups/german-chocolate.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Great Pumpkin Spice Sugar Free Syrup",
+    "slug": "great-pumpkin-spice",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR016",
+    "description": "The sweetness of the fall season is combined in Stirling’s Sugar-Free Great Pumpkin Spice Syrup. Combining the best of cinnamon, nutmeg and other delectable spices, you’ll enjoy a drink that will make you want the season to last all year long!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/great-pumpkin-spice.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Hawaiian Coconut Sugar Free Syrup",
+    "slug": "hawaiian-coconut",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR007",
+    "description": "Grown in Europe, Asia, the Americas and Australasia, coconuts are warm weather fruits. Stirling’s Coconut Syrup harvests the rich, meaty coconut essence creating a flavor that is strong, bold and dominant.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/hawaiian-coconut.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Irish Cream Sugar Free Syrup",
+    "slug": "irish-cream",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR004",
+    "description": "Created in 1952 in San Francisco, Irish Coffee because an overnight sensation. Stirling Irish Crème Syrup combines the heady balance of Irish Whiskey, coffee and whipped cream in our popular, non-alcoholic tribute to the original drink.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/irish-cream.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Jamaican Rum Sugar Free Syrup",
+    "slug": "jamaican-rum",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR010",
+    "description": "A house favorite… Enjoyed all over the Caribbean, and the World, Stirling Sugar-Free Jamaican Rum Syrup gives the flavor of non-alcoholic rum, with a hint of caramel for a smooth, rich taste. Use in Lattes, Non-Alcoholic Beverages and in Baking.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/jamaican-rum.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Peppermint Schnapps Sugar Free Syrup",
+    "slug": "peppermint-schnapps",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR009",
+    "description": "A deliciously sweet, minty flavor that differs from its other mint counterparts. Stirling Peppermint Schnapps will make you think you are imbibing a digestif served in the Alps.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/peppermint-schnapps.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Rocky Mountain Hazelnut Sugar Free Syrup",
+    "slug": "rocky-mountain-hazelnut",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR002",
+    "description": "Hazelnuts were revered as potent fertility food. Our Stirling Hazelnut Syrup is a strong, potent tribute to the great nut. We recommend using this in your morning latte.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR002-rocky-mountain-hazelnut-spec-sheet.pdf",
+    "image": "/images/flavors/sugar-free-syrups/rocky-mountain-hazelnut.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Sweetness Sugar Free Syrup",
+    "slug": "sweetness",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR015",
+    "description": "Stirling's Sugar-Free Flavors are rich and concentrated, making them one of the most concentrated flavoring syrups on the market, saving you money on every pour. The secret to Stirling Flavors’ rich taste and aroma is the unique blending of sugar-free sweeteners with pure fruit juice concentrates and the finest flavor ingredients. This maintains Stirling’s truer, more intense and balanced flavor quality when used in both hot & iced beverages.",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/sugar-free-syrups/sweetness.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling White Chocolate Sugar Free Syrup",
+    "slug": "white-chocolate",
+    "category": "Sugar Free Syrups",
+    "categorySlug": "sugar-free-syrups",
+    "sku": "STIR014",
+    "description": "Made from cocoa butter, milk, sugar and vanilla, White Chocolate is not really chocolate. However, Stirling Sugar-Free White Chocolate Syrup incorporates the rich, creamy, vanilla note of a true white chocolate made from cocoa plants. It’s creamy and delicious!",
+    "pack": "12 / 25.4 fl oz",
+    "container": "750 mL plastic",
+    "caseWeight": "15",
+    "pallet": "75 cases",
+    "specSheetPdf": "STIR014-white-chocolate-spec-sheet.pdf",
+    "image": "/images/flavors/sugar-free-syrups/white-chocolate.webp",
+    "suggestedUses": [
+      "Sugar Free Latte",
+      "Iced Americano",
+      "Sparkling Refresher"
+    ],
+    "relatedFlavors": [
+      "american-strawberry",
+      "california-almond",
+      "creme-caramel",
+      "english-red-raspberry",
+      "english-toffee",
+      "french-vanilla"
+    ]
+  },
+  {
+    "name": "Stirling Blackberry Tea Concentrate",
+    "slug": "blackberry",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4009",
+    "description": "Stirling Blackberry Tea Concentrate is a unique creation.  Made with plump, sweet blackberries from the Pacific Northwest, and combined with premium black tea, this tea is one of our personal favorites.  Try it with ice cream to make a wonderful Blackberry Tea Shake.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/blackberry.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "lemon",
+      "mango",
+      "peach",
+      "raspberry",
+      "strawberry"
+    ]
+  },
+  {
+    "name": "Stirling Lemon Tea Concentrate",
+    "slug": "lemon",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4039",
+    "description": "Stirling Lemon Tea Concentrate delicately blends premium black tea and fruit juices for a classic favorite. Served hot, blended, or over ice, each drink gives you the perfect balance of sweet and sour.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/lemon.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "blackberry",
+      "mango",
+      "peach",
+      "raspberry",
+      "strawberry"
+    ]
+  },
+  {
+    "name": "Stirling Mango Tea Concentrate",
+    "slug": "mango",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4045",
+    "description": "Stirling Mango Tea Concentrate is a fruity blend of ripe, red mango fruit concentrate and premium black tea.   Not too sweet, nor too fruity, this flavor has become a favorite around the world. Try it iced or hot or as a mango Tea Smoothie.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/mango.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "blackberry",
+      "lemon",
+      "peach",
+      "raspberry",
+      "strawberry"
+    ]
+  },
+  {
+    "name": "Stirling Peach Tea Concentrate",
+    "slug": "peach",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4053",
+    "description": "Stirling Peach Tea Concentrate is our #1 selling flavor because of its rich blend of yellow peaches and premium black tea. The tea is combined with fresh peach concentrate to produce a fruit tea that has a wonderful fresh fruit taste reminiscent of the days of Rhett Butler and Scarlet O’Hare.  Serve it iced or hot with a sprig of mint.  It’s a perfect tea to use for the south’s favorite, “Sweet Tea”.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/peach.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "blackberry",
+      "lemon",
+      "mango",
+      "raspberry",
+      "strawberry"
+    ]
+  },
+  {
+    "name": "Stirling Raspberry Tea Concentrate",
+    "slug": "raspberry",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4057",
+    "description": "Stirling Raspberry Tea Concentrate is a delightful combination of ripe, rich raspberries balanced with premium black tea for a fruity tea, with black tea notes. Try Stirling's Raspberry Tea with sparkling water to make a terrific sparkling iced tea. On those extra hot days, treat everyone to Raspberry Smoothies.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/raspberry.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "blackberry",
+      "lemon",
+      "mango",
+      "peach",
+      "strawberry"
+    ]
+  },
+  {
+    "name": "Stirling Strawberry Tea Concentrate",
+    "slug": "strawberry",
+    "category": "Tea Concentrates",
+    "categorySlug": "tea-concentrates",
+    "sku": "STIR4059",
+    "description": "Stirling Strawberry Tea Concentrate takes freshly picked strawberries and combines them with premium black tea for a refreshing tea drink.  Try Stirling's Strawberry Tea iced or sparkling and for a creamy note, add a little half and half, or whipped cream.",
+    "pack": "12 / 750 mL",
+    "container": "Glass",
+    "caseWeight": "40 lb",
+    "pallet": "56 cases",
+    "specSheetPdf": null,
+    "image": "/images/flavors/tea-concentrates/strawberry.webp",
+    "suggestedUses": [
+      "Iced Tea",
+      "Hot Brew",
+      "Sparkling Tea"
+    ],
+    "relatedFlavors": [
+      "blackberry",
+      "lemon",
+      "mango",
+      "peach",
+      "raspberry"
+    ]
+  }
+]

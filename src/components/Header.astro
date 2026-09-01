@@ -1,0 +1,206 @@
+---
+// Real nav structure + copy ported from reference/home.html <header>.
+// Visual/animation polish (backdrop blur, drawer transitions, hamburger
+// morph, sticky-scroll behavior) is deferred to Phase 4 — this component
+// only needs correct semantic structure and working open/close behavior.
+const navLinks = [
+  { href: '/#about', label: 'About' },
+  { href: '/#flavors', label: 'Flavors' },
+  { href: '/#categories', label: 'Categories' },
+  { href: '/#recipes', label: 'Recipes' },
+  { href: '/#distributors', label: 'Distributors' },
+];
+
+const loginHref = 'https://books.zohosecure.com/portal/stirlingflavors/signin';
+---
+
+<header class="bar">
+  <div class="shell inner">
+    <a class="brand" href="/" aria-label="Stirling Flavors — home">
+      <img
+        src="/images/site/wordmark-white.webp"
+        srcset="/images/site/wordmark-white.webp 1x, /images/site/wordmark-white-2x.webp 2x"
+        alt="Stirling Flavors"
+        width="129"
+        height="26"
+        loading="eager"
+        decoding="async"
+      />
+      <span class="brand-sub">Flavors</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      <a class="login" href={loginHref} target="_blank" rel="noopener noreferrer"
+        >Customer Login</a
+      >
+    </nav>
+
+    <button
+      class="toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      aria-label="Open menu"
+      data-nav-toggle
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="drawer" id="mobile-nav" hidden>
+    <nav aria-label="Primary, mobile">
+      {navLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+      <a class="login" href={loginHref} target="_blank" rel="noopener noreferrer"
+        >Customer Login</a
+      >
+    </nav>
+  </div>
+</header>
+<div class="spacer" aria-hidden="true"></div>
+
+<style>
+  .bar {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 60;
+    background: #1b0f22d1;
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    color: #fff;
+  }
+  .spacer {
+    height: var(--header-h);
+    background: var(--plum);
+  }
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: var(--header-h);
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand:hover {
+    color: inherit;
+  }
+  .brand-sub {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .nav a {
+    transition: color var(--t-hover);
+  }
+  .login {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding-inline: 18px;
+    border-radius: var(--pill);
+    background: var(--gold);
+    color: var(--plum);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .login:hover {
+    color: var(--plum);
+    background: #d4b338;
+  }
+  .toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0 10px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .toggle span {
+    display: block;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  .drawer {
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    background: #1b0f22f5;
+    border-top: 1px solid #ffffff1a;
+  }
+  .drawer nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px var(--gutter) 26px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .drawer nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid #ffffff12;
+  }
+  .drawer .login {
+    justify-content: center;
+    height: 46px;
+    margin-top: 18px;
+    border-bottom: 0;
+  }
+  @media (width <= 940px) {
+    .nav {
+      display: none;
+    }
+    .toggle {
+      display: flex;
+    }
+  }
+  @media (width >= 941px) {
+    .drawer {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  // Ported verbatim from reference/module-script-1.js: toggle button opens/
+  // closes the drawer, any link inside the drawer closes it on click, and
+  // Escape closes it globally (not just while the drawer/toggle has focus).
+  const toggle = document.querySelector<HTMLButtonElement>('.toggle');
+  const drawer = document.querySelector<HTMLElement>('#mobile-nav');
+
+  const setExpanded = (expanded: boolean) => {
+    toggle?.setAttribute('aria-expanded', String(expanded));
+    toggle?.setAttribute('aria-label', expanded ? 'Close menu' : 'Open menu');
+    if (drawer) drawer.hidden = !expanded;
+  };
+
+  toggle?.addEventListener('click', () => {
+    setExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+  });
+  drawer?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setExpanded(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setExpanded(false);
+  });
+</script>

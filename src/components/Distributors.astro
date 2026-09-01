@@ -1,0 +1,139 @@
+---
+// "#distributors" — ported verbatim from reference/home.html's
+// <section class="distribution" id="distributors" data-astro-cid-lsleewa2>.
+//
+// IMPORTANT FINDING (see NOTES.md): there is NO zip-code lookup form/input
+// anywhere on the live homepage. The brief describes a "ZIP lookup control"
+// to build functionally, but the actual source has only a plain sentence —
+// "...enter your zip code here for the closest distributor to you." — where
+// "enter your zip code here" is itself just a mailto: link
+// (mailto:info@stirlingflavors.com), not a form control. Reproduced exactly
+// as a link, not invented as a functional zip form.
+---
+
+<section class="distribution" id="distributors">
+  <div class="glows" aria-hidden="true">
+    <span class="glow glow-blue"></span>
+    <span class="glow glow-gold"></span>
+  </div>
+  <div class="shell inner">
+    <div class="top">
+      <h2 class="h2">We don't sell direct.<br />Our distributors do it better.</h2>
+      <div class="body">
+        <p>
+          Distributors are the backbone of the supply chain, and we are grateful to all. This year,
+          we are pleased to announce Houston's has partnered with Stirling Flavors to distribute
+          products nationwide and we encourage you to purchase through them. They have competitive
+          programs and a national footprint, making lead times shorter and order deliveries more
+          manageable. Reach out your local Houston's rep for more information.
+        </p>
+        <p>
+          As we focus on building distributor programs, Stirling will no longer be available direct
+          to consumers. If you need product for your shop,
+          <a href="mailto:info@stirlingflavors.com">enter your zip code here</a> for the closest
+          distributor to you.
+        </p>
+      </div>
+    </div>
+    <ul class="cards">
+      <li class="glass" data-reveal="0">
+        <h3 class="h3">Unsurpassed Product Quality</h3>
+        <p>Pure cane sugar and real fruit juice concentrates, cool-blended so the flavor survives the pour.</p>
+      </li>
+      <li class="glass" data-reveal="1">
+        <h3 class="h3">National Distribution</h3>
+        <p>Houston's carries the full line coast to coast — shorter lead times and deliveries you can plan around.</p>
+      </li>
+      <li class="glass" data-reveal="2">
+        <h3 class="h3">Aggressive Pricing</h3>
+        <p>Concentrated formulas mean fewer ounces per drink, so the case goes further than the invoice suggests.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .distribution {
+    background: var(--pink);
+    color: #fff;
+    padding-block: clamp(64px, 9vw, 132px);
+    position: relative;
+    overflow: hidden;
+  }
+  .glows {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+  }
+  .glow {
+    filter: blur(70px);
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .glow-blue {
+    background: var(--blue);
+    width: 40vw;
+    height: 40vw;
+    animation: 30s ease-in-out infinite drift-b;
+    top: -14%;
+    right: -6%;
+  }
+  .glow-gold {
+    background: var(--gold);
+    width: 30vw;
+    height: 30vw;
+    animation: 34s ease-in-out infinite drift-c;
+    bottom: -12%;
+    left: -4%;
+  }
+  .inner {
+    z-index: 1;
+    position: relative;
+  }
+  .top {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    align-items: end;
+    gap: 64px;
+    display: grid;
+  }
+  .body {
+    gap: 18px;
+    font-size: 17px;
+    line-height: 1.65;
+    display: grid;
+  }
+  .body a {
+    text-underline-offset: 3px;
+    text-decoration: underline;
+  }
+  .body a:hover {
+    color: var(--plum);
+  }
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin: clamp(40px, 6vw, 72px) 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .glass {
+    border-radius: var(--r-lg);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    backdrop-filter: blur(10px) saturate(140%);
+    box-shadow: var(--shadow-glass);
+    transition: transform var(--t-card);
+    background: #1b0f224d;
+    padding: 34px;
+  }
+  .glass:hover {
+    transform: translateY(-7px);
+  }
+  .glass p {
+    color: #ffffffd1;
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+</style>

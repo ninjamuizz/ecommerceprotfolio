@@ -1,0 +1,561 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import flavors from '../../data/flavors.json';
+import recipeProductLinks from '../../data/recipe-product-links.json';
+import recipeImages from '../../data/recipe-images.json';
+import { recipeCategoryColor } from '../../lib/recipe-content';
+import { shortName } from '../../lib/flavor-content';
+
+// --- TEMPORARY SCAFFOLD ACCOMMODATION (Phase 2) ---
+// src/data/recipes.json is populated by a parallel content-extraction pass
+// and does not exist (or is empty) yet. Read it defensively so `npm run
+// build` succeeds with zero generated recipe pages in the meantime, rather
+// than hard-crashing on a missing/empty JSON import. Once recipes.json is
+// guaranteed to exist with real content, this guard can be simplified back
+// to a plain `import recipes from '../../data/recipes.json'`.
+// See NOTES.md for the removal note.
+interface Ingredient {
+  item: string;
+  home: string;
+  cafe: string;
+}
+interface RecipeEntry {
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  blurb: string;
+  tags: string[];
+  madeWith: string[];
+  ingredients: Ingredient[];
+  method: string;
+  swap: string | null;
+  spike: string | null;
+  products: string[];
+  related: string[];
+}
+
+export async function getStaticPaths() {
+  // NOTE: this helper must stay INLINE inside getStaticPaths — Astro's
+  // compiler extracts getStaticPaths into its own isolated module and does
+  // not carry along sibling top-level function declarations from the
+  // frontmatter (only imports + code inside this function survive).
+  function readRecipes(): RecipeEntry[] {
+    try {
+      const filePath = path.join(process.cwd(), 'src/data/recipes.json');
+      if (!fs.existsSync(filePath)) return [];
+      const raw = fs.readFileSync(filePath, 'utf-8').trim();
+      if (!raw) return [];
+      const data = JSON.parse(raw);
+      return Array.isArray(data) ? data : [];
+    } catch {
+      return [];
+    }
+  }
+
+  const recipes = readRecipes();
+  return recipes.map((recipe) => ({
+    params: { slug: recipe.slug },
+    props: { recipe, all: recipes },
+  }));
+}
+
+const { recipe, all } = Astro.props as { recipe: RecipeEntry; all: RecipeEntry[] };
+
+const typeColor = recipeCategoryColor[recipe.category] ?? '#C1A12E';
+
+// Product links: recipes.json's `products` field stores bare flavor slugs,
+// but 19 flavor slugs are reused across 2-3 different categories (see
+// NOTES.md) — 24 of the 65 recipes' product references are genuinely
+// ambiguous on slug alone. src/data/recipe-product-links.json resolves each
+// recipe+product pair to the real (categorySlug, slug) pair by reading the
+// actual rendered <a href="/flavors/{categorySlug}/{slug}/"> straight out of
+// this exact recipe's own reference/pages/recipe-{slug}.html — ground truth,
+// not a guess — verified against all 65 pages with zero mismatches.
+const productLinks = (recipeProductLinks as Record<string, Array<{ categorySlug: string; slug: string }>>)[recipe.slug] ?? [];
+const flavorList = flavors as Array<{
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  image: string | null;
+}>;
+const products = productLinks
+  .map((link) => flavorList.find((f) => f.categorySlug === link.categorySlug && f.slug === link.slug))
+  .filter((f): f is (typeof flavorList)[number] => !!f);
+
+const relatedRecipes = recipe.related
+  .map((slug) => all.find((r) => r.slug === slug))
+  .filter((r): r is RecipeEntry => !!r);
+
+const images = recipeImages as Record<string, { src: string; srcset: string }>;
+const heroImage = images[recipe.slug];
+
+const linesText = recipe.madeWith.length > 0 ? recipe.madeWith.join(' + ') : recipe.category;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: recipe.name,
+  recipeCategory: recipe.category,
+  recipeIngredient: recipe.ingredients.map((i) => i.home),
+  recipeInstructions: recipe.method,
+  author: { '@type': 'Organization', name: 'Stirling Flavors' },
+};
+
+// meta description matches the live site's own pattern exactly:
+// "{Name} — a Stirling {blurb-tail} {method}" where blurb already IS
+// "a Stirling {category-ish} built from {lines}." (see recipes.json's own
+// `blurb` field, extracted in Phase 3 from this exact meta tag).
+const metaDescription = `${recipe.name} — ${recipe.blurb} ${recipe.method}`;
+---
+
+<BaseLayout
+  title={`${recipe.name} — Stirling Flavors`}
+  description={metaDescription}
+  showHeader={false}
+  showFooter={false}
+  background="cream"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="back" href={`/recipes/#${recipe.categorySlug}`}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 6l-6 6 6 6"></path>
+        </svg>All Recipes</a
+      >
+      <p class="crumb" style={`--type:${typeColor}`}>
+        <span class="dot" aria-hidden="true"></span>{recipe.category}
+      </p>
+    </div>
+  </div>
+
+  <article style={`--type:${typeColor}`}>
+    <div class="hero">
+      <div class="col">
+        <div class="art">
+          {heroImage && (
+            <img
+              src={heroImage.src}
+              srcset={heroImage.srcset}
+              alt={recipe.name}
+              sizes="(max-width: 900px) 90vw, 420px"
+              loading="eager"
+              decoding="async"
+              width={heroImage.width}
+              height={heroImage.height}
+            />
+          )}
+        </div>
+        <section class="uses">
+          <h2 class="uses-title">What you'll need</h2>
+          <ul class="bottles">
+            {
+              products.map((p) => (
+                <li>
+                  <a href={`/flavors/${p.categorySlug}/${p.slug}/`}>
+                    <span class="bottle">
+                      {p.image ? (
+                        <img
+                          src={p.image}
+                          alt={shortName(p.name, p.category)}
+                          sizes="120px"
+                          loading="lazy"
+                          decoding="async"
+                          width="500"
+                          height="500"
+                        />
+                      ) : (
+                        <p class="no-photo" />
+                      )}
+                    </span>
+                    <span class="p-name">{shortName(p.name, p.category)}</span>
+                    <span class="p-cat">{p.category}</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+      <div class="detail">
+        <h1>{recipe.name}</h1>
+        <p class="lines">{linesText}</p>
+        <div class="tags">
+          {recipe.tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+        <div class="measures" role="group" aria-label="Measurement style">
+          <button type="button" data-measure="home" aria-pressed="true">Home</button>
+          <button type="button" data-measure="cafe" aria-pressed="false">Café · pumps</button>
+        </div>
+        <h2 class="h3 section">Ingredients</h2>
+        <ul class="list" data-home>
+          {recipe.ingredients.map((ing) => <li>{ing.home}</li>)}
+        </ul>
+        <ul class="list" data-cafe hidden>
+          {recipe.ingredients.map((ing) => <li>{ing.cafe}</li>)}
+        </ul>
+        <h2 class="h3 section">Build</h2>
+        <p class="build">{recipe.method}</p>
+        {recipe.swap && (
+          <p class="callout swap">
+            <b>Swap it</b>{recipe.swap}
+          </p>
+        )}
+        {recipe.spike && (
+          <p class="callout spike">
+            <b>Spike it</b>{recipe.spike}
+          </p>
+        )}
+      </div>
+    </div>
+
+    {
+      relatedRecipes.length > 0 && (
+        <section class="more">
+          <h2 class="h3">More {recipe.category}</h2>
+          <ul class="more-row">
+            {relatedRecipes.map((r) => {
+              const img = images[r.slug];
+              return (
+                <li>
+                  <a href={`/recipes/${r.slug}/`}>
+                    <span class="tile">
+                      {/*
+                        The live site serves a distinct 180w/360w hashed
+                        variant here (different from the hero's 420w/840w
+                        srcset) — Astro's asset pipeline mints one hash per
+                        requested size. Not reproduced (same known gap as
+                        FlavorExplorer.astro's card grid, see NOTES.md): the
+                        binaries don't exist locally regardless, so this uses
+                        the one real path we have rather than fabricating a
+                        second hash that would just as surely 404.
+                      */}
+                      {img && (
+                        <img
+                          src={img.src}
+                          alt={r.name}
+                          sizes="180px"
+                          loading="lazy"
+                          decoding="async"
+                          width={img.width}
+                          height={img.height}
+                        />
+                      )}
+                    </span>
+                    <span class="s-name">{r.name}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )
+    }
+  </article>
+
+  <script>
+    // Ported verbatim from the source's second inline module on recipe
+    // detail pages: the Home/Café measure toggle swaps which <ul> is hidden.
+    const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-measure]'));
+    buttons.forEach((btn) =>
+      btn.addEventListener('click', () => {
+        const mode = btn.dataset.measure;
+        buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.measure === mode)));
+        document.querySelectorAll<HTMLElement>('[data-home]').forEach((el) => {
+          el.hidden = mode !== 'home';
+        });
+        document.querySelectorAll<HTMLElement>('[data-cafe]').forEach((el) => {
+          el.hidden = mode !== 'cafe';
+        });
+      })
+    );
+  </script>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: var(--page-max);
+    padding: clamp(28px, 4vw, 56px) var(--gutter) clamp(72px, 9vw, 120px);
+    color: var(--ink);
+    margin-inline: auto;
+  }
+  .topbar {
+    z-index: 10;
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    color: #fff;
+    background: #1b0f22e6;
+    position: sticky;
+    top: 0;
+  }
+  .topbar-inner {
+    max-width: var(--page-max);
+    padding: 16px var(--gutter);
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-inline: auto;
+    display: flex;
+  }
+  .back {
+    border-radius: var(--pill);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    height: 40px;
+    transition: background var(--t-hover), color var(--t-hover);
+    background: #ffffff1f;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+  }
+  .back:hover {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .crumb {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ffffffb8;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+  }
+  .crumb .dot {
+    background: var(--type);
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+  }
+  .hero {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: start;
+    gap: clamp(32px, 5vw, 72px);
+    display: grid;
+  }
+  .col {
+    align-content: start;
+    display: grid;
+  }
+  .uses {
+    margin-top: 28px;
+  }
+  .uses-title {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 14px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .bottles {
+    grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .bottles li {
+    display: grid;
+  }
+  .bottles a {
+    border-radius: var(--r-sm);
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    align-content: start;
+    gap: 6px;
+    padding: 12px 10px 14px;
+    display: grid;
+  }
+  .bottles a:hover {
+    color: inherit;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-row-hover);
+  }
+  .bottle {
+    aspect-ratio: 1;
+    display: grid;
+  }
+  .bottle img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .p-name {
+    letter-spacing: -0.01em;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .p-cat {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 600;
+  }
+  .art {
+    aspect-ratio: 1;
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-light);
+    background: #fff;
+    overflow: hidden;
+  }
+  .art img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    letter-spacing: -0.045em;
+    font-size: clamp(32px, 4.4vw, 60px);
+    font-weight: 900;
+    line-height: 0.95;
+  }
+  .lines {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+  }
+  .tags {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    display: flex;
+  }
+  .tag {
+    border-radius: var(--pill);
+    color: var(--secondary);
+    border: 1px solid #1b0f2224;
+    padding: 5px 13px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .measures {
+    border-radius: var(--pill);
+    background: #fff;
+    border: 1px solid #1b0f2229;
+    margin-top: 26px;
+    padding: 3px;
+    display: inline-flex;
+  }
+  .measures button {
+    border-radius: var(--pill);
+    color: var(--secondary);
+    cursor: pointer;
+    transition: background var(--t-hover), color var(--t-hover);
+    background: none;
+    border: 0;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .measures button[aria-pressed='true'] {
+    background: var(--plum);
+    color: #fff;
+  }
+  .section {
+    margin-top: 30px;
+  }
+  .list {
+    color: var(--body-on-cream);
+    margin: 12px 0 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .list[hidden] {
+    display: none;
+  }
+  .build {
+    color: var(--body-on-cream);
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .callout {
+    border-radius: var(--r-sm);
+    gap: 4px;
+    margin: 22px 0 0;
+    padding: 16px 18px;
+    font-size: 15px;
+    line-height: 1.55;
+    display: grid;
+  }
+  .callout b {
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .swap {
+    background: var(--cream-card);
+    color: var(--body-on-cream);
+  }
+  .spike {
+    background: var(--plum);
+    color: #ffffffd6;
+  }
+  .more {
+    margin-top: clamp(56px, 8vw, 104px);
+  }
+  .more-row {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 18px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .more-row a {
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    gap: 10px;
+    padding: 12px;
+    display: grid;
+  }
+  .more-row a:hover {
+    color: inherit;
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .tile {
+    aspect-ratio: 1;
+    border-radius: var(--r-sm);
+    overflow: hidden;
+  }
+  .tile img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .s-name {
+    padding: 0 4px 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+</style>

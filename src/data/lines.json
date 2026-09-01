@@ -1,0 +1,50 @@
+[
+  {
+    "order": 1,
+    "slug": "cane-sugar-syrups",
+    "kicker": "Flavor the coffee",
+    "title": "Cane Sugar Syrups",
+    "description": "Cool-blended from up to five sugars with pure fruit juice concentrates.",
+    "railColor": "#C1A12E"
+  },
+  {
+    "order": 2,
+    "slug": "sugar-free-syrups",
+    "kicker": "Sugar-free swap",
+    "title": "Sugar Free Syrups",
+    "description": "The signature flavors with the sugar taken out, not the taste.",
+    "railColor": "#002554"
+  },
+  {
+    "order": 3,
+    "slug": "tea-concentrates",
+    "kicker": "Tea build",
+    "title": "Tea Concentrates",
+    "description": "Black tea blended with fresh fruit. Hot, cold or sparkling, at a 1:8 ratio.",
+    "railColor": "#009D4E"
+  },
+  {
+    "order": 4,
+    "slug": "frappe-mixes",
+    "kicker": "Blend it",
+    "title": "Frappe Mixes",
+    "description": "The thickest, creamiest frappes on the market — made with real milk creamers.",
+    "railColor": "#F5841F"
+  },
+  {
+    "order": 5,
+    "slug": "gourmet-sauces",
+    "kicker": "Drizzle",
+    "title": "Gourmet Sauces",
+    "description": "Bold and smooth — straight from the bottle, in a latte, blended or as a topping.",
+    "railColor": "#673165"
+  },
+  {
+    "order": 6,
+    "slug": "shakable-toppings",
+    "kicker": "Finish",
+    "title": "Shakable Toppings",
+    "description": "Spice-and-sugar blends for rimming glasses and finishing the cup.",
+    "railColor": "#E64784"
+  }
+]

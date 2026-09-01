@@ -1,0 +1,83 @@
+---
+// Ported verbatim from reference/home.html's <section class="about" id="about"
+// data-astro-cid-oxgmilyn>. All copy cross-checked character-for-character
+// against the live HTML (not retyped from AUDIT.md/the brief).
+---
+
+<section class="about" id="about">
+  <div class="shell grid">
+    <div class="lede">
+      <p class="eyebrow gold">About</p>
+      <h2 class="h2">Made for the bar,<br />not the shelf.</h2>
+    </div>
+    <div class="body">
+      <p data-reveal="0">
+        Stirling has been family owned since 1993, and the formulation philosophy hasn't changed:
+        pure cane sugar, real flavor concentration, no chemical finish. It's why most operators
+        find they pour less Stirling per drink than what they were using before.
+      </p>
+      <p data-reveal="1">
+        The lineup — cane sugar syrups, sugar-free syrups, gourmet sauces, frappe mixes, shakeable
+        toppings, and tea concentrates — is built as one system, so flavors layer instead of
+        fight. French vanilla into a cappuccino frappe. Peanut butter into a mocha. One bar, one
+        supplier, no dead ends.
+      </p>
+      <p data-reveal="2">If a case doesn't meet spec, we replace it or credit it. No forms, no argument.</p>
+      <div class="card" data-reveal="3">
+        <h3 class="h3">Quality Guaranteed</h3>
+        <p>
+          Thirty-three years in, we've learned that operators don't switch suppliers over a
+          catalog — they switch over who picks up the phone. Reorder, spec sheet, or problem: you
+          get a person, same day.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(64px, 9vw, 132px);
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    align-items: start;
+    gap: clamp(40px, 6vw, 88px);
+    display: grid;
+  }
+  .lede {
+    position: sticky;
+    top: 96px;
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .body {
+    gap: 24px;
+    display: grid;
+  }
+  .body > p {
+    color: var(--body-on-cream);
+    font-size: 19px;
+    line-height: 1.68;
+  }
+  .card {
+    border-radius: var(--r-md);
+    background: var(--plum);
+    color: #fff;
+    margin-top: 18px;
+    padding: 34px;
+  }
+  .card p {
+    color: var(--on-dark);
+    margin-top: 14px;
+  }
+  @media (width <= 900px) {
+    .lede {
+      position: static;
+    }
+  }
+</style>

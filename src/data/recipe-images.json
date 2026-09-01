@@ -1,0 +1,392 @@
+{
+  "lavender-vanilla-oat-latte": {
+    "src": "/images/recipes/lavender-vanilla-oat-latte.webp",
+    "srcset": "/images/recipes/lavender-vanilla-oat-latte-420w.webp 420w, /images/recipes/lavender-vanilla-oat-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "tuscan-tiramisu-creme-latte": {
+    "src": "/images/recipes/tuscan-tiramisu-creme-latte.webp",
+    "srcset": "/images/recipes/tuscan-tiramisu-creme-latte-420w.webp 420w, /images/recipes/tuscan-tiramisu-creme-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "salted-caramel-macadamia-latte": {
+    "src": "/images/recipes/salted-caramel-macadamia-latte.webp",
+    "srcset": "/images/recipes/salted-caramel-macadamia-latte-420w.webp 420w, /images/recipes/salted-caramel-macadamia-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "peanut-butter-cup-mocha": {
+    "src": "/images/recipes/peanut-butter-cup-mocha.webp",
+    "srcset": "/images/recipes/peanut-butter-cup-mocha-420w.webp 420w, /images/recipes/peanut-butter-cup-mocha-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "german-chocolate-cocoa": {
+    "src": "/images/recipes/german-chocolate-cocoa.webp",
+    "srcset": "/images/recipes/german-chocolate-cocoa-420w.webp 420w, /images/recipes/german-chocolate-cocoa-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "white-peppermint-mocha": {
+    "src": "/images/recipes/white-peppermint-mocha.webp",
+    "srcset": "/images/recipes/white-peppermint-mocha-420w.webp 420w, /images/recipes/white-peppermint-mocha-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "cookies-and-cream-dream-frappe": {
+    "src": "/images/recipes/cookies-and-cream-dream-frappe.webp",
+    "srcset": "/images/recipes/cookies-and-cream-dream-frappe-420w.webp 420w, /images/recipes/cookies-and-cream-dream-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "salted-caramel-toffee-frappe": {
+    "src": "/images/recipes/salted-caramel-toffee-frappe.webp",
+    "srcset": "/images/recipes/salted-caramel-toffee-frappe-420w.webp 420w, /images/recipes/salted-caramel-toffee-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "red-velvet-cheesecake-frappe": {
+    "src": "/images/recipes/red-velvet-cheesecake-frappe.webp",
+    "srcset": "/images/recipes/red-velvet-cheesecake-frappe-420w.webp 420w, /images/recipes/red-velvet-cheesecake-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "mango-passionfruit-refresher": {
+    "src": "/images/recipes/mango-passionfruit-refresher.webp",
+    "srcset": "/images/recipes/mango-passionfruit-refresher-420w.webp 420w, /images/recipes/mango-passionfruit-refresher-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "peach-blossom-iced-tea": {
+    "src": "/images/recipes/peach-blossom-iced-tea.webp",
+    "srcset": "/images/recipes/peach-blossom-iced-tea-420w.webp 420w, /images/recipes/peach-blossom-iced-tea-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "raspberry-peach-iced-tea": {
+    "src": "/images/recipes/raspberry-peach-iced-tea.webp",
+    "srcset": "/images/recipes/raspberry-peach-iced-tea-420w.webp 420w, /images/recipes/raspberry-peach-iced-tea-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "blackberry-bramble": {
+    "src": "/images/recipes/blackberry-bramble.webp",
+    "srcset": "/images/recipes/blackberry-bramble-420w.webp 420w, /images/recipes/blackberry-bramble-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "mojito-lime-cooler": {
+    "src": "/images/recipes/mojito-lime-cooler.webp",
+    "srcset": "/images/recipes/mojito-lime-cooler-420w.webp 420w, /images/recipes/mojito-lime-cooler-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "pomegranate-rose-spritz": {
+    "src": "/images/recipes/pomegranate-rose-spritz.webp",
+    "srcset": "/images/recipes/pomegranate-rose-spritz-420w.webp 420w, /images/recipes/pomegranate-rose-spritz-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "coconut-cream-dirty-soda": {
+    "src": "/images/recipes/coconut-cream-dirty-soda.webp",
+    "srcset": "/images/recipes/coconut-cream-dirty-soda-420w.webp 420w, /images/recipes/coconut-cream-dirty-soda-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "cherry-vanilla-dirty-soda": {
+    "src": "/images/recipes/cherry-vanilla-dirty-soda.webp",
+    "srcset": "/images/recipes/cherry-vanilla-dirty-soda-420w.webp 420w, /images/recipes/cherry-vanilla-dirty-soda-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "strawberry-watermelon-lemonade": {
+    "src": "/images/recipes/strawberry-watermelon-lemonade.webp",
+    "srcset": "/images/recipes/strawberry-watermelon-lemonade-420w.webp 420w, /images/recipes/strawberry-watermelon-lemonade-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "butterbeer-cream-soda": {
+    "src": "/images/recipes/butterbeer-cream-soda.webp",
+    "srcset": "/images/recipes/butterbeer-cream-soda-420w.webp 420w, /images/recipes/butterbeer-cream-soda-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "espresso-brulee-tonic": {
+    "src": "/images/recipes/espresso-brulee-tonic.webp",
+    "srcset": "/images/recipes/espresso-brulee-tonic-420w.webp 420w, /images/recipes/espresso-brulee-tonic-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "lavender-haze-latte": {
+    "src": "/images/recipes/lavender-haze-latte.webp",
+    "srcset": "/images/recipes/lavender-haze-latte-420w.webp 420w, /images/recipes/lavender-haze-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "caramel-apple-steamer": {
+    "src": "/images/recipes/caramel-apple-steamer.webp",
+    "srcset": "/images/recipes/caramel-apple-steamer-420w.webp 420w, /images/recipes/caramel-apple-steamer-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "sarsaparilla-cream-float": {
+    "src": "/images/recipes/sarsaparilla-cream-float.webp",
+    "srcset": "/images/recipes/sarsaparilla-cream-float-420w.webp 420w, /images/recipes/sarsaparilla-cream-float-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "sunrise-layered-lemonade": {
+    "src": "/images/recipes/sunrise-layered-lemonade.webp",
+    "srcset": "/images/recipes/sunrise-layered-lemonade-420w.webp 420w, /images/recipes/sunrise-layered-lemonade-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "snickerdoodle-cold-brew": {
+    "src": "/images/recipes/snickerdoodle-cold-brew.webp",
+    "srcset": "/images/recipes/snickerdoodle-cold-brew-420w.webp 420w, /images/recipes/snickerdoodle-cold-brew-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "cotton-candy-cloud": {
+    "src": "/images/recipes/cotton-candy-cloud.webp",
+    "srcset": "/images/recipes/cotton-candy-cloud-420w.webp 420w, /images/recipes/cotton-candy-cloud-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "galaxy-blue-lemonade": {
+    "src": "/images/recipes/galaxy-blue-lemonade.webp",
+    "srcset": "/images/recipes/galaxy-blue-lemonade-420w.webp 420w, /images/recipes/galaxy-blue-lemonade-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "rose-gold-peach-spritz": {
+    "src": "/images/recipes/rose-gold-peach-spritz.webp",
+    "srcset": "/images/recipes/rose-gold-peach-spritz-420w.webp 420w, /images/recipes/rose-gold-peach-spritz-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "starlight-watermelon-cooler": {
+    "src": "/images/recipes/starlight-watermelon-cooler.webp",
+    "srcset": "/images/recipes/starlight-watermelon-cooler-420w.webp 420w, /images/recipes/starlight-watermelon-cooler-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "golden-hour-tropical-fizz": {
+    "src": "/images/recipes/golden-hour-tropical-fizz.webp",
+    "srcset": "/images/recipes/golden-hour-tropical-fizz-420w.webp 420w, /images/recipes/golden-hour-tropical-fizz-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "midnight-pomegranate-toast": {
+    "src": "/images/recipes/midnight-pomegranate-toast.webp",
+    "srcset": "/images/recipes/midnight-pomegranate-toast-420w.webp 420w, /images/recipes/midnight-pomegranate-toast-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "caramel-apple-tini": {
+    "src": "/images/recipes/caramel-apple-tini.webp",
+    "srcset": "/images/recipes/caramel-apple-tini-420w.webp 420w, /images/recipes/caramel-apple-tini-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "creme-brulee-white-mocha": {
+    "src": "/images/recipes/creme-brulee-white-mocha.webp",
+    "srcset": "/images/recipes/creme-brulee-white-mocha-420w.webp 420w, /images/recipes/creme-brulee-white-mocha-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "frozen-tiramisu-coffee": {
+    "src": "/images/recipes/frozen-tiramisu-coffee.webp",
+    "srcset": "/images/recipes/frozen-tiramisu-coffee-420w.webp 420w, /images/recipes/frozen-tiramisu-coffee-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "pumpkin-pie-mimosa": {
+    "src": "/images/recipes/pumpkin-pie-mimosa.webp",
+    "srcset": "/images/recipes/pumpkin-pie-mimosa-420w.webp 420w, /images/recipes/pumpkin-pie-mimosa-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "pumpkin-spice-dessert-liqueur": {
+    "src": "/images/recipes/pumpkin-spice-dessert-liqueur.webp",
+    "srcset": "/images/recipes/pumpkin-spice-dessert-liqueur-420w.webp 420w, /images/recipes/pumpkin-spice-dessert-liqueur-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "brandied-fruit-smoothie": {
+    "src": "/images/recipes/brandied-fruit-smoothie.webp",
+    "srcset": "/images/recipes/brandied-fruit-smoothie-420w.webp 420w, /images/recipes/brandied-fruit-smoothie-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "caramel-apple-fizz": {
+    "src": "/images/recipes/caramel-apple-fizz.webp",
+    "srcset": "/images/recipes/caramel-apple-fizz-420w.webp 420w, /images/recipes/caramel-apple-fizz-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "white-chocolate-macadamia-latte": {
+    "src": "/images/recipes/white-chocolate-macadamia-latte.webp",
+    "srcset": "/images/recipes/white-chocolate-macadamia-latte-420w.webp 420w, /images/recipes/white-chocolate-macadamia-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "pumpkin-spice-martini": {
+    "src": "/images/recipes/pumpkin-spice-martini.webp",
+    "srcset": "/images/recipes/pumpkin-spice-martini-420w.webp 420w, /images/recipes/pumpkin-spice-martini-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "death-by-chocolate-frappe": {
+    "src": "/images/recipes/death-by-chocolate-frappe.webp",
+    "srcset": "/images/recipes/death-by-chocolate-frappe-420w.webp 420w, /images/recipes/death-by-chocolate-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "candy-corn-cream-soda": {
+    "src": "/images/recipes/candy-corn-cream-soda.webp",
+    "srcset": "/images/recipes/candy-corn-cream-soda-420w.webp 420w, /images/recipes/candy-corn-cream-soda-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "stirling-bulldog": {
+    "src": "/images/recipes/stirling-bulldog.webp",
+    "srcset": "/images/recipes/stirling-bulldog-420w.webp 420w, /images/recipes/stirling-bulldog-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "bubblicious-martini": {
+    "src": "/images/recipes/bubblicious-martini.webp",
+    "srcset": "/images/recipes/bubblicious-martini-420w.webp 420w, /images/recipes/bubblicious-martini-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "hot-rum-coffee": {
+    "src": "/images/recipes/hot-rum-coffee.webp",
+    "srcset": "/images/recipes/hot-rum-coffee-420w.webp 420w, /images/recipes/hot-rum-coffee-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "cappuccino-royale": {
+    "src": "/images/recipes/cappuccino-royale.webp",
+    "srcset": "/images/recipes/cappuccino-royale-420w.webp 420w, /images/recipes/cappuccino-royale-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "royal-coffee-martini": {
+    "src": "/images/recipes/royal-coffee-martini.webp",
+    "srcset": "/images/recipes/royal-coffee-martini-420w.webp 420w, /images/recipes/royal-coffee-martini-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "toasted-almond-latte": {
+    "src": "/images/recipes/toasted-almond-latte.webp",
+    "srcset": "/images/recipes/toasted-almond-latte-420w.webp 420w, /images/recipes/toasted-almond-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "stirling-mulled-cider": {
+    "src": "/images/recipes/stirling-mulled-cider.webp",
+    "srcset": "/images/recipes/stirling-mulled-cider-420w.webp 420w, /images/recipes/stirling-mulled-cider-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "brandy-collins": {
+    "src": "/images/recipes/brandy-collins.webp",
+    "srcset": "/images/recipes/brandy-collins-420w.webp 420w, /images/recipes/brandy-collins-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "irish-cream-non-dairy-coffee-creamer": {
+    "src": "/images/recipes/irish-cream-non-dairy-coffee-creamer.webp",
+    "srcset": "/images/recipes/irish-cream-non-dairy-coffee-creamer-420w.webp 420w, /images/recipes/irish-cream-non-dairy-coffee-creamer-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "hot-buttered-whiskey": {
+    "src": "/images/recipes/hot-buttered-whiskey.webp",
+    "srcset": "/images/recipes/hot-buttered-whiskey-420w.webp 420w, /images/recipes/hot-buttered-whiskey-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "coffee-nudge": {
+    "src": "/images/recipes/coffee-nudge.webp",
+    "srcset": "/images/recipes/coffee-nudge-420w.webp 420w, /images/recipes/coffee-nudge-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "pomegranate-mule": {
+    "src": "/images/recipes/pomegranate-mule.webp",
+    "srcset": "/images/recipes/pomegranate-mule-420w.webp 420w, /images/recipes/pomegranate-mule-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "toffee-macchiato": {
+    "src": "/images/recipes/toffee-macchiato.webp",
+    "srcset": "/images/recipes/toffee-macchiato-420w.webp 420w, /images/recipes/toffee-macchiato-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "creme-cream-soda": {
+    "src": "/images/recipes/creme-cream-soda.webp",
+    "srcset": "/images/recipes/creme-cream-soda-420w.webp 420w, /images/recipes/creme-cream-soda-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "snickerdoodle-latte": {
+    "src": "/images/recipes/snickerdoodle-latte.webp",
+    "srcset": "/images/recipes/snickerdoodle-latte-420w.webp 420w, /images/recipes/snickerdoodle-latte-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "salted-caramel-cocoa": {
+    "src": "/images/recipes/salted-caramel-cocoa.webp",
+    "srcset": "/images/recipes/salted-caramel-cocoa-420w.webp 420w, /images/recipes/salted-caramel-cocoa-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "lavender-white-chocolate-martini": {
+    "src": "/images/recipes/lavender-white-chocolate-martini.webp",
+    "srcset": "/images/recipes/lavender-white-chocolate-martini-420w.webp 420w, /images/recipes/lavender-white-chocolate-martini-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "chocolate-mint-mocha-frappe": {
+    "src": "/images/recipes/chocolate-mint-mocha-frappe.webp",
+    "srcset": "/images/recipes/chocolate-mint-mocha-frappe-420w.webp 420w, /images/recipes/chocolate-mint-mocha-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "stirling-mulled-wine": {
+    "src": "/images/recipes/stirling-mulled-wine.webp",
+    "srcset": "/images/recipes/stirling-mulled-wine-420w.webp 420w, /images/recipes/stirling-mulled-wine-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "tiramisu-frappe": {
+    "src": "/images/recipes/tiramisu-frappe.webp",
+    "srcset": "/images/recipes/tiramisu-frappe-420w.webp 420w, /images/recipes/tiramisu-frappe-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "gingerbread-white-mocha": {
+    "src": "/images/recipes/gingerbread-white-mocha.webp",
+    "srcset": "/images/recipes/gingerbread-white-mocha-420w.webp 420w, /images/recipes/gingerbread-white-mocha-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  },
+  "candy-cane-cocktail": {
+    "src": "/images/recipes/candy-cane-cocktail.webp",
+    "srcset": "/images/recipes/candy-cane-cocktail-420w.webp 420w, /images/recipes/candy-cane-cocktail-600w.webp 600w",
+    "width": 600,
+    "height": 600
+  },
+  "frozen-gingerbread-eggnog": {
+    "src": "/images/recipes/frozen-gingerbread-eggnog.webp",
+    "srcset": "/images/recipes/frozen-gingerbread-eggnog-420w.webp 420w, /images/recipes/frozen-gingerbread-eggnog-840w.webp 840w",
+    "width": 1080,
+    "height": 1080
+  }
+}

@@ -1,0 +1,582 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import accentColors from '../../../data/flavor-accent-colors.json';
+import eyebrowColors from '../../../data/flavor-eyebrow-colors.json';
+import {
+  shortName,
+  specRows,
+  categoryBody,
+  ideaNotes,
+  ideaDotColors,
+  askDistributorHref,
+} from '../../../lib/flavor-content';
+
+// --- TEMPORARY SCAFFOLD ACCOMMODATION (Phase 2) ---
+// src/data/flavors.json is populated by a parallel content-extraction pass
+// and does not exist (or is empty) yet. Read it defensively so `npm run
+// build` succeeds with zero generated flavor pages in the meantime, rather
+// than hard-crashing on a missing/empty JSON import. Once flavors.json is
+// guaranteed to exist with real content, this guard can be simplified back
+// to a plain `import flavors from '../../../data/flavors.json'`.
+// See NOTES.md for the removal note.
+interface FlavorEntry {
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  sku: string;
+  description: string;
+  pack: string;
+  container: string;
+  caseWeight: string;
+  pallet: string;
+  specSheetPdf: string | null;
+  image: string | null;
+  suggestedUses: string[];
+  relatedFlavors: string[];
+}
+
+export async function getStaticPaths() {
+  // NOTE: this helper must stay INLINE inside getStaticPaths — Astro's
+  // compiler extracts getStaticPaths into its own isolated module and does
+  // not carry along sibling top-level function declarations from the
+  // frontmatter (only imports + code inside this function survive).
+  function readFlavors(): FlavorEntry[] {
+    try {
+      const filePath = path.join(process.cwd(), 'src/data/flavors.json');
+      if (!fs.existsSync(filePath)) return [];
+      const raw = fs.readFileSync(filePath, 'utf-8').trim();
+      if (!raw) return [];
+      const data = JSON.parse(raw);
+      return Array.isArray(data) ? data : [];
+    } catch {
+      return [];
+    }
+  }
+
+  const flavors = readFlavors();
+  return flavors.map((flavor) => ({
+    params: { category: flavor.categorySlug, slug: flavor.slug },
+    props: { flavor, all: flavors },
+  }));
+}
+
+const { flavor, all } = Astro.props as { flavor: FlavorEntry; all: FlavorEntry[] };
+
+const accentMap = accentColors as Record<string, string>;
+const eyebrowMap = eyebrowColors as Record<string, string>;
+const key = `${flavor.categorySlug}/${flavor.slug}`;
+const accent = accentMap[key];
+const eyebrowColor = eyebrowMap[key];
+
+const displayName = shortName(flavor.name, flavor.category);
+const rows = specRows(flavor);
+const bodyCopy = categoryBody[flavor.category];
+
+// Hero image: two real variants on the source —
+//  - a plain product-bottle render on an accent-tinted square (`.shot`,
+//    inline `background:{accent}1f`), used whenever the image path is one
+//    of the "Products_…" studio renders;
+//  - a full-bleed "lifestyle" photo card (`.shot.shot-card`, no background
+//    tint, larger 1080x1080 intrinsic size) for the 4 flavors whose image
+//    isn't a "Products_…" file (cherry-blossom, maraschino-cherry,
+//    yellow-passionfruit, sweetness) — confirmed by reading all 110 pages'
+//    own <div class="shot…"> markup directly (see NOTES.md).
+const isPhotoCard = !!flavor.image && !flavor.image.includes('/Products_');
+
+const relatedFlavors = flavor.relatedFlavors
+  .map((slug) => all.find((f) => f.categorySlug === flavor.categorySlug && f.slug === slug))
+  .filter((f): f is FlavorEntry => !!f);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: flavor.name,
+  sku: flavor.sku,
+  category: flavor.category,
+  description: flavor.description,
+  brand: { '@type': 'Brand', name: 'Stirling Flavors' },
+  manufacturer: { '@type': 'Organization', name: 'Stirling Flavors' },
+};
+---
+
+{/*
+  <title> is exactly the JSON-LD `name` with the "Stirling " prefix
+  stripped (verified against a sample from all 6 categories, e.g.
+  "Stirling Classic Vanilla Cane Sugar Syrup" -> "Classic Vanilla Cane Sugar
+  Syrup — Stirling Flavors") — simpler than reconstructing displayName +
+  category suffix by hand, and provably identical.
+*/}
+<BaseLayout
+  title={`${flavor.name.replace(/^Stirling\s+/, '')} — Stirling Flavors`}
+  description={flavor.description}
+  showHeader={false}
+  showFooter={false}
+  background="cream"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="back" href="/#flavors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 6l-6 6 6 6"></path>
+        </svg>All Flavors</a
+      >
+      <nav aria-label="Primary">
+        <a href="/#about">About</a>
+        <a href="/#flavors">Flavors</a>
+        <a href="/#categories">Categories</a>
+        <a href="/#recipes">Recipes</a>
+        <a href="/#distributors">Distributors</a>
+      </nav>
+    </div>
+  </div>
+
+  <article>
+    <div class="hero">
+      {
+        isPhotoCard ? (
+          <div class="shot shot-card">
+            {flavor.image ? (
+              <img
+                src={flavor.image}
+                alt={`Stirling ${displayName}`}
+                sizes="(max-width: 900px) 80vw, 540px"
+                loading="eager"
+                decoding="async"
+                width="1080"
+                height="1080"
+              />
+            ) : (
+              <p class="no-photo" style={`color:${accent}`}>
+                {displayName}
+              </p>
+            )}
+          </div>
+        ) : (
+          <div class="shot" style={`background:${accent}1f`}>
+            {flavor.image ? (
+              <img
+                src={flavor.image}
+                alt={flavor.name}
+                sizes="(max-width: 900px) 80vw, 380px"
+                loading="eager"
+                decoding="async"
+                width="500"
+                height="500"
+              />
+            ) : (
+              <p class="no-photo" style={`color:${accent}`}>
+                {displayName}
+              </p>
+            )}
+          </div>
+        )
+      }
+      <div class="detail">
+        <p class="eyebrow line" style={`color:${eyebrowColor}`}>
+          <span class="dot" style={`background:${accent}`} aria-hidden="true"></span>{flavor.category}
+        </p>
+        <h1>{displayName}</h1>
+        <p class="code">{flavor.sku}</p>
+        <p class="lead">{flavor.description}</p>
+        <dl class="specs">
+          {
+            rows.map((row) => (
+              <div class="spec">
+                <dt>{row.label}</dt>
+                <dd>{row.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class="cat-body">{bodyCopy}</p>
+        <a class="ask" href={askDistributorHref(displayName)}>Ask Your Distributor</a>
+      </div>
+    </div>
+
+    <div class="lower">
+      {
+        flavor.specSheetPdf && (
+          <section>
+            <h2 class="h3">Spec Sheet</h2>
+            <a class="sheet" href={`/spec-sheets/${flavor.specSheetPdf}`} download>
+              <svg class="sheet-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                <path d="M14 3v5h5" />
+                <path d="M12 12v5" />
+                <path d="M9.5 14.5 12 17l2.5-2.5" />
+              </svg>
+              <span class="sheet-text">
+                <span class="sheet-title">Product Specification</span>
+                <span class="sheet-note">PDF · {displayName} · {flavor.sku}</span>
+              </span>
+              <span class="sheet-cta">Download</span>
+            </a>
+          </section>
+        )
+      }
+      <section>
+        <h2 class="h3">Recipes with {displayName}</h2>
+        <ul class="ideas">
+          {
+            flavor.suggestedUses.map((use, i) => (
+              <li>
+                <span class="idea-dot" style={`background:${ideaDotColors[i % ideaDotColors.length]}`} aria-hidden="true" />
+                <span>
+                  <span class="idea-name">{use}</span>
+                  <span class="idea-note">{ideaNotes[use] ?? ''}</span>
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+
+    {
+      relatedFlavors.length > 0 && (
+        <section class="related">
+          <h2 class="h3">More in {flavor.category}</h2>
+          <ul class="related-row">
+            {relatedFlavors.map((r) => (
+              <li>
+                <a href={`/flavors/${r.categorySlug}/${r.slug}/`}>
+                  <span class="tile">
+                    {r.image ? (
+                      <img
+                        src={r.image}
+                        alt={shortName(r.name, r.category)}
+                        sizes="180px"
+                        loading="lazy"
+                        decoding="async"
+                        width="500"
+                        height="500"
+                      />
+                    ) : (
+                      <p class="no-photo">{shortName(r.name, r.category)}</p>
+                    )}
+                  </span>
+                  <span class="sib-name">{shortName(r.name, r.category)}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: var(--page-max);
+    padding: clamp(28px, 4vw, 56px) var(--gutter) clamp(72px, 9vw, 120px);
+    color: var(--ink);
+    margin-inline: auto;
+  }
+  .topbar {
+    z-index: 10;
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    color: #fff;
+    background: #1b0f22e6;
+    position: sticky;
+    top: 0;
+  }
+  .topbar-inner {
+    max-width: var(--page-max);
+    padding: 16px var(--gutter);
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-inline: auto;
+    display: flex;
+  }
+  .back {
+    border-radius: var(--pill);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    height: 40px;
+    transition: background var(--t-hover), color var(--t-hover);
+    background: #ffffff1f;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+  }
+  .back:hover {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .topbar nav {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+  }
+  @media (width <= 860px) {
+    .topbar nav {
+      display: none;
+    }
+  }
+  .hero {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+    display: grid;
+  }
+  .shot {
+    aspect-ratio: 1;
+    border-radius: var(--r-xl);
+    padding: clamp(28px, 5vw, 64px);
+    display: grid;
+  }
+  .shot img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .shot-card {
+    padding: 0;
+    overflow: hidden;
+  }
+  .shot-card img {
+    object-fit: cover;
+  }
+  .no-photo {
+    letter-spacing: -0.04em;
+    text-align: center;
+    filter: brightness(0.72);
+    align-self: center;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900;
+    line-height: 0.95;
+  }
+  .line {
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    display: flex;
+  }
+  .dot {
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+  }
+  h1 {
+    letter-spacing: -0.045em;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 900;
+    line-height: 0.9;
+  }
+  .code {
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-top: 12px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .lead {
+    color: var(--body-on-cream);
+    margin-top: 24px;
+    font-size: 19px;
+    line-height: 1.68;
+  }
+  .specs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin: 32px 0 0;
+    display: grid;
+  }
+  .spec {
+    border-radius: var(--r-sm);
+    background: var(--cream-card);
+    padding: 16px 18px;
+  }
+  .spec:last-child:nth-child(3n + 1) {
+    grid-column: span 3;
+  }
+  .spec dt {
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+  }
+  .spec dd {
+    letter-spacing: -0.01em;
+    margin: 6px 0 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .cat-body {
+    color: var(--secondary);
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .ask {
+    border-radius: var(--pill);
+    background: var(--plum);
+    color: #fff;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    width: 100%;
+    height: 58px;
+    transition: background var(--t-hover), color var(--t-hover);
+    place-items: center;
+    margin-top: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    display: grid;
+  }
+  .ask:hover {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .lower {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: start;
+    gap: clamp(32px, 5vw, 64px);
+    margin-top: clamp(56px, 8vw, 104px);
+    display: grid;
+  }
+  .related {
+    margin-top: clamp(56px, 8vw, 104px);
+  }
+  .sheet {
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 24px 26px;
+    display: flex;
+  }
+  .sheet:hover {
+    color: inherit;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .sheet-icon {
+    color: var(--gold);
+    flex: none;
+  }
+  .sheet-text {
+    flex: 1;
+    gap: 3px;
+    display: grid;
+  }
+  .sheet-title {
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .sheet-note {
+    color: var(--secondary);
+    font-size: 13px;
+  }
+  .sheet-cta {
+    border-radius: var(--pill);
+    background: var(--plum);
+    color: #fff;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background var(--t-hover);
+    flex: none;
+    padding: 9px 18px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .sheet:hover .sheet-cta {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .ideas {
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    background: #fff;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  .ideas li {
+    align-items: center;
+    gap: 18px;
+    padding: 22px 26px;
+    display: flex;
+  }
+  .ideas li + li {
+    border-top: 1px solid #1b0f2212;
+  }
+  .idea-dot {
+    border-radius: 50%;
+    flex: none;
+    width: 26px;
+    height: 26px;
+  }
+  .idea-name {
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+  }
+  .idea-note {
+    color: var(--secondary);
+    margin-top: 2px;
+    font-size: 14px;
+    display: block;
+  }
+  .related-row {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 18px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .related-row a {
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    gap: 10px;
+    padding: 12px;
+    display: grid;
+  }
+  .related-row a:hover {
+    color: inherit;
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .sib-name {
+    padding-inline: 4px;
+    padding-bottom: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .tile {
+    aspect-ratio: 1;
+    border-radius: var(--r-sm);
+    padding: 12px;
+    display: grid;
+    overflow: hidden;
+  }
+  .tile img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+</style>

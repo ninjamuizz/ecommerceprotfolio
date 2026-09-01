@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import specsheets from '../../data/specsheets.json';
+import lines from '../../data/lines.json';
+import { categorySuffix } from '../../lib/flavor-content';
+
+// Swatch color per group: the 3 categories that actually publish sheets
+// (Cane Sugar Syrups #C1A12E gold, Sugar Free Syrups #002554 navy, Shakable
+// Toppings #E64784 pink) use exactly their six-lines rail color from
+// src/data/lines.json — verified directly against the live page's own
+// inline `style="background:#…"` swatch values, byte-identical.
+const lineColor = new Map((lines as Array<{ title: string; railColor: string }>).map((l) => [l.title, l.railColor]));
+---
+
+<BaseLayout
+  title="Spec Sheets — Stirling Flavors"
+  description="Download product specification sheets for Stirling Flavors syrups, sauces and toppings."
+  background="cream"
+>
+  <section class="sheets">
+    <div class="shell">
+      <p class="eyebrow gold">For operators</p>
+      <h1 class="h2">Spec sheets.</h1>
+      <p class="lead">
+        Product specifications for every item we publish one for — ingredients, pack sizes, allergens and
+        nutrition, in one PDF per SKU.
+      </p>
+
+      {
+        specsheets.categories.map((group) => {
+          const suffix = categorySuffix[group.category] ?? '';
+          return (
+            <div class="group">
+              <h2 class="h3">
+                <span class="swatch" style={`background:${lineColor.get(group.category)}`} aria-hidden="true" />
+                {group.category}
+              </h2>
+              <ul class="list">
+                {group.items.map((item) => (
+                  <li>
+                    <a class="row" href={item.pdfUrl} download>
+                      <span class="row-text">
+                        <span class="row-name">{item.name}</span>
+                        <span class="row-code">{item.sku}</span>
+                      </span>
+                      <span class="row-cta">PDF</span>
+                    </a>
+                    <a class="row-link" href={item.flavorUrl}>
+                      <span class="sr-only">{item.name} — {suffix} — </span>View flavor
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })
+      }
+
+      {/*
+        specsheets.json's `notice` field stores the full sentence verbatim
+        (source: NOTES.md — the site's own footer text, "69" vs the real "67"
+        math discrepancy is the site's bug, reproduced not corrected). The
+        live markup splits it around a real <a mailto> for "Email us" — since
+        the JSON stores one flat string, the two static halves are spelled
+        out literally here rather than parsed back apart from it.
+      */}
+      <p class="note">
+        69 of our items don't have a published sheet yet.{' '}
+        <a href="mailto:info@stirlingflavors.com?subject=Spec%20sheet%20request">Email us</a> for any of them and
+        we'll send it the same day.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sheets {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(48px, 7vw, 96px) clamp(72px, 9vw, 120px);
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .lead {
+    max-width: 54ch;
+    color: var(--body-on-cream);
+    margin-top: 22px;
+    font-size: 19px;
+    line-height: 1.68;
+  }
+  .group {
+    margin-top: clamp(40px, 5vw, 64px);
+  }
+  .group h2 {
+    align-items: center;
+    gap: 12px;
+    display: flex;
+  }
+  .swatch {
+    border-radius: 3px;
+    width: 12px;
+    height: 12px;
+  }
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 12px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .list li {
+    gap: 6px;
+    display: grid;
+  }
+  .row {
+    border-radius: var(--r-sm);
+    box-shadow: var(--shadow-light);
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    display: flex;
+  }
+  .row:hover {
+    color: inherit;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-row-hover);
+  }
+  .row-text {
+    gap: 2px;
+    display: grid;
+  }
+  .row-name {
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .row-code {
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .row-cta {
+    border-radius: var(--pill);
+    background: var(--plum);
+    color: #fff;
+    letter-spacing: 0.16em;
+    flex: none;
+    padding: 7px 14px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .row:hover .row-cta {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .row-link {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    justify-self: start;
+    padding-left: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .note {
+    color: var(--secondary);
+    border-top: 1px solid #1b0f221a;
+    margin-top: clamp(48px, 6vw, 76px);
+    padding-top: 28px;
+  }
+  .note a {
+    color: var(--ink);
+    text-underline-offset: 3px;
+    text-decoration: underline;
+  }
+</style>

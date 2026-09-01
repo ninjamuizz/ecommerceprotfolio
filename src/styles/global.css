@@ -1,0 +1,297 @@
+@import './fonts.css';
+@import './tokens.css';
+
+/*
+ * Base resets + global typography, ported from the shared rules in
+ * reference/assets/Layout.BT1pusgH.css (the part of that file below the
+ * :root block, before the per-component `[data-astro-cid-*]` rules).
+ * Per-route/component styling stays local to its own .astro file — this
+ * file is intentionally global-only, matching the source's single shared
+ * Layout stylesheet.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 78px;
+}
+
+body {
+  /* background is set per-page via an inline style on <body> in
+     BaseLayout.astro (matching the live site's own per-page inline
+     style="background:var(--plum|--cream)"), not here. */
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-family: Gabarito, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--plum);
+}
+
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin: 0;
+}
+
+.eyebrow {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: var(--h2);
+  letter-spacing: -0.045em;
+  font-weight: 900;
+  line-height: 0.88;
+}
+
+.h3 {
+  font-size: var(--h3);
+  letter-spacing: -0.03em;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.lead {
+  font-size: 19px;
+  line-height: 1.68;
+}
+
+.shell {
+  max-width: var(--page-max);
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+}
+
+.sr-only {
+  clip-path: inset(50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  z-index: 200;
+  clip-path: none;
+  background: var(--gold);
+  width: auto;
+  height: auto;
+  color: var(--plum);
+  border-radius: var(--pill);
+  padding: 12px 20px;
+  font-weight: 700;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+}
+
+/* Scroll-reveal base state — toggled to .is-revealed by an IntersectionObserver
+   controller added in Phase 4/6 (see AUDIT.md §1.3). */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity var(--t-reveal), transform var(--t-reveal);
+  transform: translateY(26px);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* The global prefers-reduced-motion fallback lives in tokens.css (imported
+   above), per this project's convention of keeping that rule alongside the
+   token definitions it depends on (--ease-out etc. are not used by it, but
+   AUDIT.md §1.3 groups it with the shared root/token stylesheet since the
+   source ships it in the same Layout.BT1pusgH.css :root-adjacent block). */
+
+/*
+ * Shared keyframes — ported verbatim from reference/assets/Layout.BT1pusgH.css.
+ * The source defines every keyframe once in the shared Layout stylesheet and
+ * reuses them across multiple per-route scoped components (hero, statement
+ * marquee, six-lines module, distributors glows) with different durations
+ * set locally — same pattern kept here rather than duplicating keyframes
+ * per component.
+ */
+@keyframes marquee-left {
+  0% {
+    translate: 0;
+  }
+  to {
+    translate: -50%;
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    translate: -50%;
+  }
+  to {
+    translate: 0;
+  }
+}
+
+@keyframes column-up {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes column-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift-a {
+  0%,
+  to {
+    transform: translate(-6%, -4%) scale(1);
+  }
+  50% {
+    transform: translate(10%, 8%) scale(1.18);
+  }
+}
+
+@keyframes drift-b {
+  0%,
+  to {
+    transform: translate(8%, 6%) scale(1.1);
+  }
+  50% {
+    transform: translate(-8%, -8%) scale(0.92);
+  }
+}
+
+@keyframes drift-c {
+  0%,
+  to {
+    transform: translateY(10%) scale(0.95);
+  }
+  50% {
+    transform: translate(-12%, -6%) scale(1.25);
+  }
+}
+
+@keyframes pour-bar {
+  0% {
+    transform: translateY(-100%) scaleY(0.6);
+  }
+  60% {
+    transform: translateY(0) scaleY(1);
+  }
+  to {
+    transform: translateY(100%) scaleY(0.6);
+  }
+}
+
+@keyframes syrup-stream {
+  0% {
+    opacity: 0;
+    transform: translateY(-62%) scaleY(0.5) scaleX(1.35);
+  }
+  14% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  to {
+    opacity: 0.85;
+    transform: translateY(52%) scaleY(1.18) scaleX(0.72);
+  }
+}
+
+@keyframes syrup-bead {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.5, 0.9);
+  }
+  20% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 1;
+    transform: translateY(34px) scaleY(1.25);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px) scale(0.7);
+  }
+}
+
+@keyframes grain-fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px) rotate(0deg);
+  }
+  14% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx, 0px), 110px) rotate(260deg);
+    opacity: 0;
+  }
+}

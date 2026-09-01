@@ -1,0 +1,180 @@
+---
+// "#recipes" teaser rows — ported verbatim from reference/home.html's
+// <section class="recipes" id="recipes" data-astro-cid-4jvhbjz3>. Counts and
+// notes are static site copy (not derived from recipes.json), matching the
+// live markup exactly; cross-checked against recipes.json's own category
+// tallies in NOTES.md (15/7/8/4/20/11, all matching).
+const rows = [
+  { anchor: 'lattes', type: '#C1A12E', name: 'Lattes', note: 'Espresso and steamed milk', count: 15 },
+  {
+    anchor: 'mochas-and-cocoas',
+    type: '#673165',
+    name: 'Mochas & Cocoas',
+    note: 'Chocolate, with or without the shot',
+    count: 7,
+  },
+  { anchor: 'frappes', type: '#1B449C', name: 'Frappes', note: 'Blended, loaded, camera-ready', count: 8 },
+  {
+    anchor: 'tea-and-refreshers',
+    type: '#009D4E',
+    name: 'Tea & Refreshers',
+    note: 'Iced tea and fruit, no coffee',
+    count: 4,
+  },
+  {
+    anchor: 'cocktails-and-mocktails',
+    type: '#E64784',
+    name: 'Cocktails & Mocktails',
+    note: 'Zero-proof, or spiked',
+    count: 20,
+  },
+  {
+    anchor: 'dirty-sodas-and-lemonades',
+    type: '#F5841F',
+    name: 'Dirty Sodas & Lemonades',
+    note: 'Soda, cream and citrus',
+    count: 11,
+  },
+];
+---
+
+<section class="recipes" id="recipes">
+  <div class="shell">
+    <div class="head">
+      <div>
+        <p class="eyebrow gold">Recipes</p>
+        <h2 class="h2">Drinks worth<br />the reorder.</h2>
+      </div>
+      <p class="intro">65 builds, every one of them layered from the lines above. Six ways in.</p>
+    </div>
+    <ul class="rows">
+      {
+        rows.map((row, i) => (
+          <li>
+            <a href={`/recipes/#${row.anchor}`} style={`--type:${row.type}`}>
+              <span class="num">{String(i + 1).padStart(2, '0')}</span>
+              <span class="name">{row.name}</span>
+              <span class="note">{row.note}</span>
+              <span class="count">
+                {row.count} <span class="count-word">recipes</span>
+              </span>
+              <span class="dot" aria-hidden="true" />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .recipes {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(64px, 9vw, 132px);
+  }
+  .head {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    align-items: end;
+    gap: clamp(28px, 5vw, 72px);
+    margin-bottom: clamp(36px, 5vw, 56px);
+    display: grid;
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .intro {
+    color: var(--body-on-cream);
+    max-width: 40ch;
+  }
+  .rows {
+    border-top: 1px solid #1b0f221f;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .rows li {
+    border-bottom: 1px solid #1b0f221f;
+  }
+  .rows a {
+    transition:
+      background var(--t-card),
+      color var(--t-card),
+      padding-left var(--t-card);
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.1fr) auto auto;
+    align-items: center;
+    gap: clamp(16px, 3vw, 40px);
+    padding: clamp(20px, 2.6vw, 30px) clamp(12px, 2vw, 24px);
+    display: grid;
+  }
+  .rows a:hover {
+    background: var(--type);
+    color: #fff;
+    padding-left: clamp(20px, 3vw, 36px);
+  }
+  .num {
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    transition: color var(--t-card);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .name {
+    letter-spacing: -0.03em;
+    font-size: clamp(20px, 2.4vw, 30px);
+    font-weight: 900;
+    line-height: 1.05;
+  }
+  .note {
+    color: var(--secondary);
+    transition: color var(--t-card);
+    font-size: 14px;
+  }
+  .count {
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    transition: color var(--t-card);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .dot {
+    background: var(--type);
+    width: 22px;
+    height: 22px;
+    transition:
+      background var(--t-card),
+      box-shadow var(--t-card);
+    border-radius: 50%;
+  }
+  .rows a:hover .num,
+  .rows a:hover .note,
+  .rows a:hover .count {
+    color: #ffffffc7;
+  }
+  .rows a:hover .dot {
+    background: #fff;
+  }
+  @media (width <= 860px) {
+    .rows a {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      row-gap: 6px;
+    }
+    .note {
+      grid-column: 2 / -1;
+    }
+    .count {
+      grid-column: 2 / 3;
+    }
+    .dot {
+      grid-area: 1 / 3;
+    }
+  }
+  @media (width <= 520px) {
+    .count-word {
+      display: none;
+    }
+  }
+</style>

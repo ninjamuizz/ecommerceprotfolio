@@ -1,0 +1,341 @@
+---
+// "#flavors" explorer — ported verbatim from reference/home.html's
+// <section class="flavors" id="flavors" data-astro-cid-ck4adeeb>.
+//
+// Card order: the live site's 110 cards are NOT in flavors.json's (alphabetical
+// within category) order — e.g. the real page runs
+// Big Apple, Green Apple, Blue Curacao, Bubble Gum... not alphabetically.
+// src/data/flavor-card-order.json captures the exact (categorySlug/slug)
+// sequence scraped from reference/home.html so the grid's visual order
+// matches pixel-for-pixel; flavors.json itself (a Phase 3 deliverable) is
+// left untouched.
+//
+// Per-flavor accent color: flavors.json has no color field (a gap Phase 1/3
+// flagged but never closed — see NOTES.md). src/data/flavor-accent-colors.json
+// was extracted directly from this same reference/home.html pass (all 110
+// --flavor:#hex values, keyed by categorySlug/slug) so the hover-fill color
+// is the real one, not a substitute.
+//
+// Card display name ("American Strawberry" instead of the JSON-LD
+// "Stirling American Strawberry Cane Sugar Syrup"): derived by stripping the
+// "Stirling " prefix and the category's singular product-noun suffix, using
+// the exact suffix strings observed in flavors.json's own data per category
+// (including the site's own "Frappe Mixe" singular-typo suffix, kept as-is).
+import flavors from '../data/flavors.json';
+import cardOrder from '../data/flavor-card-order.json';
+import accentColors from '../data/flavor-accent-colors.json';
+
+const categorySuffix: Record<string, string> = {
+  'Cane Sugar Syrups': 'Cane Sugar Syrup',
+  'Sugar Free Syrups': 'Sugar Free Syrup',
+  'Tea Concentrates': 'Tea Concentrate',
+  'Frappe Mixes': 'Frappe Mixe',
+  'Gourmet Sauces': 'Gourmet Sauce',
+  'Shakable Toppings': 'Shakable Topping',
+};
+
+function shortName(name: string, category: string): string {
+  const suffix = categorySuffix[category];
+  let out = name.replace(/^Stirling\s+/, '');
+  if (suffix && out.endsWith(suffix)) {
+    out = out.slice(0, -suffix.length).trim();
+  }
+  return out;
+}
+
+const accentColorMap = accentColors as Record<string, string>;
+const bySlugKey = new Map(flavors.map((f) => [`${f.categorySlug}/${f.slug}`, f]));
+const orderedFlavors = (cardOrder as string[]).map((key) => {
+  const f = bySlugKey.get(key);
+  if (!f) throw new Error(`flavor-card-order.json references unknown flavor key: ${key}`);
+  return f;
+});
+
+const filters = [
+  'All',
+  'Cane Sugar Syrups',
+  'Sugar Free Syrups',
+  'Tea Concentrates',
+  'Frappe Mixes',
+  'Gourmet Sauces',
+  'Shakable Toppings',
+];
+---
+
+<section class="flavors" id="flavors">
+  <div class="shell">
+    <div class="head">
+      <div>
+        <p class="eyebrow gold">Flavors</p>
+        <h2 class="h2">Every flavor,<br />one system.</h2>
+      </div>
+      <div class="search">
+        <label class="sr-only" for="flavor-search">Search flavors</label>
+        <input
+          id="flavor-search"
+          type="search"
+          placeholder="Search by name or code"
+          autocomplete="off"
+          data-search
+        />
+      </div>
+    </div>
+    <div class="filters" role="group" aria-label="Filter by line">
+      {
+        filters.map((f) => (
+          <button type="button" class="chip" data-filter={f} aria-pressed={f === 'All' ? 'true' : 'false'}>
+            {f}
+          </button>
+        ))
+      }
+    </div>
+    <p class="count" role="status" data-count></p>
+    <ul class="grid" data-grid>
+      {
+        orderedFlavors.map((f) => {
+          const name = shortName(f.name, f.category);
+          const key = `${f.categorySlug}/${f.slug}`;
+          const accent = accentColorMap[key];
+          return (
+            <li class="cell" data-card data-category={f.category} data-name={name.toLowerCase()} data-code={f.sku.toLowerCase()}>
+              <a class="card" href={`/flavors/${f.categorySlug}/${f.slug}/`} style={`--flavor:${accent}`}>
+                <span class="tile">
+                  {f.image ? (
+                    <img
+                      src={f.image}
+                      alt={f.name}
+                      sizes="(max-width: 640px) 44vw, 220px"
+                      loading="lazy"
+                      decoding="async"
+                      width="500"
+                      height="500"
+                    />
+                  ) : (
+                    <p class="no-photo">{name}</p>
+                  )}
+                </span>
+                <span class="meta">
+                  <span class="dash" aria-hidden="true" />
+                  <span class="name">{name}</span>
+                  <span class="cat">{f.category}</span>
+                </span>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <p class="empty" data-empty hidden>
+      No flavors match that search.
+    </p>
+  </div>
+</section>
+
+<script>
+  const el = document.querySelector<HTMLElement>('.flavors');
+  if (el) {
+    const cards = Array.from(el.querySelectorAll<HTMLElement>('[data-card]'));
+    const filters = Array.from(el.querySelectorAll<HTMLButtonElement>('[data-filter]'));
+    const search = el.querySelector<HTMLInputElement>('[data-search]');
+    const count = el.querySelector<HTMLElement>('[data-count]');
+    const empty = el.querySelector<HTMLElement>('[data-empty]');
+    let activeFilter = 'All';
+
+    const update = () => {
+      const q = (search?.value ?? '').trim().toLowerCase();
+      let n = 0;
+      cards.forEach((card) => {
+        const inFilter = activeFilter === 'All' || card.dataset.category === activeFilter;
+        const inSearch =
+          !q || (card.dataset.name ?? '').includes(q) || (card.dataset.code ?? '').includes(q);
+        const visible = inFilter && inSearch;
+        card.hidden = !visible;
+        if (visible) n += 1;
+      });
+      if (count) {
+        count.textContent = `${n} ${n === 1 ? 'flavor' : 'flavors'}${activeFilter === 'All' ? '' : ` in ${activeFilter}`}`;
+      }
+      if (empty) empty.hidden = n > 0;
+    };
+
+    filters.forEach((btn) =>
+      btn.addEventListener('click', () => {
+        activeFilter = btn.dataset.filter ?? 'All';
+        filters.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        update();
+      })
+    );
+    search?.addEventListener('input', update);
+    update();
+  }
+</script>
+
+<style>
+  .flavors {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(64px, 9vw, 132px);
+  }
+  .head {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: 28px;
+    margin-bottom: 32px;
+    display: flex;
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .search input {
+    border-radius: var(--pill);
+    width: min(320px, 100%);
+    height: 48px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #1b0f2229;
+    padding-inline: 20px;
+    font-size: 15px;
+  }
+  .search input::placeholder {
+    color: var(--muted);
+  }
+  .search input:focus {
+    border-color: var(--gold);
+  }
+  .filters {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+    display: flex;
+  }
+  .chip {
+    border-radius: var(--pill);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    height: 38px;
+    color: var(--secondary);
+    cursor: pointer;
+    transition:
+      background var(--t-hover),
+      border-color var(--t-hover),
+      color var(--t-hover);
+    background: none;
+    border: 1px solid #1b0f2229;
+    padding-inline: 20px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .chip:hover {
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  .chip[aria-pressed='true'] {
+    background: var(--plum);
+    border-color: var(--plum);
+    color: #fff;
+  }
+  .count {
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin: 0 0 24px;
+    font-size: 13px;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .cell[hidden] {
+    display: none;
+  }
+  .card {
+    border-radius: var(--r-md);
+    height: 100%;
+    box-shadow: var(--shadow-light);
+    transition:
+      transform var(--t-card),
+      background var(--t-card),
+      box-shadow var(--t-card);
+    background: #fff;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    padding: 12px;
+    display: grid;
+  }
+  .card:hover {
+    background: var(--flavor);
+    color: inherit;
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-card-hover);
+  }
+  .tile {
+    aspect-ratio: 1;
+    border-radius: var(--r-sm);
+    background: #fff;
+    padding: 14px;
+    display: grid;
+    overflow: hidden;
+  }
+  .tile img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .no-photo {
+    letter-spacing: -0.03em;
+    text-align: center;
+    filter: brightness(0.72);
+    align-self: center;
+    padding: 8px;
+    font-size: 19px;
+    font-weight: 900;
+    line-height: 1.05;
+  }
+  .meta {
+    align-content: start;
+    gap: 6px;
+    padding: 2px 6px 8px;
+    display: grid;
+  }
+  .dash {
+    background: var(--flavor);
+    width: 26px;
+    height: 4px;
+    transition: opacity var(--t-card);
+    border-radius: 2px;
+  }
+  .card:hover .dash {
+    opacity: 0;
+  }
+  .name {
+    letter-spacing: -0.01em;
+    transition: color var(--t-card);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .cat {
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color var(--t-card);
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .card:hover .name {
+    color: #fff;
+  }
+  .card:hover .cat {
+    color: #ffffffbf;
+  }
+  .empty {
+    text-align: center;
+    color: var(--secondary);
+    margin-top: 40px;
+  }
+</style>

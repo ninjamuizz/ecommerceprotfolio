@@ -1,0 +1,644 @@
+{
+  "lavender-vanilla-oat-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "lavender-de-provence"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "french-vanilla"
+    }
+  ],
+  "tuscan-tiramisu-creme-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "tuscan-tiramisu"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-vanilla"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "chocolate"
+    }
+  ],
+  "salted-caramel-macadamia-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "macadamia-nut"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "salted-caramel"
+    }
+  ],
+  "peanut-butter-cup-mocha": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "homestyle-peanut-butter"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "chocolate-sauce"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "chocolate"
+    }
+  ],
+  "german-chocolate-cocoa": [
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "dark-chocolate-sauce"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "german-chocolate"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "toasted-coconut"
+    }
+  ],
+  "white-peppermint-mocha": [
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "peppermint-schnapps"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "peppermint-bits"
+    }
+  ],
+  "cookies-and-cream-dream-frappe": [
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "cookies-and-cream"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "chocolate-sauce"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "mini-marshmallow"
+    }
+  ],
+  "salted-caramel-toffee-frappe": [
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "english-toffee"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "salted-caramel"
+    }
+  ],
+  "red-velvet-cheesecake-frappe": [
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "red-velvet"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "white-chocolate"
+    }
+  ],
+  "mango-passionfruit-refresher": [
+    {
+      "categorySlug": "tea-concentrates",
+      "slug": "mango"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "yellow-passionfruit"
+    }
+  ],
+  "peach-blossom-iced-tea": [
+    {
+      "categorySlug": "tea-concentrates",
+      "slug": "peach"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "cherry-blossom"
+    }
+  ],
+  "raspberry-peach-iced-tea": [
+    {
+      "categorySlug": "tea-concentrates",
+      "slug": "raspberry"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "georgia-peach"
+    }
+  ],
+  "blackberry-bramble": [
+    {
+      "categorySlug": "tea-concentrates",
+      "slug": "blackberry"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "oregon-mountain-blackberry"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "persian-lime"
+    }
+  ],
+  "mojito-lime-cooler": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "mojito-mojo"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "persian-lime"
+    }
+  ],
+  "pomegranate-rose-spritz": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "himalayan-pommegranate"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "asian-rose"
+    }
+  ],
+  "coconut-cream-dirty-soda": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "hawaiian-coconut"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "toasted-coconut"
+    }
+  ],
+  "cherry-vanilla-dirty-soda": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "new-england-black-cherry"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-vanilla"
+    }
+  ],
+  "strawberry-watermelon-lemonade": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "sweet-african-watermelon"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "american-strawberry"
+    }
+  ],
+  "butterbeer-cream-soda": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "harvey-s-butter-rum-batter"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "highland-butterscotch"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-vanilla"
+    }
+  ],
+  "espresso-brulee-tonic": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-creme-brulee"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "curacao-orange"
+    }
+  ],
+  "lavender-haze-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "lavender-de-provence"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "lemon-meringue"
+    }
+  ],
+  "caramel-apple-steamer": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "green-apple"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "caramel-sauce"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "cinnamon"
+    }
+  ],
+  "sarsaparilla-cream-float": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "old-fashioned-sarsaparilla"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-vanilla"
+    }
+  ],
+  "sunrise-layered-lemonade": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "himalayan-pommegranate"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "georgia-peach"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "yellow-passionfruit"
+    }
+  ],
+  "snickerdoodle-cold-brew": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "granny-s-snickerdoodle"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "cinnamon"
+    }
+  ],
+  "cotton-candy-cloud": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "bubble-gum"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "cherry-blossom"
+    }
+  ],
+  "galaxy-blue-lemonade": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "blue-curacao"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "blue-raspberry"
+    }
+  ],
+  "rose-gold-peach-spritz": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "asian-rose"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "georgia-peach"
+    }
+  ],
+  "starlight-watermelon-cooler": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "sweet-african-watermelon"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "persian-lime"
+    }
+  ],
+  "golden-hour-tropical-fizz": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "yellow-passionfruit"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "polynesian-pineapple"
+    }
+  ],
+  "midnight-pomegranate-toast": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "himalayan-pommegranate"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "curacao-orange"
+    }
+  ],
+  "caramel-apple-tini": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "salted-caramel"
+    }
+  ],
+  "creme-brulee-white-mocha": [
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-creme-brulee"
+    }
+  ],
+  "frozen-tiramisu-coffee": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "tuscan-tiramisu"
+    },
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "chocolate-without-espresso"
+    }
+  ],
+  "pumpkin-pie-mimosa": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "ceylon-cinnamon"
+    }
+  ],
+  "pumpkin-spice-dessert-liqueur": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "great-pumpkin-spice"
+    }
+  ],
+  "brandied-fruit-smoothie": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "napoleon-brandy"
+    }
+  ],
+  "caramel-apple-fizz": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "creme-caramel"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "big-apple"
+    }
+  ],
+  "white-chocolate-macadamia-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "macadamia-nut"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "white-chocolate"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "cinnamon"
+    }
+  ],
+  "pumpkin-spice-martini": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "great-pumpkin-spice"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "caramel-sauce"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "cinnamon"
+    }
+  ],
+  "death-by-chocolate-frappe": [
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "mocha"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "german-chocolate"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "dark-chocolate-sauce"
+    }
+  ],
+  "candy-corn-cream-soda": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "polynesian-pineapple"
+    }
+  ],
+  "stirling-bulldog": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "mexican-kahlua"
+    }
+  ],
+  "bubblicious-martini": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "bubble-gum"
+    }
+  ],
+  "hot-rum-coffee": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "jamaican-rum"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "chocolate"
+    }
+  ],
+  "cappuccino-royale": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "coffee-royale"
+    }
+  ],
+  "royal-coffee-martini": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "coffee-royale"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "chocolate"
+    }
+  ],
+  "toasted-almond-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "italian-amaretto"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "mexican-kahlua"
+    }
+  ],
+  "stirling-mulled-cider": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "ceylon-cinnamon"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "napoleon-brandy"
+    }
+  ],
+  "brandy-collins": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "napoleon-brandy"
+    }
+  ],
+  "irish-cream-non-dairy-coffee-creamer": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "irish-cream"
+    }
+  ],
+  "hot-buttered-whiskey": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "harvey-s-butter-rum-batter"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "cinnamon"
+    }
+  ],
+  "coffee-nudge": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "creme-de-cacao"
+    },
+    {
+      "categorySlug": "shakable-toppings",
+      "slug": "chocolate"
+    }
+  ],
+  "pomegranate-mule": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "himalayan-pommegranate"
+    }
+  ],
+  "toffee-macchiato": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "royal-english-toffee"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "salted-caramel"
+    }
+  ],
+  "creme-cream-soda": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "classic-creme-brulee"
+    }
+  ],
+  "snickerdoodle-latte": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "granny-s-snickerdoodle"
+    }
+  ],
+  "salted-caramel-cocoa": [
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "salted-caramel"
+    }
+  ],
+  "lavender-white-chocolate-martini": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "lavender-de-provence"
+    },
+    {
+      "categorySlug": "sugar-free-syrups",
+      "slug": "white-chocolate"
+    }
+  ],
+  "chocolate-mint-mocha-frappe": [
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "chocolate-without-espresso"
+    }
+  ],
+  "stirling-mulled-wine": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "italian-amaretto"
+    }
+  ],
+  "tiramisu-frappe": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "tuscan-tiramisu"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    },
+    {
+      "categorySlug": "frappe-mixes",
+      "slug": "mocha"
+    }
+  ],
+  "gingerbread-white-mocha": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "gingerbread"
+    },
+    {
+      "categorySlug": "gourmet-sauces",
+      "slug": "white-chocolate-sauce"
+    }
+  ],
+  "candy-cane-cocktail": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "peppermint-schnapps"
+    }
+  ],
+  "frozen-gingerbread-eggnog": [
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "egg-cellent-eggnog"
+    },
+    {
+      "categorySlug": "cane-sugar-syrups",
+      "slug": "gingerbread"
+    }
+  ]
+}

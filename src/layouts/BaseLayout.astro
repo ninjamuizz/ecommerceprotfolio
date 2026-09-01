@@ -1,0 +1,118 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Defaults to the page's own canonical URL derived from Astro.url. */
+  canonical?: string;
+  /**
+   * The flavor-detail (`/flavors/{category}/{slug}/`) and recipe-detail
+   * (`/recipes/{slug}/`) templates carry ZERO of the sitewide `<header
+   * class="bar">`/`<footer class="footer">` chrome on the real site — grepping
+   * reference/pages/flavor-*.html and recipe-*.html for `class="bar"` or
+   * `footer` returns zero matches on every one of the ~175 sampled pages.
+   * Those two templates render their own lightweight `.topbar` (back-link +
+   * nav, or back-link + category crumb) instead, and nothing at all after
+   * their closing `</article>` — no footer, full stop. Defaults preserve the
+   * prior always-on behavior for every other page (home, recipes index,
+   * spec-sheets, 404), all of which DO carry the standard header+footer.
+   */
+  showHeader?: boolean;
+  showFooter?: boolean;
+  /**
+   * The live site sets an inline `style="background:var(--plum|--cream)"`
+   * on <body> per page (confirmed via reference/pages/*.html and
+   * reference/home.html) — only the homepage is dark (`plum`); every other
+   * template (flavor detail, recipe detail, recipes index, spec-sheets, 404)
+   * is `cream`. Previously hardcoded to `plum` sitewide in global.css, which
+   * made body text on every non-home page render dark-on-dark (invisible) —
+   * found via real-browser screenshot comparison in Phase 8. Defaulting to
+   * `plum` here preserves the homepage's existing behavior without needing
+   * to touch index.astro.
+   */
+  background?: 'plum' | 'cream';
+}
+
+const {
+  title,
+  description = 'Stirling Flavors manufactures beverage flavor systems for foodservice — cane sugar syrups, sugar-free syrups, tea concentrates, gourmet sauces, shakable toppings and frappe mixes. Family owned, made in Kent, Washington.',
+  canonical = new URL(Astro.url.pathname, Astro.site).toString(),
+  showHeader = true,
+  showFooter = true,
+  background = 'plum',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1B0F22" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Stirling Flavors" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/gabarito-latin-wght-normal.woff2"
+      crossorigin
+    />
+
+    <slot name="head" />
+  </head>
+  <body style={`background:var(--${background})`}>
+    <a class="skip-link sr-only" href="#main">Skip to content</a>
+    {showHeader && <Header />}
+    <main id="main">
+      <slot />
+    </main>
+    {showFooter && <Footer />}
+    <script>
+      // Ported verbatim from reference/module-script-5.js — the scroll-reveal
+      // IntersectionObserver controller. Every page in reference/pages/*.html
+      // (home, flavor, recipe, recipes index, spec-sheets, 404) ships this
+      // exact script as the last inline module before </body>, even on pages
+      // that have zero [data-reveal] elements (it's a harmless no-op there —
+      // confirmed 0 data-reveal= occurrences on all 5 non-homepage templates).
+      // It previously lived nowhere in this codebase (a Phase 4 gap — see
+      // NOTES.md): About.astro/Distributors.astro already emit data-reveal
+      // attributes but nothing ever toggled .is-revealed. Centralizing it
+      // here in BaseLayout fixes that sitewide in one place, matching the
+      // source's own "shared Layout-level script" architecture.
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
+      if (reduced) {
+        targets.forEach((el) => el.classList.add('is-revealed'));
+      } else {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const el = entry.target as HTMLElement;
+              const step = Number(el.dataset.reveal) || 0;
+              el.style.transitionDelay = `${Math.min(step, 8) * 90}ms`;
+              el.classList.add('is-revealed');
+              io.unobserve(el);
+            });
+          },
+          { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+        );
+        targets.forEach((el) => io.observe(el));
+      }
+    </script>
+  </body>
+</html>

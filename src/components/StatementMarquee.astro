@@ -1,0 +1,56 @@
+---
+// The gold "band" marquee directly under the hero, ported verbatim from
+// reference/home.html's <div class="band" aria-hidden="true"
+// data-astro-cid-543bmuqs>. Not a <section> in the source (no id, no
+// semantic landmark, aria-hidden) — kept as a plain decorative div here too.
+const items = [
+  'Cool-blended',
+  'Pure fruit juice concentrates',
+  'Made in Kent, WA',
+  'Pours further per drink',
+  'Six complementary lines',
+  'Foodservice pack sizes',
+];
+---
+
+<div class="band" aria-hidden="true">
+  <div class="track">
+    {
+      [...items, ...items].map((item) => (
+        <span class="item">
+          {item}
+          <span class="dot">·</span>
+        </span>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .band {
+    background: var(--gold);
+    color: var(--plum);
+    padding-block: 14px;
+    overflow: hidden;
+  }
+  .track {
+    will-change: transform;
+    width: max-content;
+    animation: 50s linear infinite marquee-left;
+    display: flex;
+  }
+  .item {
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    align-items: center;
+    gap: 26px;
+    padding-inline: 13px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+  }
+  .dot {
+    opacity: 0.5;
+  }
+</style>

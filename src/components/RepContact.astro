@@ -1,0 +1,105 @@
+---
+// "#rep" ("Talk to us") — ported verbatim from reference/home.html's
+// <section class="talk" id="rep" data-astro-cid-jow3qlqj>.
+//
+// IMPORTANT FINDING (see NOTES.md): there is NO contact form anywhere on the
+// live homepage — no <form>, no <input type="email">/"tel">, nothing. The
+// brief describes building "every field/label/placeholder/required flag" of
+// a contact form, but the actual section is just eyebrow + heading + two
+// lead paragraphs + three contact rows (Email/Visit/Call), each a plain
+// link (mailto:/maps/tel:). Reproduced exactly — no form was invented.
+---
+
+<section class="talk" id="rep">
+  <div class="shell grid">
+    <div>
+      <p class="eyebrow gold">Talk to us</p>
+      <h2 class="h2">Tell us what<br />you're building.</h2>
+      <p class="lead">
+        At Stirling Flavors, our passion is creating fabulous flavors and our customers and
+        partners challenge us to make better, bolder and more flavorful products. Always up for
+        that challenge, you never know when Stirling creates something exclusive.
+      </p>
+      <p class="lead">Let us bring some of that passion to your coffee and customers. Contact us to become a Stirling aficionado.</p>
+    </div>
+    <ul class="rows">
+      <li>
+        <a href="mailto:info@stirlingflavors.com">
+          <span class="label">Email</span>
+          <span class="value">info@stirlingflavors.com</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://maps.google.com/?q=19220%2064th%20Ave%20S%2C%20Kent%2C%20Washington%2098032"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="label">Visit</span>
+          <span class="value">19220 64th Ave S, Kent, Washington 98032</span>
+        </a>
+      </li>
+      <li>
+        <a href="tel:+12538676133">
+          <span class="label">Call</span>
+          <span class="value">253.867.6133</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .talk {
+    background: var(--plum);
+    color: #fff;
+    padding-block: clamp(64px, 9vw, 132px);
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    align-items: center;
+    gap: clamp(40px, 6vw, 80px);
+    display: grid;
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .lead {
+    color: var(--on-dark);
+    max-width: 48ch;
+    margin-top: 24px;
+  }
+  .rows {
+    border-radius: var(--r-md);
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    overflow: hidden;
+  }
+  .rows a {
+    background: var(--card-dark);
+    transition: background var(--t-hover);
+    gap: 8px;
+    padding: 30px 32px;
+    display: grid;
+  }
+  .rows a:hover {
+    background: var(--card-dark-hover);
+    color: #fff;
+  }
+  .label {
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .value {
+    letter-spacing: -0.02em;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 700;
+  }
+</style>

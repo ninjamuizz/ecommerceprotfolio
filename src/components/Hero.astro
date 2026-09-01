@@ -1,0 +1,397 @@
+---
+// Hero, ported field-for-field from reference/home.html's <section class="hero"
+// id="top"> (data-astro-cid-ge2uvauf). Includes the ambient glow drifts, the
+// 5-column animated "shelf" of product bottles, and the two-column flavor-name
+// ticker underneath it — all in one component because that's how the source
+// actually nests them (NOTES.md: the brief's separate "#categories ticker"
+// section doesn't exist; this ticker lives inside the hero, and id="categories"
+// on the real site is the six-lines module instead).
+//
+// Shelf/ticker images localized to public/images/site/hero-shelf-N(.webp / -120w / -240w).
+interface ShelfImage {
+  src: string;
+  srcset: string;
+  width: string;
+  height: string;
+}
+interface ShelfColumn {
+  direction: 'up' | 'down';
+  duration: string;
+  images: ShelfImage[];
+}
+
+const shelfColumns: ShelfColumn[] = [
+  {
+    direction: 'up',
+    duration: '38s',
+    images: [
+      { src: '/images/site/hero-shelf-1.webp', srcset: '/images/site/hero-shelf-1-120w.webp 120w, /images/site/hero-shelf-1-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-2.webp', srcset: '/images/site/hero-shelf-2-120w.webp 120w, /images/site/hero-shelf-2-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-3.webp', srcset: '/images/site/hero-shelf-3-120w.webp 120w, /images/site/hero-shelf-3-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-4.webp', srcset: '/images/site/hero-shelf-4-120w.webp 120w, /images/site/hero-shelf-4-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-5.webp', srcset: '/images/site/hero-shelf-5-120w.webp 120w, /images/site/hero-shelf-5-240w.webp 240w', width: '504', height: '504' },
+      { src: '/images/site/hero-shelf-6.webp', srcset: '/images/site/hero-shelf-6-120w.webp 120w, /images/site/hero-shelf-6-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-7.webp', srcset: '/images/site/hero-shelf-7-120w.webp 120w, /images/site/hero-shelf-7-240w.webp 240w', width: '500', height: '500' },
+    ],
+  },
+  {
+    direction: 'down',
+    duration: '47s',
+    images: [
+      { src: '/images/site/hero-shelf-8.webp', srcset: '/images/site/hero-shelf-8-120w.webp 120w, /images/site/hero-shelf-8-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-9.webp', srcset: '/images/site/hero-shelf-9-120w.webp 120w, /images/site/hero-shelf-9-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-10.webp', srcset: '/images/site/hero-shelf-10-120w.webp 120w, /images/site/hero-shelf-10-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-11.webp', srcset: '/images/site/hero-shelf-11-120w.webp 120w, /images/site/hero-shelf-11-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-12.webp', srcset: '/images/site/hero-shelf-12-120w.webp 120w, /images/site/hero-shelf-12-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-13.webp', srcset: '/images/site/hero-shelf-13-120w.webp 120w, /images/site/hero-shelf-13-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-14.webp', srcset: '/images/site/hero-shelf-14-120w.webp 120w, /images/site/hero-shelf-14-240w.webp 240w', width: '504', height: '504' },
+    ],
+  },
+  {
+    direction: 'up',
+    duration: '34s',
+    images: [
+      { src: '/images/site/hero-shelf-15.webp', srcset: '/images/site/hero-shelf-15-120w.webp 120w, /images/site/hero-shelf-15-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-16.webp', srcset: '/images/site/hero-shelf-16-120w.webp 120w, /images/site/hero-shelf-16-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-17.webp', srcset: '/images/site/hero-shelf-17-120w.webp 120w, /images/site/hero-shelf-17-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-18.webp', srcset: '/images/site/hero-shelf-18-120w.webp 120w, /images/site/hero-shelf-18-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-19.webp', srcset: '/images/site/hero-shelf-19-120w.webp 120w, /images/site/hero-shelf-19-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-20.webp', srcset: '/images/site/hero-shelf-20-120w.webp 120w, /images/site/hero-shelf-20-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-21.webp', srcset: '/images/site/hero-shelf-21-120w.webp 120w, /images/site/hero-shelf-21-240w.webp 240w', width: '500', height: '500' },
+    ],
+  },
+  {
+    direction: 'down',
+    duration: '43s',
+    images: [
+      { src: '/images/site/hero-shelf-22.webp', srcset: '/images/site/hero-shelf-22-120w.webp 120w, /images/site/hero-shelf-22-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-23.webp', srcset: '/images/site/hero-shelf-23-120w.webp 120w, /images/site/hero-shelf-23-240w.webp 240w', width: '504', height: '504' },
+      { src: '/images/site/hero-shelf-24.webp', srcset: '/images/site/hero-shelf-24-120w.webp 120w, /images/site/hero-shelf-24-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-25.webp', srcset: '/images/site/hero-shelf-25-120w.webp 120w, /images/site/hero-shelf-25-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-26.webp', srcset: '/images/site/hero-shelf-26-120w.webp 120w, /images/site/hero-shelf-26-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-27.webp', srcset: '/images/site/hero-shelf-27-120w.webp 120w, /images/site/hero-shelf-27-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-28.webp', srcset: '/images/site/hero-shelf-28-120w.webp 120w, /images/site/hero-shelf-28-240w.webp 240w', width: '500', height: '500' },
+    ],
+  },
+  {
+    direction: 'up',
+    duration: '29s',
+    images: [
+      { src: '/images/site/hero-shelf-29.webp', srcset: '/images/site/hero-shelf-29-120w.webp 120w, /images/site/hero-shelf-29-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-30.webp', srcset: '/images/site/hero-shelf-30-120w.webp 120w, /images/site/hero-shelf-30-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-31.webp', srcset: '/images/site/hero-shelf-31-120w.webp 120w, /images/site/hero-shelf-31-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-32.webp', srcset: '/images/site/hero-shelf-32-120w.webp 120w, /images/site/hero-shelf-32-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-33.webp', srcset: '/images/site/hero-shelf-33-120w.webp 120w, /images/site/hero-shelf-33-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-34.webp', srcset: '/images/site/hero-shelf-34-120w.webp 120w, /images/site/hero-shelf-34-240w.webp 240w', width: '500', height: '500' },
+      { src: '/images/site/hero-shelf-35.webp', srcset: '/images/site/hero-shelf-35-120w.webp 120w, /images/site/hero-shelf-35-240w.webp 240w', width: '500', height: '500' },
+    ],
+  },
+];
+
+const tickerUp = [
+  'American Strawberry', 'Asian Rose', 'B-52', 'Big Apple', 'Green Apple', 'Blue Curacao', 'Bubble Gum',
+  'California Almond', 'Ceylon Cinnamon', 'Cherry Blossom', 'Cherry Lime', 'White Chocolate',
+  'Cinnamon & Brown Sugar', 'Classic Creme Brulee', 'Classic Vanilla', 'Coffee Royale', 'Creme Caramel',
+  'Creme de Cacao', 'Curacao Orange', 'English Red Raspberry', 'French Vanilla', 'Georgia Peach',
+  'German Chocolate', 'Gingerbread', 'Going Bananas', "Granny's Snickerdoodle", 'Great Pumpkin Spice',
+  'Green Mint', 'Hawaiian Coconut', 'Highland Butterscotch', 'Homestyle Peanut Butter', 'Irish Cream',
+  'Italian Amaretto', 'Jamaican Rum', 'Lavender de Provence', 'Lemon Meringue', 'Macadamia Nut',
+  'Maraschino Cherry', 'Mojito Mojo', 'Napoleon Brandy', 'New England Black Cherry', 'Mexican Kahlua',
+  'New Zealand Kiwi', 'Old Fashioned Sarsaparilla', 'Oregon Mountain Blackberry', 'Yellow Passionfruit',
+  'Peppermint Schnapps', 'Persian Lime', 'Polynesian Pineapple', 'Himalayan Pommegranate',
+  'Rhythm & Blueberry', 'Rocky Mountain Hazelnut', 'Royal English Toffee', 'Sweetness',
+  'Swiss Chocolate Almond',
+];
+
+const tickerDown = [
+  'Toasted Marshmallow', 'Tropical Mango', 'Tuscan Tiramisu', 'Vienna Chocolate Mint',
+  'Sweet African Watermelon', 'White Peach', 'Blue Raspberry', 'Salted Caramel', 'Egg-cellent Eggnog',
+  "Harvey's Butter Rum Batter", 'American Strawberry', 'California Almond', 'Creme Caramel',
+  'English Red Raspberry', 'English Toffee', 'French Vanilla', 'German Chocolate', 'Great Pumpkin Spice',
+  'Hawaiian Coconut', 'Irish Cream', 'Jamaican Rum', 'Peppermint Schnapps', 'Rocky Mountain Hazelnut',
+  'Sweetness', 'White Chocolate', 'Blackberry', 'Lemon', 'Mango', 'Peach', 'Raspberry', 'Strawberry',
+  'Chocolate Sauce', 'Dark Chocolate Sauce', 'White Chocolate Sauce', 'Caramel Sauce', 'Salted Caramel',
+  'Pumpkin Spice Sauce', 'Chocolate', 'Cinnamon', 'Mini Marshmallow', 'Raspberry', 'Strawberry',
+  'Toasted Coconut', 'Toffee Bit Inclusions', 'Vanilla', 'White Chocolate', 'Peppermint Bits',
+  'Chocolate (without Espresso)', 'Cookies and Cream', 'English Toffee', 'Mocha', 'Red Velvet',
+  'Vanilla Neutral Base', 'Cherry Blossom', 'Chocolate Cherry Blossom',
+];
+---
+
+<section class="hero" id="top">
+  <div class="glows" aria-hidden="true">
+    <span class="glow glow-a"></span>
+    <span class="glow glow-b"></span>
+    <span class="glow glow-c"></span>
+  </div>
+  <div class="shell grid">
+    <div class="copy">
+      <p class="eyebrow-row">
+        <span class="pour-bar" aria-hidden="true"></span>
+        <span class="eyebrow">Beverage flavor, built for foodservice</span>
+      </p>
+      <h1>
+        <span>Robust</span>
+        <span>Flavors</span>
+        <span class="gold">For Every</span>
+        <span>Beverage.</span>
+      </h1>
+      <p class="lead">
+        Cool-blended from up to five sugars with pure fruit juice concentrates. A strong, complex
+        taste in every sip — so you pour less per drink.
+      </p>
+      <p class="actions">
+        <a class="pill pill-solid" href="#rep">Talk to Us</a>
+        <a class="pill pill-outline" href="#flavors">Browse the flavors</a>
+      </p>
+    </div>
+
+    <div class="stack" aria-hidden="true">
+      <div class="panel">
+        <div class="shelf">
+          {
+            shelfColumns.map((col) => (
+              <div class="shelf-col" data-direction={col.direction} style={`--duration:${col.duration}`}>
+                {[...col.images, ...col.images].map((img) => (
+                  <img
+                    src={img.src}
+                    srcset={img.srcset}
+                    alt=""
+                    sizes="120px"
+                    loading="eager"
+                    decoding="async"
+                    width={img.width}
+                    height={img.height}
+                  />
+                ))}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="ticker">
+        <div class="ticker-col up">
+          {[...tickerUp, ...tickerUp].map((name) => <span>{name}</span>)}
+        </div>
+        <div class="ticker-col down">
+          {[...tickerDown, ...tickerDown].map((name) => <span>{name}</span>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--plum);
+    color: #fff;
+    align-items: center;
+    min-height: 88vh;
+    padding-block: clamp(48px, 7vw, 96px);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  .glows {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+  }
+  .glow {
+    filter: blur(70px);
+    opacity: 0.55;
+    will-change: transform;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .glow-a {
+    background: var(--purple);
+    width: 46vw;
+    height: 46vw;
+    animation: 30s ease-in-out infinite drift-a;
+    top: -12%;
+    left: -6%;
+  }
+  .glow-b {
+    background: var(--gold);
+    width: 34vw;
+    height: 34vw;
+    animation: 26s ease-in-out infinite drift-b;
+    top: 34%;
+    left: 38%;
+  }
+  .glow-c {
+    background: var(--pink);
+    width: 40vw;
+    height: 40vw;
+    animation: 34s ease-in-out infinite drift-c;
+    bottom: -16%;
+    right: -8%;
+  }
+  .grid {
+    z-index: 1;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    display: grid;
+    position: relative;
+  }
+  .eyebrow-row {
+    color: var(--gold);
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 28px;
+    display: flex;
+  }
+  .pour-bar {
+    background: #c1a12e40;
+    border-radius: 2px;
+    flex: none;
+    width: 3px;
+    height: 46px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .pour-bar::after {
+    content: '';
+    background: var(--gold);
+    animation: pour-bar 2.4s var(--ease-out) infinite;
+    position: absolute;
+    inset: 0;
+  }
+  h1 {
+    font-size: var(--display);
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 900;
+    line-height: 0.84;
+    display: grid;
+  }
+  h1 .gold {
+    color: var(--gold);
+  }
+  .lead {
+    max-width: 46ch;
+    color: var(--on-dark);
+  }
+  .actions {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+    display: flex;
+  }
+  .pill {
+    border-radius: var(--pill);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    height: 52px;
+    transition:
+      background var(--t-hover),
+      color var(--t-hover),
+      border-color var(--t-hover);
+    align-items: center;
+    padding-inline: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-flex;
+  }
+  .pill-solid {
+    color: var(--plum);
+    background: #fff;
+  }
+  .pill-solid:hover {
+    background: var(--gold);
+    color: var(--plum);
+  }
+  .pill-outline {
+    color: #fff;
+    border: 1px solid #ffffff52;
+  }
+  .pill-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .stack {
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 18px;
+    height: min(66vh, 620px);
+    display: grid;
+  }
+  .panel {
+    border-radius: var(--r-lg);
+    -webkit-backdrop-filter: blur(2px) saturate(120%);
+    backdrop-filter: blur(2px) saturate(120%);
+    background: #fbf6ec1f;
+    min-height: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .shelf {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    padding-inline: 6px;
+    display: grid;
+    position: absolute;
+    inset: 0;
+  }
+  .shelf-col {
+    will-change: transform;
+    align-content: start;
+    gap: 6px;
+    display: grid;
+  }
+  .shelf-col[data-direction='up'] {
+    animation: column-up var(--duration) linear infinite;
+  }
+  .shelf-col[data-direction='down'] {
+    animation: column-down var(--duration) linear infinite;
+  }
+  .shelf-col img {
+    width: 100%;
+    height: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .shelf-col img:nth-child(n + 8) {
+      display: none;
+    }
+  }
+  .ticker {
+    opacity: 0.42;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    height: 168px;
+    font-size: 14px;
+    font-weight: 600;
+    display: grid;
+    overflow: hidden;
+    mask-image: linear-gradient(transparent, black 22% 78%, transparent);
+  }
+  .ticker-col {
+    white-space: nowrap;
+    will-change: transform;
+    align-content: start;
+    gap: 10px;
+    display: grid;
+  }
+  .ticker-col.up {
+    animation: 46s linear infinite column-up;
+  }
+  .ticker-col.down {
+    animation: 52s linear infinite column-down;
+  }
+  @media (width <= 900px) {
+    .stack {
+      grid-template-rows: auto auto;
+      height: auto;
+    }
+    .panel {
+      aspect-ratio: 1;
+    }
+    .ticker {
+      height: 132px;
+    }
+  }
+</style>

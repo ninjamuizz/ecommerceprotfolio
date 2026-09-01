@@ -1,0 +1,57 @@
+---
+// Section order/ids/copy all ported verbatim from reference/home.html.
+// NOTE (see NOTES.md for full detail): the brief's assumed section map
+// doesn't quite match the live site —
+//   - the hero's flavor-name ticker lives INSIDE the hero (id="top"), there's
+//     no separate ticker section.
+//   - id="categories" is actually the six-lines module, not a second ticker.
+//   - the testimonials section is a real 6-quote carousel, not one static
+//     quote.
+//   - #distributors has no zip-lookup form and #rep has no contact form at
+//     all — both are plain content + mailto/tel links on the live site.
+// Built to match reference/home.html exactly rather than the brief's
+// section-by-section assumptions.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import StatementMarquee from '../components/StatementMarquee.astro';
+import About from '../components/About.astro';
+import LinesModule from '../components/LinesModule.astro';
+import FlavorExplorer from '../components/FlavorExplorer.astro';
+import RecipesTeaser from '../components/RecipesTeaser.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Distributors from '../components/Distributors.astro';
+import RepContact from '../components/RepContact.astro';
+
+const title = 'Stirling Flavors — Made for the bar, not the shelf.';
+const description =
+  'Stirling Flavors manufactures beverage flavor systems for foodservice — cane sugar syrups, sugar-free syrups, tea concentrates, gourmet sauces, shakable toppings and frappe mixes. Family owned, made in Kent, Washington.';
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Stirling Flavors',
+    url: 'https://www.stirlingflavors.com/',
+    email: 'info@stirlingflavors.com',
+    telephone: '+12538676133',
+    foundingDate: '1993',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '19220 64th Ave S',
+      addressLocality: 'Kent',
+      addressRegion: 'Washington',
+      postalCode: '98032',
+      addressCountry: 'US',
+    },
+  })} />
+  <Hero />
+  <StatementMarquee />
+  <About />
+  <LinesModule />
+  <FlavorExplorer />
+  <RecipesTeaser />
+  <Testimonials />
+  <Distributors />
+  <RepContact />
+</BaseLayout>

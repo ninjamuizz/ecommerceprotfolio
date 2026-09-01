@@ -1,0 +1,3359 @@
+[
+  {
+    "name": "Lavender Vanilla Oat Latte",
+    "slug": "lavender-vanilla-oat-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [
+      "Spring",
+      "Floral",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Lavender De Provence syrup",
+        "home": "0.5 oz Lavender De Provence syrup",
+        "cafe": "1 pump Lavender De Provence"
+      },
+      {
+        "item": "French Vanilla syrup",
+        "home": "0.5 oz French Vanilla syrup",
+        "cafe": "1 pump French Vanilla"
+      },
+      {
+        "item": "steamed oat milk",
+        "home": "10 oz steamed oat milk",
+        "cafe": "10 oz steamed oat milk"
+      }
+    ],
+    "method": "Pull espresso over the syrups, add steamed oat milk. Serve over ice in warm months.",
+    "swap": "Lavender De Provence → Asian Rose for a rose-vanilla version",
+    "spike": null,
+    "products": [
+      "lavender-de-provence",
+      "french-vanilla"
+    ],
+    "related": [
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Tuscan Tiramisu Creme Latte",
+    "slug": "tuscan-tiramisu-creme-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Toppings.",
+    "tags": [
+      "Year-round",
+      "Coffeehouse",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Tuscan Tiramisu syrup",
+        "home": "0.75 oz Tuscan Tiramisu syrup",
+        "cafe": "1.5 pumps Tuscan Tiramisu"
+      },
+      {
+        "item": "Classic Vanilla syrup",
+        "home": "0.25 oz Classic Vanilla syrup",
+        "cafe": "0.5 pump Classic Vanilla"
+      },
+      {
+        "item": "steamed milk",
+        "home": "10 oz steamed milk",
+        "cafe": "10 oz steamed milk"
+      },
+      {
+        "item": "Dust of Chocolate Shakable Topping",
+        "home": "Dust of Chocolate Shakable Topping",
+        "cafe": "Dust of Chocolate Shakable Topping"
+      }
+    ],
+    "method": "Combine syrups, espresso and milk; finish with a cocoa dust.",
+    "swap": "Tuscan Tiramisu → Royal English Toffee for a toffee-cream latte",
+    "spike": "1 oz coffee liqueur",
+    "products": [
+      "tuscan-tiramisu",
+      "classic-vanilla",
+      "chocolate"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Salted Caramel Macadamia Latte",
+    "slug": "salted-caramel-macadamia-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [
+      "Fall",
+      "Nutty",
+      "Coffeehouse"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Kona Macadamia Nut syrup",
+        "home": "0.5 oz Kona Macadamia Nut syrup",
+        "cafe": "1 pump Kona Macadamia Nut"
+      },
+      {
+        "item": "Salted English Caramel syrup",
+        "home": "0.5 oz Salted English Caramel syrup",
+        "cafe": "1 pump Salted English Caramel"
+      },
+      {
+        "item": "steamed milk",
+        "home": "10 oz steamed milk",
+        "cafe": "10 oz steamed milk"
+      }
+    ],
+    "method": "Pull espresso over the syrups, add steamed milk. Excellent iced.",
+    "swap": "Kona Macadamia Nut → Rocky Mountain Hazelnut for a hazelnut-caramel take",
+    "spike": "1 oz bourbon",
+    "products": [
+      "macadamia-nut",
+      "salted-caramel"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Peanut Butter Cup Mocha",
+    "slug": "peanut-butter-cup-mocha",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Syrups and Sauces and Toppings.",
+    "tags": [
+      "Year-round",
+      "Chocolate",
+      "Nutty"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Peanut Butter syrup",
+        "home": "0.75 oz Peanut Butter syrup",
+        "cafe": "1.5 pumps Peanut Butter"
+      },
+      {
+        "item": "Chocolate Sauce",
+        "home": "1 oz Chocolate Sauce",
+        "cafe": "2 pumps Chocolate Sauce"
+      },
+      {
+        "item": "steamed milk",
+        "home": "10 oz steamed milk",
+        "cafe": "10 oz steamed milk"
+      },
+      {
+        "item": "Whip + Chocolate Shakable Topping",
+        "home": "Whip + Chocolate Shakable Topping",
+        "cafe": "Whip + Chocolate Shakable Topping"
+      }
+    ],
+    "method": "Stir sauce and syrup into the espresso, add steamed milk, finish with whip and a dust.",
+    "swap": "Peanut Butter → Toasted Marshmallow for a s'mores mocha",
+    "spike": "1 oz Irish cream",
+    "products": [
+      "homestyle-peanut-butter",
+      "chocolate-sauce",
+      "chocolate"
+    ],
+    "related": [
+      "german-chocolate-cocoa",
+      "white-peppermint-mocha",
+      "caramel-apple-steamer",
+      "creme-brulee-white-mocha",
+      "salted-caramel-cocoa",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "German Chocolate Cocoa",
+    "slug": "german-chocolate-cocoa",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Syrups and Sauces and Toppings.",
+    "tags": [
+      "Winter",
+      "Chocolate"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Dark Chocolate Sauce",
+        "home": "1 oz Dark Chocolate Sauce",
+        "cafe": "2 pumps Dark Chocolate Sauce"
+      },
+      {
+        "item": "German Chocolate syrup",
+        "home": "0.5 oz German Chocolate syrup",
+        "cafe": "1 pump German Chocolate"
+      },
+      {
+        "item": "steamed milk",
+        "home": "12 oz steamed milk",
+        "cafe": "12 oz steamed milk"
+      },
+      {
+        "item": "Whip + Toasted Coconut Shakable Topping",
+        "home": "Whip + Toasted Coconut Shakable Topping",
+        "cafe": "Whip + Toasted Coconut Shakable Topping"
+      }
+    ],
+    "method": "Melt the sauce and syrup into steamed milk; top with whip and toasted coconut.",
+    "swap": "Dark Chocolate Sauce → White Chocolate Sauce for a white-chocolate coconut cocoa",
+    "spike": "1 oz dark rum",
+    "products": [
+      "dark-chocolate-sauce",
+      "german-chocolate",
+      "toasted-coconut"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "white-peppermint-mocha",
+      "caramel-apple-steamer",
+      "creme-brulee-white-mocha",
+      "salted-caramel-cocoa",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "White Peppermint Mocha",
+    "slug": "white-peppermint-mocha",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Syrups and Sauces and Toppings.",
+    "tags": [
+      "Winter",
+      "Chocolate"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "White Chocolate Sauce",
+        "home": "1 oz White Chocolate Sauce",
+        "cafe": "2 pumps White Chocolate Sauce"
+      },
+      {
+        "item": "Peppermint Schnapps syrup",
+        "home": "0.5 oz Peppermint Schnapps syrup",
+        "cafe": "1 pump Peppermint Schnapps"
+      },
+      {
+        "item": "steamed milk",
+        "home": "10 oz steamed milk",
+        "cafe": "10 oz steamed milk"
+      },
+      {
+        "item": "Peppermint Bits Shakable Topping",
+        "home": "Peppermint Bits Shakable Topping",
+        "cafe": "Peppermint Bits Shakable Topping"
+      }
+    ],
+    "method": "Stir sauce and syrup into the espresso, add milk, crown with peppermint bits.",
+    "swap": "White Chocolate Sauce → Dark Chocolate Sauce for a dark peppermint mocha",
+    "spike": "1 oz Irish cream",
+    "products": [
+      "white-chocolate-sauce",
+      "peppermint-schnapps",
+      "peppermint-bits"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "german-chocolate-cocoa",
+      "caramel-apple-steamer",
+      "creme-brulee-white-mocha",
+      "salted-caramel-cocoa",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "Cookies & Cream Dream Frappe",
+    "slug": "cookies-and-cream-dream-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Frappe Mixes and Sauces and Toppings.",
+    "tags": [
+      "Summer",
+      "Chocolate",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Frappe Mixes",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Cookies & Cream Frappe Mix",
+        "home": "1.5 oz (~3 tbsp) Cookies & Cream Frappe Mix",
+        "cafe": "Per-pack ratio Cookies & Cream Frappe Mix"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      },
+      {
+        "item": "ice",
+        "home": "1.5 cups ice",
+        "cafe": "1.5 cups ice"
+      },
+      {
+        "item": "Chocolate Sauce - ribbon the cup",
+        "home": "Chocolate Sauce - ribbon the cup",
+        "cafe": "2 pumps Chocolate Sauce - ribbon the cup"
+      },
+      {
+        "item": "Mini-Marshmallow Bits Topping",
+        "home": "Mini-Marshmallow Bits Topping",
+        "cafe": "Mini-Marshmallow Bits Topping"
+      }
+    ],
+    "method": "Blend mix, milk and ice; ribbon the cup with chocolate sauce; pour and top.",
+    "swap": "Chocolate Sauce → Caramel Sauce for a caramel-cookie frappe",
+    "spike": null,
+    "products": [
+      "cookies-and-cream",
+      "chocolate-sauce",
+      "mini-marshmallow"
+    ],
+    "related": [
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "Salted Caramel Toffee Frappe",
+    "slug": "salted-caramel-toffee-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Frappe Mixes and Sauces.",
+    "tags": [
+      "Summer",
+      "Coffeehouse"
+    ],
+    "madeWith": [
+      "Frappe Mixes",
+      "Sauces"
+    ],
+    "ingredients": [
+      {
+        "item": "English Toffee Frappe Mix",
+        "home": "1.5 oz (~3 tbsp) English Toffee Frappe Mix",
+        "cafe": "Per-pack ratio English Toffee Frappe Mix"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      },
+      {
+        "item": "ice",
+        "home": "1.5 cups ice",
+        "cafe": "1.5 cups ice"
+      },
+      {
+        "item": "Salted Caramel Sauce",
+        "home": "0.5 oz Salted Caramel Sauce",
+        "cafe": "1 pump Salted Caramel Sauce"
+      },
+      {
+        "item": "Whip + salted caramel drizzle",
+        "home": "Whip + salted caramel drizzle",
+        "cafe": "Whip + salted caramel drizzle"
+      }
+    ],
+    "method": "Blend mix, milk, ice and sauce; top with whip and a Salted Caramel Sauce drizzle.",
+    "swap": "English Toffee Frappe Mix → Mocha Frappe Mix for a salted-caramel mocha frappe",
+    "spike": null,
+    "products": [
+      "english-toffee",
+      "salted-caramel"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "Red Velvet Cheesecake Frappe",
+    "slug": "red-velvet-cheesecake-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Frappe Mixes and Sauces and Toppings.",
+    "tags": [
+      "Winter",
+      "Chocolate",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Frappe Mixes",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Red Velvet Frappe Mix",
+        "home": "1.5 oz (~3 tbsp) Red Velvet Frappe Mix",
+        "cafe": "Per-pack ratio Red Velvet Frappe Mix"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      },
+      {
+        "item": "ice",
+        "home": "1.5 cups ice",
+        "cafe": "1.5 cups ice"
+      },
+      {
+        "item": "White Chocolate Sauce",
+        "home": "0.5 oz White Chocolate Sauce",
+        "cafe": "1 pump White Chocolate Sauce"
+      },
+      {
+        "item": "White Chocolate Shakable Topping",
+        "home": "White Chocolate Shakable Topping",
+        "cafe": "White Chocolate Shakable Topping"
+      }
+    ],
+    "method": "Blend mix, milk, ice and white chocolate sauce; dust with white chocolate topping.",
+    "swap": "White Chocolate Sauce → Chocolate Sauce for a classic red-velvet chocolate frappe",
+    "spike": null,
+    "products": [
+      "red-velvet",
+      "white-chocolate-sauce",
+      "white-chocolate"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "Mango Passionfruit Refresher",
+    "slug": "mango-passionfruit-refresher",
+    "category": "Tea & Refreshers",
+    "categorySlug": "tea-and-refreshers",
+    "blurb": "a Stirling tea & refresher built from Tea Concentrates and Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit",
+      "Tropical"
+    ],
+    "madeWith": [
+      "Tea Concentrates",
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Mango Tea Concentrate",
+        "home": "3 oz Mango Tea Concentrate",
+        "cafe": "3 oz Mango Tea Concentrate"
+      },
+      {
+        "item": "Yellow Passionfruit syrup",
+        "home": "0.5 oz Yellow Passionfruit syrup",
+        "cafe": "1 pump Yellow Passionfruit"
+      },
+      {
+        "item": "cold water",
+        "home": "8 oz cold water",
+        "cafe": "8 oz cold water"
+      },
+      {
+        "item": "Ice - splash of soda for fizz",
+        "home": "Ice - splash of soda for fizz",
+        "cafe": "Ice - splash of soda for fizz"
+      }
+    ],
+    "method": "Stir concentrate, syrup and water over ice; add soda for sparkle.",
+    "swap": "Yellow Passionfruit → Polynesian Pineapple for a mango-pineapple refresher",
+    "spike": "1.5 oz white rum",
+    "products": [
+      "mango",
+      "yellow-passionfruit"
+    ],
+    "related": [
+      "peach-blossom-iced-tea",
+      "raspberry-peach-iced-tea",
+      "starlight-watermelon-cooler"
+    ]
+  },
+  {
+    "name": "Peach Blossom Iced Tea",
+    "slug": "peach-blossom-iced-tea",
+    "category": "Tea & Refreshers",
+    "categorySlug": "tea-and-refreshers",
+    "blurb": "a Stirling tea & refresher built from Tea Concentrates and Syrups.",
+    "tags": [
+      "Spring",
+      "Fruit",
+      "Floral"
+    ],
+    "madeWith": [
+      "Tea Concentrates",
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Peach Tea Concentrate",
+        "home": "3 oz Peach Tea Concentrate",
+        "cafe": "3 oz Peach Tea Concentrate"
+      },
+      {
+        "item": "Cherry Blossom syrup",
+        "home": "0.5 oz Cherry Blossom syrup",
+        "cafe": "1 pump Cherry Blossom"
+      },
+      {
+        "item": "cold water",
+        "home": "8 oz cold water",
+        "cafe": "8 oz cold water"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir together over ice; garnish with a lemon wheel.",
+    "swap": "Cherry Blossom → Georgia Peach to go double-peach",
+    "spike": "1.5 oz bourbon",
+    "products": [
+      "peach",
+      "cherry-blossom"
+    ],
+    "related": [
+      "mango-passionfruit-refresher",
+      "raspberry-peach-iced-tea",
+      "starlight-watermelon-cooler"
+    ]
+  },
+  {
+    "name": "Raspberry Peach Iced Tea",
+    "slug": "raspberry-peach-iced-tea",
+    "category": "Tea & Refreshers",
+    "categorySlug": "tea-and-refreshers",
+    "blurb": "a Stirling tea & refresher built from Tea Concentrates and Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Tea Concentrates",
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Raspberry Tea Concentrate",
+        "home": "3 oz Raspberry Tea Concentrate",
+        "cafe": "3 oz Raspberry Tea Concentrate"
+      },
+      {
+        "item": "Georgia Peach syrup",
+        "home": "0.5 oz Georgia Peach syrup",
+        "cafe": "1 pump Georgia Peach"
+      },
+      {
+        "item": "cold water",
+        "home": "8 oz cold water",
+        "cafe": "8 oz cold water"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Combine over ice; finish with fresh raspberries.",
+    "swap": "Georgia Peach → New Zealand Kiwi for a raspberry-kiwi tea",
+    "spike": "1.5 oz vodka",
+    "products": [
+      "raspberry",
+      "georgia-peach"
+    ],
+    "related": [
+      "mango-passionfruit-refresher",
+      "peach-blossom-iced-tea",
+      "starlight-watermelon-cooler"
+    ]
+  },
+  {
+    "name": "Blackberry Bramble",
+    "slug": "blackberry-bramble",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Tea Concentrates and Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Tea Concentrates",
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Blackberry Tea Concentrate",
+        "home": "3 oz Blackberry Tea Concentrate",
+        "cafe": "3 oz Blackberry Tea Concentrate"
+      },
+      {
+        "item": "Oregon Mountain Blackberry syrup",
+        "home": "0.5 oz Oregon Mountain Blackberry syrup",
+        "cafe": "1 pump Oregon Mountain Blackberry"
+      },
+      {
+        "item": "Persian Lime syrup",
+        "home": "0.5 oz Persian Lime syrup",
+        "cafe": "1 pump Persian Lime"
+      },
+      {
+        "item": "Soda water",
+        "home": "Soda water",
+        "cafe": "Soda water"
+      },
+      {
+        "item": "Ice + fresh mint",
+        "home": "Ice + fresh mint",
+        "cafe": "Ice + fresh mint"
+      }
+    ],
+    "method": "Build over crushed ice, top with soda, slap of mint.",
+    "swap": "Oregon Mountain Blackberry → English Red Raspberry for a raspberry bramble",
+    "spike": "1.5 oz gin",
+    "products": [
+      "blackberry",
+      "oregon-mountain-blackberry",
+      "persian-lime"
+    ],
+    "related": [
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Mojito Lime Cooler",
+    "slug": "mojito-lime-cooler",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Mojito Mojo syrup",
+        "home": "0.5 oz Mojito Mojo syrup",
+        "cafe": "1 pump Mojito Mojo"
+      },
+      {
+        "item": "Persian Lime syrup",
+        "home": "0.5 oz Persian Lime syrup",
+        "cafe": "1 pump Persian Lime"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "Ice + fresh mint",
+        "home": "Ice + fresh mint",
+        "cafe": "Ice + fresh mint"
+      }
+    ],
+    "method": "Muddle mint, add syrups and soda over ice.",
+    "swap": "Persian Lime → Sweet African Watermelon for a watermelon mojito",
+    "spike": "1.5 oz white rum",
+    "products": [
+      "mojito-mojo",
+      "persian-lime"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Pomegranate Rose Spritz",
+    "slug": "pomegranate-rose-spritz",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [
+      "Spring",
+      "Fruit",
+      "Floral"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Himalayan Pomegranate syrup",
+        "home": "0.5 oz Himalayan Pomegranate syrup",
+        "cafe": "1 pump Himalayan Pomegranate"
+      },
+      {
+        "item": "Asian Rose syrup",
+        "home": "0.5 oz Asian Rose syrup",
+        "cafe": "1 pump Asian Rose"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir syrups and soda over ice; garnish with a lime twist.",
+    "swap": "Asian Rose → Cherry Blossom for a cherry-pom spritz",
+    "spike": "3 oz prosecco",
+    "products": [
+      "himalayan-pommegranate",
+      "asian-rose"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Coconut Cream Dirty Soda",
+    "slug": "coconut-cream-dirty-soda",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups and Toppings.",
+    "tags": [
+      "Summer",
+      "Tropical"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "cola or Dr Pepper",
+        "home": "12 oz cola or Dr Pepper",
+        "cafe": "12 oz cola or Dr Pepper"
+      },
+      {
+        "item": "Hawaiian Coconut syrup",
+        "home": "1 oz Hawaiian Coconut syrup",
+        "cafe": "2 pumps Hawaiian Coconut"
+      },
+      {
+        "item": "half-and-half",
+        "home": "1 oz half-and-half",
+        "cafe": "1 oz half-and-half"
+      },
+      {
+        "item": "Toasted Coconut Shakable Topping",
+        "home": "Toasted Coconut Shakable Topping",
+        "cafe": "Toasted Coconut Shakable Topping"
+      }
+    ],
+    "method": "Pour soda over ice, add syrup, float the cream, dust with toasted coconut.",
+    "swap": "Hawaiian Coconut → Going Bananas for a banana-cream soda",
+    "spike": "1.5 oz coconut rum",
+    "products": [
+      "hawaiian-coconut",
+      "toasted-coconut"
+    ],
+    "related": [
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Cherry Vanilla Dirty Soda",
+    "slug": "cherry-vanilla-dirty-soda",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Year-round",
+      "Fruit",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "cola",
+        "home": "12 oz cola",
+        "cafe": "12 oz cola"
+      },
+      {
+        "item": "Black Cherry syrup",
+        "home": "0.5 oz Black Cherry syrup",
+        "cafe": "1 pump Black Cherry"
+      },
+      {
+        "item": "Classic Vanilla syrup",
+        "home": "0.5 oz Classic Vanilla syrup",
+        "cafe": "1 pump Classic Vanilla"
+      },
+      {
+        "item": "half-and-half",
+        "home": "1 oz half-and-half",
+        "cafe": "1 oz half-and-half"
+      }
+    ],
+    "method": "Pour cola over ice, add syrups, float the cream, stir once.",
+    "swap": "Black Cherry → American Strawberry for a strawberries-and-cream soda",
+    "spike": "1.5 oz bourbon",
+    "products": [
+      "new-england-black-cherry",
+      "classic-vanilla"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Strawberry Watermelon Lemonade",
+    "slug": "strawberry-watermelon-lemonade",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Sweet African Watermelon syrup",
+        "home": "0.75 oz Sweet African Watermelon syrup",
+        "cafe": "1.5 pumps Sweet African Watermelon"
+      },
+      {
+        "item": "American Strawberry syrup",
+        "home": "0.75 oz American Strawberry syrup",
+        "cafe": "1.5 pumps American Strawberry"
+      },
+      {
+        "item": "lemonade",
+        "home": "12 oz lemonade",
+        "cafe": "12 oz lemonade"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir syrups into lemonade over ice; garnish with a strawberry.",
+    "swap": "Sweet African Watermelon → Yellow Passionfruit for a strawberry-passion lemonade",
+    "spike": "1.5 oz tequila blanco",
+    "products": [
+      "sweet-african-watermelon",
+      "american-strawberry"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Butterbeer Cream Soda",
+    "slug": "butterbeer-cream-soda",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Fall",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Butter Rum Batter syrup",
+        "home": "0.75 oz Butter Rum Batter syrup",
+        "cafe": "1.5 pumps Butter Rum Batter"
+      },
+      {
+        "item": "Highland Butterscotch syrup",
+        "home": "0.5 oz Highland Butterscotch syrup",
+        "cafe": "1 pump Highland Butterscotch"
+      },
+      {
+        "item": "cream soda",
+        "home": "10 oz cream soda",
+        "cafe": "10 oz cream soda"
+      },
+      {
+        "item": "Cold foam: 4 oz cream + 0.25 oz Classic Vanilla syrup",
+        "home": "Cold foam: 4 oz cream + 0.25 oz Classic Vanilla syrup",
+        "cafe": "Cold foam: 4 oz cream + 0.5 pump Classic Vanilla"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir the syrups into cream soda over ice; top with vanilla cold foam. The Harry Potter drink.",
+    "swap": "Highland Butterscotch → Creme Caramel for a smoother butterbeer",
+    "spike": "1.5 oz spiced rum",
+    "products": [
+      "harvey-s-butter-rum-batter",
+      "highland-butterscotch",
+      "classic-vanilla"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Espresso Brulee Tonic",
+    "slug": "espresso-brulee-tonic",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [
+      "Summer",
+      "Coffeehouse"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Classic Creme Brulee syrup",
+        "home": "0.5 oz Classic Creme Brulee syrup",
+        "cafe": "1 pump Classic Creme Brulee"
+      },
+      {
+        "item": "Curacao Orange syrup",
+        "home": "0.25 oz Curacao Orange syrup",
+        "cafe": "0.5 pump Curacao Orange"
+      },
+      {
+        "item": "tonic water",
+        "home": "6 oz tonic water",
+        "cafe": "6 oz tonic water"
+      },
+      {
+        "item": "Ice + orange peel",
+        "home": "Ice + orange peel",
+        "cafe": "Ice + orange peel"
+      }
+    ],
+    "method": "Build syrups + tonic over ice, pour espresso on top for the layered look; twist an orange peel over it. On-trend espresso tonic.",
+    "swap": "Curacao Orange → Persian Lime for a citrus brulee tonic",
+    "spike": "1 oz coffee liqueur",
+    "products": [
+      "classic-creme-brulee",
+      "curacao-orange"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Lavender Haze Latte",
+    "slug": "lavender-haze-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [
+      "Spring",
+      "Floral",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "espresso",
+        "home": "2 shots espresso",
+        "cafe": "2 shots espresso"
+      },
+      {
+        "item": "Lavender De Provence syrup",
+        "home": "0.5 oz Lavender De Provence syrup",
+        "cafe": "1 pump Lavender De Provence"
+      },
+      {
+        "item": "Lemon Meringue syrup",
+        "home": "0.5 oz Lemon Meringue syrup",
+        "cafe": "1 pump Lemon Meringue"
+      },
+      {
+        "item": "milk over ice",
+        "home": "10 oz milk over ice",
+        "cafe": "10 oz milk over ice"
+      },
+      {
+        "item": "Cold foam on top",
+        "home": "Cold foam on top",
+        "cafe": "Cold foam on top"
+      }
+    ],
+    "method": "Shake espresso with the syrups, pour over iced milk, finish with cold foam. Floral-citrus and very photogenic.",
+    "swap": "Lemon Meringue → Classic Vanilla for a softer lavender latte",
+    "spike": null,
+    "products": [
+      "lavender-de-provence",
+      "lemon-meringue"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "snickerdoodle-cold-brew",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Caramel Apple Steamer",
+    "slug": "caramel-apple-steamer",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Syrups and Sauces and Toppings.",
+    "tags": [
+      "Fall",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Sour Apple syrup",
+        "home": "0.75 oz Sour Apple syrup",
+        "cafe": "1.5 pumps Sour Apple"
+      },
+      {
+        "item": "Caramel Sauce",
+        "home": "0.75 oz Caramel Sauce",
+        "cafe": "1.5 pumps Caramel Sauce"
+      },
+      {
+        "item": "steamed milk",
+        "home": "12 oz steamed milk",
+        "cafe": "12 oz steamed milk"
+      },
+      {
+        "item": "Cinnamon Shakable Topping",
+        "home": "Cinnamon Shakable Topping",
+        "cafe": "Cinnamon Shakable Topping"
+      }
+    ],
+    "method": "Stir syrup and caramel into steamed milk (no espresso); dust with cinnamon. Fair-food nostalgia, no coffee needed.",
+    "swap": "Sour Apple → The Big Apple for a sweeter caramel apple",
+    "spike": "1 oz bourbon",
+    "products": [
+      "green-apple",
+      "caramel-sauce",
+      "cinnamon"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "german-chocolate-cocoa",
+      "white-peppermint-mocha",
+      "creme-brulee-white-mocha",
+      "salted-caramel-cocoa",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "Sarsaparilla Cream Float",
+    "slug": "sarsaparilla-cream-float",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Summer",
+      "Vanillas"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Old Fashioned Sarsaparilla syrup",
+        "home": "1 oz Old Fashioned Sarsaparilla syrup",
+        "cafe": "2 pumps Old Fashioned Sarsaparilla"
+      },
+      {
+        "item": "Classic Vanilla syrup",
+        "home": "0.5 oz Classic Vanilla syrup",
+        "cafe": "1 pump Classic Vanilla"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "cream (or a scoop of vanilla ice cream)",
+        "home": "2 oz cream (or a scoop of vanilla ice cream)",
+        "cafe": "2 oz cream (or a scoop of vanilla ice cream)"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir syrups into soda over ice, float the cream (or drop the ice cream scoop). An adult root-beer float.",
+    "swap": "Classic Vanilla → Butter Rum Batter for a richer float",
+    "spike": "1.5 oz bourbon",
+    "products": [
+      "old-fashioned-sarsaparilla",
+      "classic-vanilla"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sunrise-layered-lemonade",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Sunrise Layered Lemonade",
+    "slug": "sunrise-layered-lemonade",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit",
+      "Tropical"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Himalayan Pomegranate syrup (poured first)",
+        "home": "0.75 oz Himalayan Pomegranate syrup (poured first)",
+        "cafe": "1.5 pumps Himalayan Pomegranate (poured first)"
+      },
+      {
+        "item": "Georgia Peach syrup",
+        "home": "0.5 oz Georgia Peach syrup",
+        "cafe": "1 pump Georgia Peach"
+      },
+      {
+        "item": "Yellow Passionfruit syrup",
+        "home": "0.5 oz Yellow Passionfruit syrup",
+        "cafe": "1 pump Yellow Passionfruit"
+      },
+      {
+        "item": "lemonade",
+        "home": "12 oz lemonade",
+        "cafe": "12 oz lemonade"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Pour pomegranate in first, fill with ice and lemonade, then float peach + passionfruit on top - don't stir, let it ombre.",
+    "swap": "Georgia Peach → American Strawberry for a berry sunrise",
+    "spike": "1.5 oz tequila blanco",
+    "products": [
+      "himalayan-pommegranate",
+      "georgia-peach",
+      "yellow-passionfruit"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "cotton-candy-cloud"
+    ]
+  },
+  {
+    "name": "Snickerdoodle Cold Brew",
+    "slug": "snickerdoodle-cold-brew",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Toppings.",
+    "tags": [
+      "Fall",
+      "Coffeehouse"
+    ],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Granny's Snickerdoodle syrup",
+        "home": "1 oz Granny's Snickerdoodle syrup",
+        "cafe": "2 pumps Granny's Snickerdoodle"
+      },
+      {
+        "item": "cold brew",
+        "home": "10 oz cold brew",
+        "cafe": "10 oz cold brew"
+      },
+      {
+        "item": "Sweet cream cold foam",
+        "home": "Sweet cream cold foam",
+        "cafe": "Sweet cream cold foam"
+      },
+      {
+        "item": "Cinnamon Shakable Topping",
+        "home": "Cinnamon Shakable Topping",
+        "cafe": "Cinnamon Shakable Topping"
+      }
+    ],
+    "method": "Stir syrup into cold brew over ice; top with sweet cream cold foam and a cinnamon dust.",
+    "swap": "Granny's Snickerdoodle → Cinnamon & Sugar for a spicier cold brew",
+    "spike": "1 oz Irish cream",
+    "products": [
+      "granny-s-snickerdoodle",
+      "cinnamon"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "frozen-tiramisu-coffee"
+    ]
+  },
+  {
+    "name": "Cotton Candy Cloud",
+    "slug": "cotton-candy-cloud",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Bubble Gum syrup",
+        "home": "0.75 oz Bubble Gum syrup",
+        "cafe": "1.5 pumps Bubble Gum"
+      },
+      {
+        "item": "Cherry Blossom syrup",
+        "home": "0.5 oz Cherry Blossom syrup",
+        "cafe": "1 pump Cherry Blossom"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "cream",
+        "home": "1 oz cream",
+        "cafe": "1 oz cream"
+      },
+      {
+        "item": "Whipped cream",
+        "home": "Whipped cream",
+        "cafe": "Whipped cream"
+      }
+    ],
+    "method": "Stir syrups into soda over ice, float the cream, pile on whip - it turns cotton-candy pink. A kids' / unicorn-menu drink.",
+    "swap": "Cherry Blossom → American Strawberry for a strawberry cloud",
+    "spike": null,
+    "products": [
+      "bubble-gum",
+      "cherry-blossom"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade"
+    ]
+  },
+  {
+    "name": "Galaxy Blue Lemonade",
+    "slug": "galaxy-blue-lemonade",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups + luster dust.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups + luster dust"
+    ],
+    "ingredients": [
+      {
+        "item": "Blue Curacao syrup",
+        "home": "0.75 oz Blue Curacao syrup",
+        "cafe": "1.5 pumps Blue Curacao"
+      },
+      {
+        "item": "Blue Raspberry syrup",
+        "home": "0.5 oz Blue Raspberry syrup",
+        "cafe": "1 pump Blue Raspberry"
+      },
+      {
+        "item": "lemonade",
+        "home": "12 oz lemonade",
+        "cafe": "12 oz lemonade"
+      },
+      {
+        "item": "1 pinch blue or silver EDIBLE luster dust",
+        "home": "1 pinch blue or silver EDIBLE luster dust",
+        "cafe": "1 pinch blue or silver EDIBLE luster dust"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Add syrups, lemonade and dust to a shaker with ice; shake hard to suspend the shimmer and pour. Serve in a clear cup so the galaxy shows.",
+    "swap": "Blue Raspberry → Sour Apple for a galaxy-green version",
+    "spike": "1.5 oz vodka",
+    "products": [
+      "blue-curacao",
+      "blue-raspberry"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade"
+    ]
+  },
+  {
+    "name": "Rose Gold Peach Spritz",
+    "slug": "rose-gold-peach-spritz",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups + luster dust.",
+    "tags": [
+      "Spring",
+      "Floral",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups + luster dust"
+    ],
+    "ingredients": [
+      {
+        "item": "Asian Rose syrup",
+        "home": "0.5 oz Asian Rose syrup",
+        "cafe": "1 pump Asian Rose"
+      },
+      {
+        "item": "Georgia Peach syrup",
+        "home": "0.5 oz Georgia Peach syrup",
+        "cafe": "1 pump Georgia Peach"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "1 pinch gold EDIBLE luster dust",
+        "home": "1 pinch gold EDIBLE luster dust",
+        "cafe": "1 pinch gold EDIBLE luster dust"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir syrups and dust with a splash of soda until the shimmer blooms, then top with the rest over ice. Keep it clear-glass.",
+    "swap": "Georgia Peach → Himalayan Pomegranate for a rose-gold pomegranate",
+    "spike": "3 oz prosecco",
+    "products": [
+      "asian-rose",
+      "georgia-peach"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Starlight Watermelon Cooler",
+    "slug": "starlight-watermelon-cooler",
+    "category": "Tea & Refreshers",
+    "categorySlug": "tea-and-refreshers",
+    "blurb": "a Stirling tea & refresher built from Syrups + luster dust.",
+    "tags": [
+      "Summer",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups + luster dust"
+    ],
+    "ingredients": [
+      {
+        "item": "Sweet African Watermelon syrup",
+        "home": "0.75 oz Sweet African Watermelon syrup",
+        "cafe": "1.5 pumps Sweet African Watermelon"
+      },
+      {
+        "item": "Persian Lime syrup",
+        "home": "0.5 oz Persian Lime syrup",
+        "cafe": "1 pump Persian Lime"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "1 pinch silver or pink EDIBLE luster dust",
+        "home": "1 pinch silver or pink EDIBLE luster dust",
+        "cafe": "1 pinch silver or pink EDIBLE luster dust"
+      },
+      {
+        "item": "Ice + mint",
+        "home": "Ice + mint",
+        "cafe": "Ice + mint"
+      }
+    ],
+    "method": "Shake syrups, soda and dust with ice to wake up the shimmer; pour over fresh ice with mint.",
+    "swap": "Persian Lime → Cherry Lime for a cherry-watermelon sparkle",
+    "spike": "1.5 oz vodka",
+    "products": [
+      "sweet-african-watermelon",
+      "persian-lime"
+    ],
+    "related": [
+      "mango-passionfruit-refresher",
+      "peach-blossom-iced-tea",
+      "raspberry-peach-iced-tea"
+    ]
+  },
+  {
+    "name": "Golden Hour Tropical Fizz",
+    "slug": "golden-hour-tropical-fizz",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups + luster dust.",
+    "tags": [
+      "Summer",
+      "Fruit",
+      "Tropical"
+    ],
+    "madeWith": [
+      "Syrups + luster dust"
+    ],
+    "ingredients": [
+      {
+        "item": "Yellow Passionfruit syrup",
+        "home": "0.75 oz Yellow Passionfruit syrup",
+        "cafe": "1.5 pumps Yellow Passionfruit"
+      },
+      {
+        "item": "Polynesian Pineapple syrup",
+        "home": "0.5 oz Polynesian Pineapple syrup",
+        "cafe": "1 pump Polynesian Pineapple"
+      },
+      {
+        "item": "soda water",
+        "home": "10 oz soda water",
+        "cafe": "10 oz soda water"
+      },
+      {
+        "item": "1 pinch gold EDIBLE luster dust",
+        "home": "1 pinch gold EDIBLE luster dust",
+        "cafe": "1 pinch gold EDIBLE luster dust"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Shake the syrups and dust with ice to bloom the gold, then top with soda. Best in a tall clear glass in the light.",
+    "swap": "Polynesian Pineapple → Hawaiian Coconut for a golden pina-colada fizz",
+    "spike": "1.5 oz white rum",
+    "products": [
+      "yellow-passionfruit",
+      "polynesian-pineapple"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "midnight-pomegranate-toast",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Midnight Pomegranate Toast",
+    "slug": "midnight-pomegranate-toast",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups + luster dust.",
+    "tags": [
+      "Winter",
+      "Fruit"
+    ],
+    "madeWith": [
+      "Syrups + luster dust"
+    ],
+    "ingredients": [
+      {
+        "item": "Himalayan Pomegranate syrup",
+        "home": "0.5 oz Himalayan Pomegranate syrup",
+        "cafe": "1 pump Himalayan Pomegranate"
+      },
+      {
+        "item": "Curacao Orange syrup",
+        "home": "0.5 oz Curacao Orange syrup",
+        "cafe": "1 pump Curacao Orange"
+      },
+      {
+        "item": "soda water (or sparkling cider)",
+        "home": "10 oz soda water (or sparkling cider)",
+        "cafe": "10 oz soda water (or sparkling cider)"
+      },
+      {
+        "item": "1 pinch gold EDIBLE luster dust",
+        "home": "1 pinch gold EDIBLE luster dust",
+        "cafe": "1 pinch gold EDIBLE luster dust"
+      },
+      {
+        "item": "Ice",
+        "home": "Ice",
+        "cafe": "Ice"
+      }
+    ],
+    "method": "Stir syrups and dust with a splash of soda to bloom the shimmer, then top with the rest; a New Year's toast in a coupe.",
+    "swap": "Curacao Orange → Maraschino Cherry for a cherry-pomegranate toast",
+    "spike": "3 oz prosecco",
+    "products": [
+      "himalayan-pommegranate",
+      "curacao-orange"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "caramel-apple-tini"
+    ]
+  },
+  {
+    "name": "Caramel Apple-tini",
+    "slug": "caramel-apple-tini",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Vodka",
+        "home": "2 oz Vodka",
+        "cafe": "2 oz Vodka"
+      },
+      {
+        "item": "Apple Juice",
+        "home": "2 oz Apple Juice",
+        "cafe": "2 oz Apple Juice"
+      },
+      {
+        "item": "Stirling Salted Caramel Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Salted Caramel Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Salted Caramel Flavored Cane Sugar Syrup"
+      }
+    ],
+    "method": "Add ingredients to cocktail shaker Fill shaker with ice. Shake. Strain into martini glass.",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "salted-caramel"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Creme Brulee White Mocha",
+    "slug": "creme-brulee-white-mocha",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Sauces and Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Sauces",
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Gourmet White Chocolate Sauce",
+        "home": "1 oz Stirling Gourmet White Chocolate Sauce",
+        "cafe": "1 oz Stirling Gourmet White Chocolate Sauce"
+      },
+      {
+        "item": "Stirling Classic Creme Brulee Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Classic Creme Brulee Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Classic Creme Brulee Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Espresso",
+        "home": "2 oz Espresso",
+        "cafe": "2 oz Espresso"
+      },
+      {
+        "item": "Milk",
+        "home": "7 oz Milk",
+        "cafe": "7 oz Milk"
+      }
+    ],
+    "method": "Combine ingredients, except milk & toppings, in a 16 oz. Cup. Stir and set aside. Steam milk in a pitcher Pour milk into the cup, stirring gently Top and garnish",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "white-chocolate-sauce",
+      "classic-creme-brulee"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "german-chocolate-cocoa",
+      "white-peppermint-mocha",
+      "caramel-apple-steamer",
+      "salted-caramel-cocoa",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "Frozen Tiramisu Coffee",
+    "slug": "frozen-tiramisu-coffee",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Frappe Mixes.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Frappe Mixes"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Chocolate Frappe Mix",
+        "home": "3 oz Stirling Chocolate Frappe Mix",
+        "cafe": "3 oz Stirling Chocolate Frappe Mix"
+      },
+      {
+        "item": "Coffee",
+        "home": "8 oz Coffee",
+        "cafe": "8 oz Coffee"
+      },
+      {
+        "item": "Ice",
+        "home": "8 oz Ice",
+        "cafe": "8 oz Ice"
+      }
+    ],
+    "method": "Blend ingredients until creamy pour into prepared glass. top with Whipped Cream Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "tuscan-tiramisu",
+      "chocolate-without-espresso"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Pumpkin Pie Mimosa",
+    "slug": "pumpkin-pie-mimosa",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Pumpkin Liqueur",
+        "home": "1 oz Pumpkin Liqueur",
+        "cafe": "1 oz Pumpkin Liqueur"
+      },
+      {
+        "item": "Champagne",
+        "home": "4 oz Champagne",
+        "cafe": "4 oz Champagne"
+      },
+      {
+        "item": "Stirling Ceylon Cinnamon Syrup",
+        "home": "1/2 oz Stirling Ceylon Cinnamon Syrup",
+        "cafe": "1/2 oz Stirling Ceylon Cinnamon Syrup"
+      }
+    ],
+    "method": "Add Liqueur & Syrup to Champagne Flute slowly pour champagne into flute Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "ceylon-cinnamon"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Pumpkin Spice Dessert Liqueur",
+    "slug": "pumpkin-spice-dessert-liqueur",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup",
+        "home": "7 oz Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup",
+        "cafe": "7 oz Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Vodka (80 Proof)",
+        "home": "5 oz Vodka (80 Proof)",
+        "cafe": "5 oz Vodka (80 Proof)"
+      }
+    ],
+    "method": "Combine Age for min 3 weeks Serve chilled in liqueur glass",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "great-pumpkin-spice"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Brandied Fruit Smoothie",
+    "slug": "brandied-fruit-smoothie",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Frozen Fruit (cherries, blueberries, plums and peaches)",
+        "home": "6 oz Frozen Fruit (cherries, blueberries, plums and peaches)",
+        "cafe": "6 oz Frozen Fruit (cherries, blueberries, plums and peaches)"
+      },
+      {
+        "item": "Stirling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "home": "2 oz Stirling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "cafe": "2 oz Stirling Napoleon Brandy Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Milk",
+        "home": "4 oz Milk",
+        "cafe": "4 oz Milk"
+      },
+      {
+        "item": "Ice",
+        "home": "8 oz Ice",
+        "cafe": "8 oz Ice"
+      }
+    ],
+    "method": "Combine ingredients in a blender blend until smooth Serve enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "napoleon-brandy"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "Caramel Apple Fizz",
+    "slug": "caramel-apple-fizz",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "½ oz Stirling Creme Caramel Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Creme Caramel Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Creme Caramel Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "½ oz Stirling Big Apple Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Big Apple Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Big Apple Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Whiskey",
+        "home": "2 oz Whiskey",
+        "cafe": "2 oz Whiskey"
+      },
+      {
+        "item": "Ginger Beer",
+        "home": "5 oz Ginger Beer",
+        "cafe": "5 oz Ginger Beer"
+      }
+    ],
+    "method": "Add syrups & whiskey to rock glass fill glass with ice Top with ginger beer garnish with cinnamon, Stir, Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "creme-caramel",
+      "big-apple"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade"
+    ]
+  },
+  {
+    "name": "White Chocolate Macadamia Latte",
+    "slug": "white-chocolate-macadamia-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Toppings.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "½ oz Stirling Kona Macadamia Nut Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Kona Macadamia Nut Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Kona Macadamia Nut Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "½ oz Stirling White Chocolate Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling White Chocolate Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling White Chocolate Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Espresso",
+        "home": "2 oz Espresso",
+        "cafe": "2 oz Espresso"
+      },
+      {
+        "item": "Milk",
+        "home": "12 oz Milk",
+        "cafe": "12 oz Milk"
+      },
+      {
+        "item": "Stirling Cinnamon Shakable Topping",
+        "home": "Stirling Cinnamon Shakable Topping",
+        "cafe": "Stirling Cinnamon Shakable Topping"
+      }
+    ],
+    "method": "Combine ingredients, except milk, in a 16 oz. Cup. Stir and set aside. Steam milk in a pitcher then pour milk into the cup, stirring gently. Garnish with shakable topping",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "macadamia-nut",
+      "white-chocolate",
+      "cinnamon"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Pumpkin Spice Martini",
+    "slug": "pumpkin-spice-martini",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups and Sauces and Toppings.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Sauces",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Vodka",
+        "home": "2 oz Vodka",
+        "cafe": "2 oz Vodka"
+      },
+      {
+        "item": "Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Great Pumpkin Spice Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Chai Tea",
+        "home": "2 oz Chai Tea",
+        "cafe": "2 oz Chai Tea"
+      },
+      {
+        "item": "Stirling Gourmet Caramel Sauce",
+        "home": "Stirling Gourmet Caramel Sauce",
+        "cafe": "Stirling Gourmet Caramel Sauce"
+      },
+      {
+        "item": "Stirling Cinnamon Shakable Topping",
+        "home": "Stirling Cinnamon Shakable Topping",
+        "cafe": "Stirling Cinnamon Shakable Topping"
+      }
+    ],
+    "method": "Rim Martini glass with Caramel Sauce Add Vodka, Syrup & Chai Tea in cocktail shaker shake over ice and strain into martini glass garnish with cinnamon shakable topping",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "great-pumpkin-spice",
+      "caramel-sauce",
+      "cinnamon"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Death by Chocolate Frappe",
+    "slug": "death-by-chocolate-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Frappe Mixes and Syrups and Sauces.",
+    "tags": [],
+    "madeWith": [
+      "Frappe Mixes",
+      "Syrups",
+      "Sauces"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Mocha Frappe Mix",
+        "home": "3 oz Stirling Mocha Frappe Mix",
+        "cafe": "3 oz Stirling Mocha Frappe Mix"
+      },
+      {
+        "item": "½ oz Stirling German Chocolate Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling German Chocolate Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling German Chocolate Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Gourmet Dark Chocolate Sauce",
+        "home": "1 oz Stirling Gourmet Dark Chocolate Sauce",
+        "cafe": "1 oz Stirling Gourmet Dark Chocolate Sauce"
+      },
+      {
+        "item": "Milk",
+        "home": "8 oz Milk",
+        "cafe": "8 oz Milk"
+      },
+      {
+        "item": "Ice",
+        "home": "12 oz Ice",
+        "cafe": "12 oz Ice"
+      }
+    ],
+    "method": "Blend ingredients until creamy pour into prepared glass. top with Whipped Cream Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "mocha",
+      "german-chocolate",
+      "dark-chocolate-sauce"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "chocolate-mint-mocha-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "\"Candy Corn\" Cream Soda",
+    "slug": "candy-corn-cream-soda",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "Heavy Cream",
+        "home": "1 oz Heavy Cream",
+        "cafe": "1 oz Heavy Cream"
+      },
+      {
+        "item": "Orange soda",
+        "home": "6 oz Orange soda",
+        "cafe": "6 oz Orange soda"
+      },
+      {
+        "item": "Pineapple syrup",
+        "home": "1 oz Pineapple syrup",
+        "cafe": "1 oz Pineapple syrup"
+      }
+    ],
+    "method": "In a tall glass filled with ice Layer the syrup, then the soda, then the cream Admire you pretty drink the the skill it took to make it Sitr, sip, and enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "polynesian-pineapple"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade"
+    ]
+  },
+  {
+    "name": "Stirling Bulldog",
+    "slug": "stirling-bulldog",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Mexican Kahlua Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Mexican Kahlua Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Mexican Kahlua Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Vodka",
+        "home": "2 oz Vodka",
+        "cafe": "2 oz Vodka"
+      },
+      {
+        "item": "Cream",
+        "home": "1 oz Cream",
+        "cafe": "1 oz Cream"
+      },
+      {
+        "item": "Cola (or pibb equivalent)",
+        "home": "Cola (or pibb equivalent)",
+        "cafe": "Cola (or pibb equivalent)"
+      }
+    ],
+    "method": "Combine Syrup, Vodka, and Cream in glass filled with ice top off with Cola Stir, Sip, & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "mexican-kahlua"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Bubblicious Martini",
+    "slug": "bubblicious-martini",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Bubblegum Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Bubblegum Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Bubblegum Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Vodka",
+        "home": "2 oz Vodka",
+        "cafe": "2 oz Vodka"
+      },
+      {
+        "item": "Lemon Juice",
+        "home": "1 oz Lemon Juice",
+        "cafe": "1 oz Lemon Juice"
+      },
+      {
+        "item": "1 egg white",
+        "home": "1 egg white",
+        "cafe": "1 egg white"
+      }
+    ],
+    "method": "Combine ingredients in cocktail shaker Shake over ice Strain into cocktail glass Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "bubble-gum"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Hot Rum Coffee",
+    "slug": "hot-rum-coffee",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "ground cardamom",
+        "home": "1/8 tsp. ground cardamom",
+        "cafe": "1/8 tsp. ground cardamom"
+      },
+      {
+        "item": "ground nutmeg",
+        "home": "1/8 tsp. ground nutmeg",
+        "cafe": "1/8 tsp. ground nutmeg"
+      },
+      {
+        "item": "Stirling Jamaican Rum Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Jamaican Rum Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Jamaican Rum Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Hot Coffee",
+        "home": "5 oz Hot Coffee",
+        "cafe": "5 oz Hot Coffee"
+      },
+      {
+        "item": "half-and-half, heated",
+        "home": "3 oz half-and-half, heated",
+        "cafe": "3 oz half-and-half, heated"
+      },
+      {
+        "item": "Chocolate Shakable topping",
+        "home": "Chocolate Shakable topping",
+        "cafe": "Chocolate Shakable topping"
+      }
+    ],
+    "method": "Combine Syrup, Spices, and half-and-half in cup. Fill the rest of the cup with coffee Stir, Sip, and Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "jamaican-rum",
+      "chocolate"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Cappuccino Royale",
+    "slug": "cappuccino-royale",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "Coffee Royale Flavored Cane Sugar Syrup",
+        "home": "1 oz Coffee Royale Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Coffee Royale Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "espresso",
+        "home": "2 oz espresso",
+        "cafe": "2 oz espresso"
+      },
+      {
+        "item": "steamed milk",
+        "home": "8 oz steamed milk",
+        "cafe": "8 oz steamed milk"
+      }
+    ],
+    "method": "Combine Syrup & espresso in 12 oz cup Fill cup with steamed milk top with whipped cream Garnish with chocolate shakable toppings Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "coffee-royale"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Royal Coffee Martini",
+    "slug": "royal-coffee-martini",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups and Toppings.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "vodka",
+        "home": "2 oz vodka",
+        "cafe": "2 oz vodka"
+      },
+      {
+        "item": "espresso",
+        "home": "2 oz espresso",
+        "cafe": "2 oz espresso"
+      },
+      {
+        "item": "Stirling Coffee Royal Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Coffee Royal Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Coffee Royal Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Whipped Cream",
+        "home": "Whipped Cream",
+        "cafe": "Whipped Cream"
+      },
+      {
+        "item": "Stirling Chocolate Shakable Topping",
+        "home": "Stirling Chocolate Shakable Topping",
+        "cafe": "Stirling Chocolate Shakable Topping"
+      }
+    ],
+    "method": "Combine Ingredients in cocktail shaker Shake over ice, strain into martini glass top with whipped cream & garnish with chocolate shakable topping",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "coffee-royale",
+      "chocolate"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Toasted Almond Latte",
+    "slug": "toasted-almond-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Italian Amaretto Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Italian Amaretto Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Italian Amaretto Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Mexican Kahlua Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Mexican Kahlua Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Mexican Kahlua Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "espresso",
+        "home": "2 oz espresso",
+        "cafe": "2 oz espresso"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      }
+    ],
+    "method": "Combine ingredients, except milk & toppings, in a 12 oz. Cup. Stir and set aside. Steam milk in a pitcher Pour milk into the cup using a large spoon to hold back the milk foam Add foam (latte art time) Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "italian-amaretto",
+      "mexican-kahlua"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Stirling Mulled Cider",
+    "slug": "stirling-mulled-cider",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Apple Cider",
+        "home": "20 oz Apple Cider",
+        "cafe": "20 oz Apple Cider"
+      },
+      {
+        "item": "Stirling Ceylon Cinnamon Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Ceylon Cinnamon Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Ceylon Cinnamon Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Napoleon Brandy Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Anise",
+        "home": "Anise",
+        "cafe": "Anise"
+      },
+      {
+        "item": "Cloves",
+        "home": "Cloves",
+        "cafe": "Cloves"
+      },
+      {
+        "item": "Ginger",
+        "home": "Ginger",
+        "cafe": "Ginger"
+      }
+    ],
+    "method": "Combine ingredients in a pot Heat to a simmer Let simmer for 15 minutes Serve in a mug Garnish with cinnamon shakable toppings",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "ceylon-cinnamon",
+      "napoleon-brandy"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Brandy Collins",
+    "slug": "brandy-collins",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "Vodka",
+        "home": "1.5 oz Vodka",
+        "cafe": "1.5 oz Vodka"
+      },
+      {
+        "item": "Cranberry Juice",
+        "home": "1 oz Cranberry Juice",
+        "cafe": "1 oz Cranberry Juice"
+      },
+      {
+        "item": "Striling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Striling Napoleon Brandy Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Striling Napoleon Brandy Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Club soda",
+        "home": "Club soda",
+        "cafe": "Club soda"
+      }
+    ],
+    "method": "Combine ingredients in a tall glass over ice Stir, Sip, & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "napoleon-brandy"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Irish cream - Non-Dairy Coffee Creamer",
+    "slug": "irish-cream-non-dairy-coffee-creamer",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Irish Creme Flavored Cane Sugar Syrup",
+        "home": "3 oz Stirling Irish Creme Flavored Cane Sugar Syrup",
+        "cafe": "3 oz Stirling Irish Creme Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "heated milk (coconut, soy, almond, rice)",
+        "home": "24 oz heated milk (coconut, soy, almond, rice)",
+        "cafe": "24 oz heated milk (coconut, soy, almond, rice)"
+      }
+    ],
+    "method": "Combine ingredients in sealable container Cool, age, and serve",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "irish-cream"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Hot Buttered Whiskey",
+    "slug": "hot-buttered-whiskey",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups and Toppings.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Harvey's Butter Rum Batter Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Harvey's Butter Rum Batter Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Harvey's Butter Rum Batter Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Hot Apple Cider (hard cider also works)",
+        "home": "6 oz Hot Apple Cider (hard cider also works)",
+        "cafe": "6 oz Hot Apple Cider (hard cider also works)"
+      },
+      {
+        "item": "Jameson Black Barrel Irish Whiskey",
+        "home": "2 oz Jameson Black Barrel Irish Whiskey",
+        "cafe": "2 oz Jameson Black Barrel Irish Whiskey"
+      },
+      {
+        "item": "Stirling Cinnamon Shakable Topping",
+        "home": "Stirling Cinnamon Shakable Topping",
+        "cafe": "Stirling Cinnamon Shakable Topping"
+      }
+    ],
+    "method": "Combine Syrup and Whiskey in Mug Top with Hot Apple Cider Stir, Sip, & Enjoy for bubbly fun add sparkling wine or apple cider",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "harvey-s-butter-rum-batter",
+      "cinnamon"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Coffee Nudge",
+    "slug": "coffee-nudge",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Toppings.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Toppings"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Creme de cacao Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Creme de cacao Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Creme de cacao Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Coffee Liqueur (kaluha)",
+        "home": "1/2 oz Coffee Liqueur (kaluha)",
+        "cafe": "1/2 oz Coffee Liqueur (kaluha)"
+      },
+      {
+        "item": "Brandy",
+        "home": "1/2 oz Brandy",
+        "cafe": "1/2 oz Brandy"
+      },
+      {
+        "item": "hot coffee",
+        "home": "8 oz hot coffee",
+        "cafe": "8 oz hot coffee"
+      },
+      {
+        "item": "Whipped cream",
+        "home": "Whipped cream",
+        "cafe": "Whipped cream"
+      },
+      {
+        "item": "Stirling Chocolate Shakable topping",
+        "home": "Stirling Chocolate Shakable topping",
+        "cafe": "Stirling Chocolate Shakable topping"
+      }
+    ],
+    "method": "Combine Ingredients in 12 oz. cup Top with Whipped Cream Stir, Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "creme-de-cacao",
+      "chocolate"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Pomegranate Mule",
+    "slug": "pomegranate-mule",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Himalayan Pomegranate Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Himalayan Pomegranate Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Himalayan Pomegranate Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "mint vodka",
+        "home": "2 oz mint vodka",
+        "cafe": "2 oz mint vodka"
+      },
+      {
+        "item": "1 lime wedge",
+        "home": "1 lime wedge",
+        "cafe": "1 lime wedge"
+      },
+      {
+        "item": "gingerbeer",
+        "home": "4 oz gingerbeer",
+        "cafe": "4 oz gingerbeer"
+      }
+    ],
+    "method": "Combine Syrup and vodka in a mug Add ice and lime wedge Top with ginger beer Stir, sip, & enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "himalayan-pommegranate"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Toffee Macchiato",
+    "slug": "toffee-macchiato",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups and Sauces.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Sauces"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling English Toffee Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling English Toffee Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling English Toffee Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "espresso",
+        "home": "2 oz espresso",
+        "cafe": "2 oz espresso"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      },
+      {
+        "item": "Stirling Gourmet Salted caramel sauce",
+        "home": "1 oz Stirling Gourmet Salted caramel sauce",
+        "cafe": "1 oz Stirling Gourmet Salted caramel sauce"
+      }
+    ],
+    "method": "Add Syrup in a 12 oz cup Stir and set aside. Steam milk in a pitcher, add hot milk & foam to cup Pour in espresso Add caramel sauce on top",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "royal-english-toffee",
+      "salted-caramel"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Creme Cream soda",
+    "slug": "creme-cream-soda",
+    "category": "Dirty Sodas & Lemonades",
+    "categorySlug": "dirty-sodas-and-lemonades",
+    "blurb": "a Stirling dirty sodas & lemonade built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "Striling Classic Creme Brulee Flavored Cane Sugar Syrup",
+        "home": "1 oz Striling Classic Creme Brulee Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Striling Classic Creme Brulee Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Cream",
+        "home": "1 oz Cream",
+        "cafe": "1 oz Cream"
+      },
+      {
+        "item": "Soda Water",
+        "home": "8 oz Soda Water",
+        "cafe": "8 oz Soda Water"
+      },
+      {
+        "item": "Ice",
+        "home": "5 oz Ice",
+        "cafe": "5 oz Ice"
+      }
+    ],
+    "method": "Pour ingredients, except cream, over ice in a 16 oz glass Float cream on top Stir, Sip, & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "classic-creme-brulee"
+    ],
+    "related": [
+      "coconut-cream-dirty-soda",
+      "cherry-vanilla-dirty-soda",
+      "strawberry-watermelon-lemonade",
+      "butterbeer-cream-soda",
+      "sarsaparilla-cream-float",
+      "sunrise-layered-lemonade"
+    ]
+  },
+  {
+    "name": "Snickerdoodle Latte",
+    "slug": "snickerdoodle-latte",
+    "category": "Lattes",
+    "categorySlug": "lattes",
+    "blurb": "a Stirling latte built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Granny's Snickerdoodle Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Granny's Snickerdoodle Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Granny's Snickerdoodle Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "milk",
+        "home": "8 oz milk",
+        "cafe": "8 oz milk"
+      },
+      {
+        "item": "espresso",
+        "home": "2 oz espresso",
+        "cafe": "2 oz espresso"
+      }
+    ],
+    "method": "Combine ingredients, except milk & toppings, in a 12 oz. Cup. Stir and set aside. Steam milk in a pitcher Pour milk into the cup using a large spoon to hold back the milk foam Add foam (latte art time) Garnish with Stirling Cinnamon Shakable Topping",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "granny-s-snickerdoodle"
+    ],
+    "related": [
+      "lavender-vanilla-oat-latte",
+      "tuscan-tiramisu-creme-latte",
+      "salted-caramel-macadamia-latte",
+      "espresso-brulee-tonic",
+      "lavender-haze-latte",
+      "snickerdoodle-cold-brew"
+    ]
+  },
+  {
+    "name": "Salted Caramel Cocoa",
+    "slug": "salted-caramel-cocoa",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "White Chocolate sauce",
+        "home": "1 oz White Chocolate sauce",
+        "cafe": "1 oz White Chocolate sauce"
+      },
+      {
+        "item": "1½  oz Salted caramel syrup",
+        "home": "1½  oz Salted caramel syrup",
+        "cafe": "1½  oz Salted caramel syrup"
+      },
+      {
+        "item": "Milk, steamed",
+        "home": "10 oz Milk, steamed",
+        "cafe": "10 oz Milk, steamed"
+      }
+    ],
+    "method": "Combine Sauce & Syrup in 12 oz mug Pour steamed milk into the cup, stirring gently Sip & enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "white-chocolate-sauce",
+      "salted-caramel"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "german-chocolate-cocoa",
+      "white-peppermint-mocha",
+      "caramel-apple-steamer",
+      "creme-brulee-white-mocha",
+      "gingerbread-white-mocha"
+    ]
+  },
+  {
+    "name": "Lavender White Chocolate Martini",
+    "slug": "lavender-white-chocolate-martini",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "½ oz Stirling Lavender Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Lavender Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Lavender Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling White Chocolate Flavored Sugar Free Syrup",
+        "home": "1 oz Stirling White Chocolate Flavored Sugar Free Syrup",
+        "cafe": "1 oz Stirling White Chocolate Flavored Sugar Free Syrup"
+      },
+      {
+        "item": "Vodka",
+        "home": "2 oz Vodka",
+        "cafe": "2 oz Vodka"
+      },
+      {
+        "item": "Cream",
+        "home": "2 oz Cream",
+        "cafe": "2 oz Cream"
+      }
+    ],
+    "method": "Combine Ingredients in cocktail shaker Shake over ice, strain into martini glass garnish with white chocolate shakable topping",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "lavender-de-provence",
+      "white-chocolate"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Chocolate Mint Mocha Frappe",
+    "slug": "chocolate-mint-mocha-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "Chocolate Mint",
+        "home": "1 oz Chocolate Mint",
+        "cafe": "1 oz Chocolate Mint"
+      },
+      {
+        "item": "Chocolate Frappe Mix",
+        "home": "3 oz Chocolate Frappe Mix",
+        "cafe": "3 oz Chocolate Frappe Mix"
+      },
+      {
+        "item": "coffee",
+        "home": "8 oz coffee",
+        "cafe": "8 oz coffee"
+      },
+      {
+        "item": "ice",
+        "home": "12 oz ice",
+        "cafe": "12 oz ice"
+      }
+    ],
+    "method": "Blend ingredients until creamy pour into prepared glass. top with Whipped Cream Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "chocolate-without-espresso"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "tiramisu-frappe"
+    ]
+  },
+  {
+    "name": "Stirling Mulled Wine",
+    "slug": "stirling-mulled-wine",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "750 mL Dry Red Wine",
+        "home": "750 mL Dry Red Wine",
+        "cafe": "750 mL Dry Red Wine"
+      },
+      {
+        "item": "Stirling Italian Amaretto Flavored Cane Sugar Syrup",
+        "home": "3 oz Stirling Italian Amaretto Flavored Cane Sugar Syrup",
+        "cafe": "3 oz Stirling Italian Amaretto Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Cinnamon",
+        "home": "Cinnamon",
+        "cafe": "Cinnamon"
+      },
+      {
+        "item": "Cloves",
+        "home": "Cloves",
+        "cafe": "Cloves"
+      },
+      {
+        "item": "Orange Rind",
+        "home": "Orange Rind",
+        "cafe": "Orange Rind"
+      },
+      {
+        "item": "Nutmeg",
+        "home": "Nutmeg",
+        "cafe": "Nutmeg"
+      },
+      {
+        "item": "Anise",
+        "home": "Anise",
+        "cafe": "Anise"
+      },
+      {
+        "item": "Cardamom",
+        "home": "Cardamom",
+        "cafe": "Cardamom"
+      }
+    ],
+    "method": "Combine ingredients in large pot Heat to a simmer, 20 min Serve warm",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "italian-amaretto"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Tiramisu Frappe",
+    "slug": "tiramisu-frappe",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Syrups and Sauces.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Sauces"
+    ],
+    "ingredients": [
+      {
+        "item": "½ oz Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Tuscan Tiramisu Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Gourmet white chocolate Sauce",
+        "home": "1 oz Stirling Gourmet white chocolate Sauce",
+        "cafe": "1 oz Stirling Gourmet white chocolate Sauce"
+      },
+      {
+        "item": "Stirling Mocha frappe",
+        "home": "3 oz Stirling Mocha frappe",
+        "cafe": "3 oz Stirling Mocha frappe"
+      },
+      {
+        "item": "Coffee chilled",
+        "home": "4 oz Coffee chilled",
+        "cafe": "4 oz Coffee chilled"
+      },
+      {
+        "item": "milk",
+        "home": "4 oz milk",
+        "cafe": "4 oz milk"
+      },
+      {
+        "item": "Ice",
+        "home": "10 oz Ice",
+        "cafe": "10 oz Ice"
+      }
+    ],
+    "method": "Blend ingredients until creamy pour into prepared glass. top with Whipped Cream Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "tuscan-tiramisu",
+      "white-chocolate-sauce",
+      "mocha"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe"
+    ]
+  },
+  {
+    "name": "Gingerbread-White Mocha",
+    "slug": "gingerbread-white-mocha",
+    "category": "Mochas & Cocoas",
+    "categorySlug": "mochas-and-cocoas",
+    "blurb": "a Stirling mochas & cocoa built from Syrups and Sauces.",
+    "tags": [],
+    "madeWith": [
+      "Syrups",
+      "Sauces"
+    ],
+    "ingredients": [
+      {
+        "item": "Espresso",
+        "home": "2 oz Espresso",
+        "cafe": "2 oz Espresso"
+      },
+      {
+        "item": "Stirling Gingerbread, Man Flavored Cane Sugar Syrup",
+        "home": "1/2 oz Stirling Gingerbread, Man Flavored Cane Sugar Syrup",
+        "cafe": "1/2 oz Stirling Gingerbread, Man Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Stirling Gourmet White Chocolate sauce",
+        "home": "1 oz Stirling Gourmet White Chocolate sauce",
+        "cafe": "1 oz Stirling Gourmet White Chocolate sauce"
+      },
+      {
+        "item": "Milk",
+        "home": "8 oz Milk",
+        "cafe": "8 oz Milk"
+      }
+    ],
+    "method": "Combine ingredients, except milk & toppings, in a 12 oz. Cup. Stir and set aside. Steam milk in a pitcher Pour milk into the cup, stirring gently Top and garnish",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "gingerbread",
+      "white-chocolate-sauce"
+    ],
+    "related": [
+      "peanut-butter-cup-mocha",
+      "german-chocolate-cocoa",
+      "white-peppermint-mocha",
+      "caramel-apple-steamer",
+      "creme-brulee-white-mocha",
+      "salted-caramel-cocoa"
+    ]
+  },
+  {
+    "name": "Candy Cane Cocktail",
+    "slug": "candy-cane-cocktail",
+    "category": "Cocktails & Mocktails",
+    "categorySlug": "cocktails-and-mocktails",
+    "blurb": "a Stirling cocktails & mocktail built from Stirling products.",
+    "tags": [],
+    "madeWith": [],
+    "ingredients": [
+      {
+        "item": "½  oz Peppermint Schnapps Flavored Cane Sugar Syrup",
+        "home": "½  oz Peppermint Schnapps Flavored Cane Sugar Syrup",
+        "cafe": "½  oz Peppermint Schnapps Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "White Rum",
+        "home": "2 oz White Rum",
+        "cafe": "2 oz White Rum"
+      },
+      {
+        "item": "Cranberry Juice",
+        "home": "2 oz Cranberry Juice",
+        "cafe": "2 oz Cranberry Juice"
+      },
+      {
+        "item": "Splash of Soda",
+        "home": "Splash of Soda",
+        "cafe": "Splash of Soda"
+      }
+    ],
+    "method": "Pour Ingredients in a rocks glass filled with ice Top off with a splash of soda",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "peppermint-schnapps"
+    ],
+    "related": [
+      "blackberry-bramble",
+      "mojito-lime-cooler",
+      "pomegranate-rose-spritz",
+      "rose-gold-peach-spritz",
+      "golden-hour-tropical-fizz",
+      "midnight-pomegranate-toast"
+    ]
+  },
+  {
+    "name": "Frozen Gingerbread Eggnog",
+    "slug": "frozen-gingerbread-eggnog",
+    "category": "Frappes",
+    "categorySlug": "frappes",
+    "blurb": "a Stirling frappe built from Syrups.",
+    "tags": [],
+    "madeWith": [
+      "Syrups"
+    ],
+    "ingredients": [
+      {
+        "item": "Stirling Egg-cellent Eggnog Flavored Cane Sugar Syrup",
+        "home": "1 oz Stirling Egg-cellent Eggnog Flavored Cane Sugar Syrup",
+        "cafe": "1 oz Stirling Egg-cellent Eggnog Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "½ oz Stirling Gingerbread, Man Flavored Cane Sugar Syrup",
+        "home": "½ oz Stirling Gingerbread, Man Flavored Cane Sugar Syrup",
+        "cafe": "½ oz Stirling Gingerbread, Man Flavored Cane Sugar Syrup"
+      },
+      {
+        "item": "Bourbon",
+        "home": "2 oz Bourbon",
+        "cafe": "2 oz Bourbon"
+      },
+      {
+        "item": "Milk",
+        "home": "8 oz Milk",
+        "cafe": "8 oz Milk"
+      },
+      {
+        "item": "Ice",
+        "home": "6 oz Ice",
+        "cafe": "6 oz Ice"
+      }
+    ],
+    "method": "Blend ingredients until creamy pour into prepared glass. top with Whipped Cream Sip & Enjoy",
+    "swap": null,
+    "spike": null,
+    "products": [
+      "egg-cellent-eggnog",
+      "gingerbread"
+    ],
+    "related": [
+      "cookies-and-cream-dream-frappe",
+      "salted-caramel-toffee-frappe",
+      "red-velvet-cheesecake-frappe",
+      "brandied-fruit-smoothie",
+      "death-by-chocolate-frappe",
+      "chocolate-mint-mocha-frappe"
+    ]
+  }
+]

@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Ported verbatim from reference/pages/notfound.html — canonical is the
+// literal "/404/" the source itself declares (not derived from Astro.url,
+// since the real path that 404s is arbitrary and unknowable at build time).
+const links = [
+  { href: '/#flavors', label: 'All flavors', note: 'Every line, searchable by name or code' },
+  { href: '/recipes/', label: 'Recipes', note: 'Signature and archive drinks by type' },
+  { href: '/spec-sheets/', label: 'Spec sheets', note: 'Ingredients, pack sizes, allergens' },
+  { href: '/#distributors', label: 'Find a distributor', note: 'We sell through distribution' },
+];
+---
+
+<BaseLayout
+  title="Page not found — Stirling Flavors"
+  description="That page isn't here. Browse Stirling Flavors syrups, sauces, toppings and recipes, or get in touch."
+  canonical="https://www.stirlingflavors.com/404/"
+  background="cream"
+>
+  <section class="notfound">
+    <div class="shell">
+      <p class="eyebrow gold">Page not found</p>
+      <h1 class="h2">That page isn't here.</h1>
+      <p class="lead">
+        The link may be out of date, or the page may have moved when we rebuilt the site. Everything below is
+        where it should be.
+      </p>
+      <ul class="links">
+        {
+          links.map((link) => (
+            <li>
+              <a class="row" href={link.href}>
+                <span class="row-text">
+                  <span class="row-label">{link.label}</span>
+                  <span class="row-note">{link.note}</span>
+                </span>
+                <span class="row-arrow" aria-hidden="true">
+                  &rarr;
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="note">
+        Looking for something specific? <a href="mailto:info@stirlingflavors.com">Email us</a> and we'll point you
+        at it, or call <a href="tel:+12538676133">253.867.6133</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    background: var(--cream);
+    color: var(--ink);
+    padding-block: clamp(64px, 9vw, 128px) clamp(72px, 9vw, 120px);
+  }
+  .gold {
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .lead {
+    max-width: 48ch;
+    color: var(--body-on-cream);
+    margin-top: 22px;
+  }
+  .links {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin: clamp(40px, 5vw, 64px) 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+  }
+  .row {
+    border-radius: var(--r-sm);
+    height: 100%;
+    box-shadow: var(--shadow-light);
+    transition: transform var(--t-card), box-shadow var(--t-card);
+    background: #fff;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 22px;
+    display: flex;
+  }
+  .row:hover {
+    color: inherit;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-row-hover);
+  }
+  .row-text {
+    gap: 4px;
+    display: grid;
+  }
+  .row-label {
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .row-note {
+    color: var(--secondary);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .row-arrow {
+    color: var(--muted);
+    transition: transform var(--t-hover);
+    flex: none;
+    font-size: 18px;
+  }
+  .row:hover .row-arrow {
+    color: var(--gold);
+    transform: translate(3px);
+  }
+  .note {
+    color: var(--secondary);
+    border-top: 1px solid #1b0f221a;
+    margin-top: clamp(48px, 6vw, 76px);
+    padding-top: 28px;
+  }
+  .note a {
+    color: var(--ink);
+    text-underline-offset: 3px;
+    text-decoration: underline;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .row,
+    .row-arrow {
+      transition: none;
+    }
+    .row:hover,
+    .row:hover .row-arrow {
+      transform: none;
+    }
+  }
+</style>

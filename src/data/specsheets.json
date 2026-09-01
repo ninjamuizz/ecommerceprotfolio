@@ -1,0 +1,278 @@
+{
+  "categories": [
+    {
+      "category": "Cane Sugar Syrups",
+      "items": [
+        {
+          "name": "American Strawberry",
+          "sku": "STIR800",
+          "pdfUrl": "/spec-sheets/STIR800-american-strawberry-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/american-strawberry/"
+        },
+        {
+          "name": "B-52",
+          "sku": "STIR874",
+          "pdfUrl": "/spec-sheets/STIR874-b-52-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/b-52/"
+        },
+        {
+          "name": "Big Apple",
+          "sku": "STIR872",
+          "pdfUrl": "/spec-sheets/STIR872-big-apple-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/big-apple/"
+        },
+        {
+          "name": "California Almond",
+          "sku": "STIR859",
+          "pdfUrl": "/spec-sheets/STIR859-california-almond-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/california-almond/"
+        },
+        {
+          "name": "Ceylon Cinnamon",
+          "sku": "STIR873",
+          "pdfUrl": "/spec-sheets/STIR873-ceylon-cinnamon-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/ceylon-cinnamon/"
+        },
+        {
+          "name": "White Chocolate",
+          "sku": "STIR887",
+          "pdfUrl": "/spec-sheets/STIR887-white-chocolate-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/white-chocolate/"
+        },
+        {
+          "name": "Classic Vanilla",
+          "sku": "STIR701",
+          "pdfUrl": "/spec-sheets/STIR701-classic-vanilla-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/classic-vanilla/"
+        },
+        {
+          "name": "Coffee Royale",
+          "sku": "STIR867",
+          "pdfUrl": "/spec-sheets/STIR867-coffee-royale-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/coffee-royale/"
+        },
+        {
+          "name": "Creme Caramel",
+          "sku": "STIR862",
+          "pdfUrl": "/spec-sheets/STIR862-creme-caramel-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/creme-caramel/"
+        },
+        {
+          "name": "English Red Raspberry",
+          "sku": "STIR850",
+          "pdfUrl": "/spec-sheets/STIR850-english-red-raspberry-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/english-red-raspberry/"
+        },
+        {
+          "name": "French Vanilla",
+          "sku": "STIR808",
+          "pdfUrl": "/spec-sheets/STIR808-french-vanilla-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/french-vanilla/"
+        },
+        {
+          "name": "Georgia Peach",
+          "sku": "STIR863",
+          "pdfUrl": "/spec-sheets/STIR863-georgia-peach-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/georgia-peach/"
+        },
+        {
+          "name": "German Chocolate",
+          "sku": "STIR857",
+          "pdfUrl": "/spec-sheets/STIR857-german-chocolate-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/german-chocolate/"
+        },
+        {
+          "name": "Gingerbread",
+          "sku": "STIR891",
+          "pdfUrl": "/spec-sheets/STIR891-gingerbread-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/gingerbread/"
+        },
+        {
+          "name": "Going Bananas",
+          "sku": "STIR880",
+          "pdfUrl": "/spec-sheets/STIR880-going-bananas-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/going-bananas/"
+        },
+        {
+          "name": "Hawaiian Coconut",
+          "sku": "STIR865",
+          "pdfUrl": "/spec-sheets/STIR865-hawaiian-coconut-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/hawaiian-coconut/"
+        },
+        {
+          "name": "Highland Butterscotch",
+          "sku": "STIR804",
+          "pdfUrl": "/spec-sheets/STIR804-highland-butterscotch-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/highland-butterscotch/"
+        },
+        {
+          "name": "Irish Cream",
+          "sku": "STIR860",
+          "pdfUrl": "/spec-sheets/STIR860-irish-cream-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/irish-cream/"
+        },
+        {
+          "name": "Italian Amaretto",
+          "sku": "STIR851",
+          "pdfUrl": "/spec-sheets/STIR851-italian-amaretto-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/italian-amaretto/"
+        },
+        {
+          "name": "Jamaican Rum",
+          "sku": "STIR864",
+          "pdfUrl": "/spec-sheets/STIR864-jamaican-rum-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/jamaican-rum/"
+        },
+        {
+          "name": "Macadamia Nut",
+          "sku": "STIR868",
+          "pdfUrl": "/spec-sheets/STIR868-macadamia-nut-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/macadamia-nut/"
+        },
+        {
+          "name": "Maraschino Cherry",
+          "sku": "STIR884",
+          "pdfUrl": "/spec-sheets/STIR884-maraschino-cherry-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/maraschino-cherry/"
+        },
+        {
+          "name": "Napoleon Brandy",
+          "sku": "STIR876",
+          "pdfUrl": "/spec-sheets/STIR876-napoleon-brandy-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/napoleon-brandy/"
+        },
+        {
+          "name": "New England Black Cherry",
+          "sku": "STIR801",
+          "pdfUrl": "/spec-sheets/STIR801-new-england-black-cherry-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/new-england-black-cherry/"
+        },
+        {
+          "name": "New Zealand Kiwi",
+          "sku": "STIR869",
+          "pdfUrl": "/spec-sheets/STIR869-new-zealand-kiwi-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/new-zealand-kiwi/"
+        },
+        {
+          "name": "Yellow Passionfruit",
+          "sku": "STIR904",
+          "pdfUrl": "/spec-sheets/STIR904-yellow-passionfruit-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/yellow-passionfruit/"
+        },
+        {
+          "name": "Peppermint Schnapps",
+          "sku": "STIR871",
+          "pdfUrl": "/spec-sheets/STIR871-peppermint-schnapps-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/peppermint-schnapps/"
+        },
+        {
+          "name": "Polynesian Pineapple",
+          "sku": "STIR905",
+          "pdfUrl": "/spec-sheets/STIR905-polynesian-pineapple-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/polynesian-pineapple/"
+        },
+        {
+          "name": "Rhythm & Blueberry",
+          "sku": "STIR803",
+          "pdfUrl": "/spec-sheets/STIR803-rhythm-and-blueberry-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/rhythm-and-blueberry/"
+        },
+        {
+          "name": "Rocky Mountain Hazelnut",
+          "sku": "STIR866",
+          "pdfUrl": "/spec-sheets/STIR866-rocky-mountain-hazelnut-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/rocky-mountain-hazelnut/"
+        },
+        {
+          "name": "Sweetness",
+          "sku": "STIR892",
+          "pdfUrl": "/spec-sheets/STIR892-sweetness-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/sweetness/"
+        },
+        {
+          "name": "Swiss Chocolate Almond",
+          "sku": "STIR853",
+          "pdfUrl": "/spec-sheets/STIR853-swiss-chocolate-almond-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/swiss-chocolate-almond/"
+        },
+        {
+          "name": "Toasted Marshmallow",
+          "sku": "STIR886",
+          "pdfUrl": "/spec-sheets/STIR886-toasted-marshmallow-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/toasted-marshmallow/"
+        },
+        {
+          "name": "Tropical Mango",
+          "sku": "STIR894",
+          "pdfUrl": "/spec-sheets/STIR894-tropical-mango-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/tropical-mango/"
+        },
+        {
+          "name": "Tuscan Tiramisu",
+          "sku": "STIR896",
+          "pdfUrl": "/spec-sheets/STIR896-tuscan-tiramisu-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/tuscan-tiramisu/"
+        },
+        {
+          "name": "Vienna Chocolate Mint",
+          "sku": "STIR802",
+          "pdfUrl": "/spec-sheets/STIR802-vienna-chocolate-mint-spec-sheet.pdf",
+          "flavorUrl": "/flavors/cane-sugar-syrups/vienna-chocolate-mint/"
+        }
+      ]
+    },
+    {
+      "category": "Sugar Free Syrups",
+      "items": [
+        {
+          "name": "Creme Caramel",
+          "sku": "STIR005",
+          "pdfUrl": "/spec-sheets/STIR005-creme-caramel-spec-sheet.pdf",
+          "flavorUrl": "/flavors/sugar-free-syrups/creme-caramel/"
+        },
+        {
+          "name": "French Vanilla",
+          "sku": "STIR001",
+          "pdfUrl": "/spec-sheets/STIR001-french-vanilla-spec-sheet.pdf",
+          "flavorUrl": "/flavors/sugar-free-syrups/french-vanilla/"
+        },
+        {
+          "name": "German Chocolate",
+          "sku": "STIR003",
+          "pdfUrl": "/spec-sheets/STIR003-german-chocolate-spec-sheet.pdf",
+          "flavorUrl": "/flavors/sugar-free-syrups/german-chocolate/"
+        },
+        {
+          "name": "Rocky Mountain Hazelnut",
+          "sku": "STIR002",
+          "pdfUrl": "/spec-sheets/STIR002-rocky-mountain-hazelnut-spec-sheet.pdf",
+          "flavorUrl": "/flavors/sugar-free-syrups/rocky-mountain-hazelnut/"
+        },
+        {
+          "name": "White Chocolate",
+          "sku": "STIR014",
+          "pdfUrl": "/spec-sheets/STIR014-white-chocolate-spec-sheet.pdf",
+          "flavorUrl": "/flavors/sugar-free-syrups/white-chocolate/"
+        }
+      ]
+    },
+    {
+      "category": "Shakable Toppings",
+      "items": [
+        {
+          "name": "Cinnamon",
+          "sku": "STIR2573",
+          "pdfUrl": "/spec-sheets/STIR2573-cinnamon-spec-sheet.pdf",
+          "flavorUrl": "/flavors/shakable-toppings/cinnamon/"
+        },
+        {
+          "name": "Toasted Coconut",
+          "sku": "STIR2565",
+          "pdfUrl": "/spec-sheets/STIR2565-toasted-coconut-spec-sheet.pdf",
+          "flavorUrl": "/flavors/shakable-toppings/toasted-coconut/"
+        }
+      ]
+    }
+  ],
+  "notice": "69 of our items don't have a published sheet yet. Email us for any of them and we'll send it the same day."
+}

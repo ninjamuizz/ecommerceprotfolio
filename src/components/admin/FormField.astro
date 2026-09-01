@@ -1,0 +1,310 @@
+---
+// Renders ONE form control for a content-schema.ts FieldDescriptor, switched
+// on `field.kind`. This is the piece that makes the edit forms "built
+// dynamically from the schema" (src/pages/admin/flavors/[category]/[slug].astro
+// and src/pages/admin/recipes/[slug].astro just loop over a schema's `fields`
+// and render one <FormField> per entry) instead of one hand-written <input>
+// per field.
+//
+// Contract with the page-level <script> that gathers/submits the form
+// (identical shape used by both flavor and recipe edit pages):
+//   - Editable fields get a wrapper `[data-field="<key>"][data-kind="<kind>"]`.
+//     Read-only fields DON'T get `data-field` at all, so the generic gather
+//     step can never pick them up and include them in a save payload.
+//   - text/enum: a single `input`/`select` inside the wrapper.
+//   - textarea: a `textarea[data-field-textarea]` + a `[data-charcount]` span
+//     a page-level script updates on `input`.
+//   - nullableText: a single `input`; blank on save means `null`.
+//   - stringArray/nullableStringArray: `[data-array-rows]` holding
+//     `[data-array-row]` rows (each with one `input[data-array-item]` +
+//     `[data-remove-row]`), a `template[data-array-template]` clone source,
+//     and a `[data-add-row]` button.
+//   - objectArray: same row/template/add-row contract, but each row holds one
+//     `input[data-object-col="<columnKey>"]` per column instead of a single
+//     `[data-array-item]`.
+//   - boolean: a checkbox (no real field uses this kind yet in either JSON
+//     file — kept for forward compatibility per the schema's own doc).
+import type { FieldDescriptor } from '../../lib/content-schema';
+
+interface Props {
+  field: FieldDescriptor;
+  value: unknown;
+}
+
+// Named alias, not inlined as `Array<Record<string, string>>` at the call
+// site below — esbuild's TSX parser (this file compiles through Astro's
+// JSX-like pipeline) chokes on that nested-generic `>>` when it appears
+// alongside this component's other `as X[]` cast, misreporting the syntax
+// error back on an unrelated earlier line. A one-level alias sidesteps the
+// ambiguity entirely.
+type ObjectRow = Record<string, string>;
+
+const { field, value } = Astro.props;
+---
+
+{
+  field.readOnly ? (
+    <div class="field">
+      <label>
+        {field.label} <span class="badge">Read-only</span>
+      </label>
+      <input type="text" value={String(value ?? '')} disabled />
+      {field.readOnlyNote && <p class="help">{field.readOnlyNote}</p>}
+    </div>
+  ) : (
+    <div class="field" data-field={field.key} data-kind={field.kind}>
+      <label for={`f-${field.key}`}>{field.label}</label>
+
+      {field.kind === 'text' && (
+        <input id={`f-${field.key}`} type="text" value={String(value ?? '')} />
+      )}
+
+      {field.kind === 'textarea' && (
+        <>
+          <textarea
+            id={`f-${field.key}`}
+            data-field-textarea
+            rows={field.rows ?? 4}
+          >
+            {String(value ?? '')}
+          </textarea>
+          <p class="charcount" data-charcount>
+            {String(value ?? '').length} characters
+          </p>
+        </>
+      )}
+
+      {field.kind === 'enum' && (
+        <select id={`f-${field.key}`}>
+          {field.options.map((opt) => (
+            <option value={opt} selected={opt === value}>
+              {opt}
+            </option>
+          ))}
+        </select>
+      )}
+
+      {field.kind === 'boolean' && (
+        <input id={`f-${field.key}`} type="checkbox" checked={Boolean(value)} />
+      )}
+
+      {field.kind === 'nullableText' && (
+        <input id={`f-${field.key}`} type="text" value={value === null || value === undefined ? '' : String(value)} placeholder="(none)" />
+      )}
+
+      {(field.kind === 'stringArray' || field.kind === 'nullableStringArray') && (
+        <div class="array-field">
+          <div class="array-rows" data-array-rows>
+            {((value as string[] | null) ?? []).map((item) => (
+              <div class="array-row" data-array-row>
+                <input type="text" data-array-item value={item} placeholder={field.itemLabel ?? 'Value'} />
+                <button type="button" class="row-remove" data-remove-row aria-label="Remove row">
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+          <template data-array-template>
+            <div class="array-row" data-array-row>
+              <input type="text" data-array-item placeholder={field.itemLabel ?? 'Value'} />
+              <button type="button" class="row-remove" data-remove-row aria-label="Remove row">
+                ×
+              </button>
+            </div>
+          </template>
+          <button type="button" class="btn-add" data-add-row>
+            + Add {field.itemLabel ?? 'row'}
+          </button>
+        </div>
+      )}
+
+      {field.kind === 'objectArray' && (
+        <div class="array-field">
+          <div class="array-rows object-rows" data-array-rows>
+            {((value as ObjectRow[]) ?? []).map((row) => (
+              <div class="array-row object-row" data-array-row>
+                {field.columns.map((col) => (
+                  <label class="object-col">
+                    <span class="object-col-label">{col.label}</span>
+                    <input type="text" data-object-col={col.key} value={row[col.key] ?? ''} placeholder={col.label} />
+                  </label>
+                ))}
+                <button type="button" class="row-remove" data-remove-row aria-label="Remove row">
+                  ×
+                </button>
+              </div>
+            ))}
+          </div>
+          <template data-array-template>
+            <div class="array-row object-row" data-array-row>
+              {field.columns.map((col) => (
+                <label class="object-col">
+                  <span class="object-col-label">{col.label}</span>
+                  <input type="text" data-object-col={col.key} placeholder={col.label} />
+                </label>
+              ))}
+              <button type="button" class="row-remove" data-remove-row aria-label="Remove row">
+                ×
+              </button>
+            </div>
+          </template>
+          <button type="button" class="btn-add" data-add-row>
+            + Add row
+          </button>
+        </div>
+      )}
+
+      {field.helpText && <p class="help">{field.helpText}</p>}
+    </div>
+  )
+}
+
+<script>
+  // Wires up every <FormField> instance on the page via event delegation —
+  // Astro dedupes identical component scripts, so this registers once per
+  // page no matter how many fields render, and still covers fields added
+  // dynamically (a cloned array/object row) since delegation reads the DOM
+  // at event time rather than binding per-element up front.
+  document.addEventListener('input', (event) => {
+    const target = event.target as HTMLElement;
+    if (target instanceof HTMLTextAreaElement && target.matches('[data-field-textarea]')) {
+      const counter = target.closest('.field')?.querySelector('[data-charcount]');
+      if (counter) counter.textContent = `${target.value.length} characters`;
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+
+    const addBtn = target.closest<HTMLElement>('[data-add-row]');
+    if (addBtn) {
+      const arrayField = addBtn.closest('.array-field');
+      const template = arrayField?.querySelector('template[data-array-template]');
+      const rows = arrayField?.querySelector('[data-array-rows]');
+      if (template instanceof HTMLTemplateElement && rows) {
+        rows.appendChild(template.content.cloneNode(true));
+      }
+      return;
+    }
+
+    const removeBtn = target.closest<HTMLElement>('[data-remove-row]');
+    if (removeBtn) {
+      removeBtn.closest('[data-array-row]')?.remove();
+    }
+  });
+</script>
+
+<style>
+  .field {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 20px;
+  }
+  .field label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .badge {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border: 1px solid #1b0f2229;
+    border-radius: var(--pill);
+    padding: 2px 8px;
+  }
+  input[type='text'],
+  select,
+  textarea {
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid #1b0f2229;
+    border-radius: 10px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+  input:disabled {
+    background: var(--cream-card);
+    color: var(--secondary);
+  }
+  textarea {
+    resize: vertical;
+    font-family: inherit;
+  }
+  .charcount {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .help {
+    font-size: 12px;
+    color: var(--secondary);
+    margin: 0;
+  }
+  .array-field {
+    display: grid;
+    gap: 8px;
+  }
+  .array-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .object-row {
+    align-items: end;
+    flex-wrap: wrap;
+  }
+  .object-col {
+    display: grid;
+    gap: 4px;
+    flex: 1 1 140px;
+  }
+  .object-col-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .array-row input {
+    flex: 1;
+  }
+  .row-remove {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #1b0f2229;
+    background: #fff;
+    color: var(--secondary);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+  }
+  .row-remove:hover {
+    border-color: var(--red);
+    color: var(--red);
+  }
+  .btn-add {
+    justify-self: start;
+    border: 1px dashed #1b0f2247;
+    background: none;
+    border-radius: var(--pill);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary);
+    cursor: pointer;
+  }
+  .btn-add:hover {
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  template {
+    display: none;
+  }
+</style>

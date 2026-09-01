@@ -1,0 +1,477 @@
+---
+// Admin: rename a flavor's display name across the whole repo.
+//
+// Flow: type the flavor's current display name + its (unchanging)
+// categorySlug/slug + the new name -> Preview scans the repo for every
+// duplicate (see src/lib/rename-scan.ts) -> the human checks which
+// sourceCode/ambiguous hits to also edit (contentData hits with an exact
+// field match are auto-fixed, never guessed at) -> Apply writes the changes,
+// commits them as one unit, and runs a real build to prove nothing broke.
+export const prerender = false;
+
+import { requireSession } from '../../lib/auth-server';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const session = requireSession(Astro.cookies);
+if (!session) {
+  return Astro.redirect('/admin/login');
+}
+
+// Optional prefill from a flavor edit page's "Rename this flavor" link
+// (?categorySlug=...&slug=...&oldName=...) so the human doesn't have to
+// retype identifiers that are already known.
+const prefillCategorySlug = Astro.url.searchParams.get('categorySlug') ?? '';
+const prefillSlug = Astro.url.searchParams.get('slug') ?? '';
+const prefillOldName = Astro.url.searchParams.get('oldName') ?? '';
+---
+
+<BaseLayout title="Rename a flavor — Admin" showHeader={false} showFooter={false} background="cream">
+  <section class="shell">
+    <p class="eyebrow">Admin</p>
+    <h1>Rename a flavor</h1>
+    <p class="lede">
+      Renames the flavor's <strong>display name</strong> everywhere it's duplicated as a literal
+      string. The flavor's slug/category (its URL) is <strong>not</strong> changed by this tool —
+      see the separate slug/category-change flow for that.
+    </p>
+
+    <form id="rename-form" class="card">
+      <div class="row">
+        <label for="categorySlug">Category slug</label>
+        <input id="categorySlug" name="categorySlug" type="text" placeholder="cane-sugar-syrups" value={prefillCategorySlug} required />
+      </div>
+      <div class="row">
+        <label for="slug">Flavor slug</label>
+        <input id="slug" name="slug" type="text" placeholder="american-strawberry" value={prefillSlug} required />
+      </div>
+      <div class="row">
+        <label for="oldName">Current display name</label>
+        <input id="oldName" name="oldName" type="text" placeholder="American Strawberry" value={prefillOldName} required />
+        <p class="hint">Type it exactly as it appears on the site (e.g. the ticker/spec-sheet form, not the full product name).</p>
+      </div>
+      <div class="row">
+        <label for="newName">New display name</label>
+        <input id="newName" name="newName" type="text" placeholder="New Name Here" required />
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary" data-preview-btn>Preview</button>
+      </div>
+    </form>
+
+    <p class="status" data-status hidden></p>
+
+    <div class="results" data-results hidden>
+      <section class="bucket" data-bucket="contentData">
+        <h2>Content data <span class="badge badge-auto">auto-fixed if exact match</span></h2>
+        <p class="bucket-desc">JSON display-name fields in <code>src/data/*.json</code>. Only ones whose value is
+          exactly the old name are changed automatically; others are shown for awareness only.</p>
+        <ul class="hit-list" data-hit-list="contentData"></ul>
+      </section>
+
+      <section class="bucket" data-bucket="sourceCode">
+        <h2>Source code <span class="badge badge-approve">approve individually</span></h2>
+        <p class="bucket-desc">Literal strings hardcoded in <code>.astro</code>/<code>.ts</code>/<code>.js</code> files. Nothing here is ever edited unless you check it.</p>
+        <ul class="hit-list" data-hit-list="sourceCode"></ul>
+      </section>
+
+      <section class="bucket" data-bucket="ambiguous">
+        <h2>Ambiguous <span class="badge badge-approve">approve individually</span></h2>
+        <p class="bucket-desc">Recipe prose, docs, filenames — anything that isn't a clean structured field. Never auto-edited.</p>
+        <ul class="hit-list" data-hit-list="ambiguous"></ul>
+      </section>
+
+      <section class="bucket" data-bucket="slugReferences">
+        <h2>Slug references <span class="badge badge-info">informational only</span></h2>
+        <p class="bucket-desc">Every place the URL slug appears. Expected and correct as long as the slug itself isn't changing — listed here for the separate redirect step, not for approval.</p>
+        <ul class="hit-list" data-hit-list="slugReferences"></ul>
+      </section>
+
+      <div class="actions">
+        <button type="button" class="btn btn-primary" data-apply-btn>Apply approved changes</button>
+      </div>
+    </div>
+
+    <div class="apply-result" data-apply-result hidden></div>
+  </section>
+</BaseLayout>
+
+<script>
+  interface RenameHit {
+    file: string;
+    line: number;
+    context: string;
+    matchedText: string;
+    bucket: 'contentData' | 'sourceCode' | 'ambiguous';
+    autoFixable: boolean;
+    jsonKey?: string;
+    kind: 'content' | 'filename';
+  }
+  interface SlugReference {
+    file: string;
+    line: number;
+    context: string;
+    kind: 'content' | 'filename';
+  }
+
+  const form = document.getElementById('rename-form') as HTMLFormElement;
+  const statusEl = document.querySelector<HTMLElement>('[data-status]')!;
+  const resultsEl = document.querySelector<HTMLElement>('[data-results]')!;
+  const applyResultEl = document.querySelector<HTMLElement>('[data-apply-result]')!;
+  const applyBtn = document.querySelector<HTMLButtonElement>('[data-apply-btn]')!;
+
+  let lastRequest: { oldName: string; categorySlug: string; slug: string } | null = null;
+
+  function setStatus(msg: string, isError = false) {
+    statusEl.hidden = false;
+    statusEl.textContent = msg;
+    statusEl.classList.toggle('status-error', isError);
+  }
+
+  function renderHitRow(hit: RenameHit, checkable: boolean): HTMLLIElement {
+    const li = document.createElement('li');
+    li.className = 'hit-row';
+    const label = document.createElement('label');
+    if (checkable) {
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.dataset.file = hit.file;
+      cb.dataset.line = String(hit.line);
+      label.appendChild(cb);
+    }
+    const text = document.createElement('span');
+    text.innerHTML = `<code>${hit.file}${hit.line ? ':' + hit.line : ''}</code>${
+      hit.autoFixable ? ' <em>(auto)</em>' : ''
+    }<br><span class="context">${escapeHtml(hit.context)}</span>`;
+    label.appendChild(text);
+    li.appendChild(label);
+    return li;
+  }
+
+  function renderSlugRow(ref: SlugReference): HTMLLIElement {
+    const li = document.createElement('li');
+    li.className = 'hit-row hit-row-info';
+    li.innerHTML = `<code>${ref.file}${ref.line ? ':' + ref.line : ''}</code><br><span class="context">${escapeHtml(ref.context)}</span>`;
+    return li;
+  }
+
+  function escapeHtml(s: string): string {
+    return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+  }
+
+  /**
+   * A single request-scoped serverless function can't block for however long
+   * the .github/workflows/build-check.yml CI run takes, so build-check
+   * results are async: poll GET /api/admin/build-status every few seconds
+   * from the browser instead of expecting the apply response to already
+   * carry a pass/fail. Gives up (not fails) after ~3 minutes so a slow or
+   * stuck workflow doesn't poll forever.
+   */
+  async function pollBuildStatus(commitSha: string, attempt = 0): Promise<void> {
+    const statusEl = document.querySelector<HTMLElement>('[data-build-status]');
+    if (!statusEl) return;
+    const MAX_ATTEMPTS = 45; // ~3 minutes at 4s intervals
+
+    let data: { conclusion: string | null; status: string; detailsUrl: string | null } | { error: string };
+    try {
+      const res = await fetch(`/api/admin/build-status?sha=${encodeURIComponent(commitSha)}`);
+      data = await res.json();
+    } catch {
+      data = { error: 'Network error while checking build status.' };
+    }
+
+    if ('error' in data) {
+      statusEl.innerHTML = `<strong>Build check:</strong> <span class="status-error">${escapeHtml(data.error)}</span>`;
+      return;
+    }
+
+    if (data.conclusion === 'success') {
+      statusEl.innerHTML = `<strong>Build check:</strong> PASSED${data.detailsUrl ? ` — <a href="${data.detailsUrl}" target="_blank" rel="noopener">view run</a>` : ''}`;
+      return;
+    }
+    if (data.conclusion && data.conclusion !== 'success') {
+      statusEl.innerHTML = [
+        `<strong>Build check:</strong> <span class="status-error">FAILED (${escapeHtml(data.conclusion)})</span>`,
+        data.detailsUrl ? ` — <a href="${data.detailsUrl}" target="_blank" rel="noopener">view run</a>` : '',
+        `<br><button type="button" class="btn btn-danger" data-revert-btn>Revert this commit now</button>`,
+      ].join('');
+      const revertBtn = statusEl.querySelector<HTMLButtonElement>('[data-revert-btn]');
+      revertBtn?.addEventListener('click', async () => {
+        revertBtn.disabled = true;
+        const r = await fetch('/api/admin/rename/revert', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ commitSha }),
+        });
+        const rdata = await r.json();
+        statusEl.insertAdjacentHTML(
+          'beforeend',
+          `<p>${rdata.ok ? `Reverted (<a href="${rdata.commitUrl}" target="_blank" rel="noopener">${rdata.commitSha.slice(0, 8)}</a>).` : 'Revert failed: ' + escapeHtml(rdata.output ?? '')}</p>`,
+        );
+      });
+      return;
+    }
+
+    // Still queued/in_progress — keep polling.
+    if (attempt >= MAX_ATTEMPTS) {
+      statusEl.innerHTML = `<strong>Build check:</strong> still running after 3 minutes — check <a href="https://github.com" target="_blank" rel="noopener">GitHub Actions</a> directly.`;
+      return;
+    }
+    statusEl.innerHTML = `<strong>Build check:</strong> ${data.status === 'queued' ? 'queued…' : 'running…'}`;
+    setTimeout(() => pollBuildStatus(commitSha, attempt + 1), 4000);
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    applyResultEl.hidden = true;
+    const fd = new FormData(form);
+    const oldName = String(fd.get('oldName') ?? '').trim();
+    const categorySlug = String(fd.get('categorySlug') ?? '').trim();
+    const slug = String(fd.get('slug') ?? '').trim();
+    const newName = String(fd.get('newName') ?? '').trim();
+    if (!oldName || !categorySlug || !slug || !newName) return;
+
+    lastRequest = { oldName, categorySlug, slug };
+    (form.dataset as any).newName = newName;
+
+    setStatus('Scanning repo…');
+    resultsEl.hidden = true;
+
+    const res = await fetch('/api/admin/rename/preview', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ oldName, categorySlug, slug }),
+    });
+    if (!res.ok) {
+      setStatus(`Preview failed: ${res.status} ${await res.text()}`, true);
+      return;
+    }
+    const data = await res.json();
+
+    for (const bucket of ['contentData', 'sourceCode', 'ambiguous'] as const) {
+      const list = document.querySelector<HTMLUListElement>(`[data-hit-list="${bucket}"]`)!;
+      list.innerHTML = '';
+      const checkable = bucket !== 'contentData';
+      for (const hit of data.buckets[bucket] as RenameHit[]) {
+        list.appendChild(renderHitRow(hit, checkable));
+      }
+      if (data.buckets[bucket].length === 0) {
+        const li = document.createElement('li');
+        li.className = 'hit-row hit-row-empty';
+        li.textContent = 'None found.';
+        list.appendChild(li);
+      }
+    }
+
+    const slugList = document.querySelector<HTMLUListElement>('[data-hit-list="slugReferences"]')!;
+    slugList.innerHTML = '';
+    for (const ref of data.slugReferences as SlugReference[]) {
+      slugList.appendChild(renderSlugRow(ref));
+    }
+
+    setStatus(`Scanned ${data.filesScanned} files.`);
+    resultsEl.hidden = false;
+  });
+
+  applyBtn.addEventListener('click', async () => {
+    if (!lastRequest) return;
+    const newName = (form.dataset as any).newName as string;
+    const approvedHits = Array.from(
+      document.querySelectorAll<HTMLInputElement>('[data-hit-list="sourceCode"] input:checked, [data-hit-list="ambiguous"] input:checked'),
+    ).map((cb) => ({ file: cb.dataset.file!, line: Number(cb.dataset.line) }));
+
+    applyBtn.disabled = true;
+    setStatus('Committing the rename to GitHub…');
+
+    try {
+      const res = await fetch('/api/admin/rename/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...lastRequest, newName, approvedHits }),
+      });
+      const data = await res.json();
+      applyResultEl.hidden = false;
+
+      if (!res.ok) {
+        applyResultEl.innerHTML = `<p class="status-error">Apply failed: ${escapeHtml(data.error ?? JSON.stringify(data))}</p>`;
+        return;
+      }
+
+      if (!data.applied) {
+        applyResultEl.innerHTML = `<p>${escapeHtml(data.reason)}</p>`;
+        return;
+      }
+
+      applyResultEl.innerHTML = [
+        `<p><strong>Files changed:</strong> ${data.filesChanged.join(', ') || 'none'}</p>`,
+        `<p><strong>Committed:</strong> <a href="${data.commitUrl}" target="_blank" rel="noopener">${data.commitHash.slice(0, 8)}</a></p>`,
+        `<p data-build-status><strong>Build check:</strong> waiting for CI to start…</p>`,
+      ].join('\n');
+
+      setStatus('Committed. Watching the CI build check…');
+      pollBuildStatus(data.commitHash);
+    } finally {
+      applyBtn.disabled = false;
+    }
+  });
+</script>
+
+<style>
+  .shell {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px var(--gutter) 96px;
+  }
+  .eyebrow {
+    color: var(--gold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+  }
+  .lede {
+    color: var(--secondary);
+    max-width: 62ch;
+    margin: 0 0 28px;
+  }
+  .card {
+    background: #fff;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .row {
+    display: grid;
+    gap: 6px;
+  }
+  .row label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .row input {
+    height: 42px;
+    border-radius: var(--r-sm, 8px);
+    border: 1px solid #1b0f2229;
+    padding-inline: 14px;
+    font-size: 14px;
+  }
+  .hint {
+    margin: 0;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  .btn {
+    border-radius: var(--pill);
+    height: 44px;
+    padding-inline: 24px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--plum);
+    color: #fff;
+  }
+  .btn-danger {
+    background: #b3261e;
+    color: #fff;
+    margin-top: 12px;
+  }
+  .status {
+    color: var(--secondary);
+    margin-bottom: 20px;
+  }
+  .status-error {
+    color: #b3261e;
+    font-weight: 700;
+  }
+  .bucket {
+    background: #fff;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .bucket h2 {
+    font-size: 16px;
+    margin: 0 0 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .badge {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: var(--pill);
+    font-weight: 700;
+  }
+  .badge-auto { background: #dff3e3; color: #1c6b34; }
+  .badge-approve { background: #fdeacb; color: #8a5a12; }
+  .badge-info { background: #e6e6f0; color: #4a4a68; }
+  .bucket-desc {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  .hit-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  .hit-row {
+    font-size: 13px;
+    border-bottom: 1px solid #1b0f2214;
+    padding-bottom: 8px;
+  }
+  .hit-row label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+  .hit-row code {
+    font-size: 12px;
+    color: var(--ink);
+  }
+  .hit-row .context {
+    color: var(--muted);
+    font-family: monospace;
+    font-size: 11.5px;
+    word-break: break-word;
+  }
+  .hit-row-empty {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .apply-result {
+    background: #fff;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-light);
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+</style>
