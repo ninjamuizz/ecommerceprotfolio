@@ -8,11 +8,19 @@
 import type { APIRoute } from 'astro';
 import { randomBytes } from 'node:crypto';
 import { OAUTH_STATE_COOKIE_NAME, OAUTH_STATE_MAX_AGE_SECONDS } from '../../../../lib/auth-server';
+import { getEnv } from '../../../../lib/env';
 
 export const prerender = false;
 
 export const GET: APIRoute = ({ cookies, redirect }) => {
-  const clientId = import.meta.env.GITHUB_CLIENT_ID;
+  // getEnv (not raw import.meta.env.X) — on the deployed Vercel function,
+  // import.meta.env.GITHUB_CLIENT_ID came back undefined even after a clean
+  // rebuild with the var correctly set in Vercel's dashboard; process.env.X
+  // (getEnv's fallback) is what actually carries runtime env vars into this
+  // on-demand route. Vite's built-in import.meta.env.PROD below is unrelated
+  // — that one really is reliably inlined by Vite itself, only custom vars
+  // like this one need the fallback.
+  const clientId = getEnv('GITHUB_CLIENT_ID');
   if (!clientId) {
     return new Response(
       'GITHUB_CLIENT_ID is not configured on the server. See SETUP.md.',

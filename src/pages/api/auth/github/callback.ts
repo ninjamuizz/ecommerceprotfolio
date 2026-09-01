@@ -19,6 +19,7 @@ import {
   isAllowedLogin,
   signSession,
 } from '../../../../lib/auth-server';
+import { getEnv } from '../../../../lib/env';
 
 export const prerender = false;
 
@@ -33,8 +34,9 @@ interface GitHubUserResponse {
 }
 
 export const GET: APIRoute = async ({ url, cookies, redirect }) => {
-  const clientId = import.meta.env.GITHUB_CLIENT_ID;
-  const clientSecret = import.meta.env.GITHUB_CLIENT_SECRET;
+  // getEnv, not raw import.meta.env.X — see start.ts's comment on the same fix.
+  const clientId = getEnv('GITHUB_CLIENT_ID');
+  const clientSecret = getEnv('GITHUB_CLIENT_SECRET');
   if (!clientId || !clientSecret) {
     return new Response(
       'GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET are not configured on the server. See SETUP.md.',
