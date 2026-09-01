@@ -27,6 +27,11 @@ if (!session) {
     <main class="wrap">
       <h1>Admin dashboard</h1>
       <p>Signed in as <strong>{session.login}</strong>.</p>
+      <nav class="links">
+        <a href="/admin/flavors/">Edit flavors</a>
+        <a href="/admin/recipes/">Edit recipes</a>
+        <a href="/admin/rename/">Rename tool</a>
+      </nav>
       <a class="logout" href="/api/auth/logout/">Log out</a>
     </main>
     <style>
@@ -53,6 +58,17 @@ if (!session) {
       }
       p {
         margin: 0 0 1.75rem;
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1.75rem;
+      }
+      .links a {
+        color: #1b0f22;
+        font-weight: 700;
+        text-decoration: underline;
       }
       .logout {
         color: #7a3b12;
